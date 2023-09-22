@@ -40,7 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
+                            <a href="{% url 'main:about' %}" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle">Jobs</a>
@@ -67,10 +67,10 @@
                             <a href="#" class="nav-link dropdown-toggle">Candidates</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'main:candidate' %}" class="nav-link">Candidates</a>
+                                    <a href="{% url 'users:candidate' %}" class="nav-link">Candidates</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'main:candidate-details' %}" class="nav-link">Candidates Details</a>
+                                    <a href="{% url 'users:candidate-details' %}" class="nav-link">Candidates Details</a>
                                 </li>
                             </ul>
                         </li>
@@ -94,10 +94,10 @@
 
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item">
-                                                    <a href="sign-in.html" class="nav-link">Sign In</a>
+                                                    <a href="{% url 'users:sign-in' %}" class="nav-link">Sign In</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="sign-up.html" class="nav-link">Sign Up</a>
+                                                    <a href="{% url 'users:sign-up' %}" class="nav-link">Sign Up</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="reset-password.html" class="nav-link">Reset Password</a>
@@ -108,12 +108,6 @@
                                             <a href="resume.html" class="nav-link">Resume</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="404.html" class="nav-link">404 Page</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="testimonial.html" class="nav-link">Testimonials</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="faq.html" class="nav-link">FAQ</a>
@@ -146,8 +140,8 @@
                     </ul>
 
                     <div class="other-option">
-                        <a href="sign-up.html" class="signup-btn">Sign Up</a>
-                        <a href="sign-in.html" class="signin-btn">Sign In</a>
+                        <a href="{% url 'users:sign-up' %}" class="signup-btn">Sign Up</a>
+                        <a href="{% url 'users:sign-in' %}" class="signin-btn">Sign In</a>
                     </div>
                 </div>
             </nav>

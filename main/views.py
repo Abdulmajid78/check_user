@@ -8,8 +8,5 @@ class HomeView(TemplateView):
 class ContactView(TemplateView):
     template_name = 'contact.html'
 
-class CandidatesView(TemplateView):
-    template_name = 'candidate.html'
-
-class CandidateDetailsView(TemplateView):
-    template_name = 'candidate-details.html'
+class AboutView(TemplateView):
+    template_name = 'about.html'

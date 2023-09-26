@@ -170,8 +170,6 @@ jQuery(function ($) {
         $(".loader-content").fadeOut(200);
     })
 
-    // Buy Now Btn
-    $('body').append("<a href='https://themeforest.net/checkout/from_item/26677255?license=regular&support=bundle_6month&_ga=2.147833143.1464546313.1649253347-1356931366.1645330919&_gac=1.255868281.1649351773.Cj0KCQjwl7qSBhD-ARIsACvV1X34Yvc4XKSYFq60iQ6auDlKjNhJLJW5j_1joCsZJCKQ-4m75Uw8RNcaArtlEALw_wcB' target='_blank' class='buy-now-btn'><img src='assets/img/envato.png' alt='envato'/>Buy Now</a>");
 
     // Switch Btn
 	$('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");

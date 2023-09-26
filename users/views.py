@@ -40,3 +40,6 @@ class AccountView(TemplateView):
 
 class ResumeView(TemplateView):
     template_name = 'resume.html'
+
+class ResetPasswordView(TemplateView):
+    template_name = 'reset-password.html'

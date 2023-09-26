@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (CandidatesView, CandidateDetailsView, SignInView, SignUpView, FindJobView,
-                    JobListView, JobDetailView, PostJobView, AccountView, ResumeView)
+                    JobListView, JobDetailView, PostJobView, AccountView, ResumeView, ResetPasswordView)
 
 app_name = 'users'
 
@@ -15,5 +15,6 @@ urlpatterns = [
     path('sign-up/', SignUpView.as_view(), name='sign-up'),
     path('account/', AccountView.as_view(), name='account'),
     path('resume/', ResumeView.as_view(), name='resume'),
+    path('reset-password/', ResetPasswordView.as_view(), name='reset-password'),
 
 ]

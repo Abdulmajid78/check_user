@@ -17,5 +17,14 @@ class SignInView(TemplateView):
 class SignUpView(TemplateView):
     template_name = 'sign-up.html'
 
+
 class FindJobView(TemplateView):
     template_name = 'find-job.html'
+
+
+class JobListView(TemplateView):
+    template_name = 'job-list.html'
+
+
+class JobDetailView(TemplateView):
+    template_name = 'job-details.html'

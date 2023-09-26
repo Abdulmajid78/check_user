@@ -177,7 +177,11 @@ Default CSS
 }
 
 .theme-dark .h1 a:hover, .theme-dark .h2 a:hover, .theme-dark .h3 a:hover, .theme-dark .h4 a:hover, .theme-dark .h5 a:hover, .theme-dark .h6 a:hover, .theme-dark h1 a:hover, .theme-dark h2 a:hover, .theme-dark h3 a:hover, .theme-dark h4 a:hover, .theme-dark h5 a:hover, .theme-dark h6 a:hover {
-  color: #fd1616 !important;
+  color: #0065FF !important;
+}
+
+.theme-dark .job-details-text .details-text .table tr td span {
+    color: white;
 }
 
 .theme-dark .bg-color {

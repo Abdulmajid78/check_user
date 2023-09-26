@@ -20,24 +20,6 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Jobs</a>
-
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="{% url 'users:find-job' %}" class="nav-link">Find An employee</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="post-job.html" class="nav-link">Post A Job</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{% url 'users:job-list' %}" class="nav-link">Job List</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'main:about' %}" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle">Candidates</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
@@ -46,6 +28,25 @@
                                 <li class="nav-item">
                                     <a href="{% url 'users:candidate-details' %}" class="nav-link">Candidates
                                         Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'main:about' %}" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle">Jobs</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="{% url 'users:find-job' %}" class="nav-link">Find An employee</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'users:post-job' %}" class="nav-link">Post A Job</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'users:job-list' %}" class="nav-link">Job List</a>
                                 </li>
                             </ul>
                         </li>

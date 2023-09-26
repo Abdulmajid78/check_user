@@ -588,7 +588,22 @@ h3 {
 }
 
 /* Job  Section CSS End */
+/* Counter CSS Start */
+.counter-section {
+  background: #010c29;
+}
 
+.counter-section .counter-text i {
+  color: var(--red-color);
+  font-size: 60px;
+}
+
+.counter-section .counter-text h2 {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+/* Counter CSS End */
 /* Job Section CSS Start */
 .job-card {
     border: 1px dashed #d9dbdf;

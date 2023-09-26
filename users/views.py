@@ -26,5 +26,9 @@ class JobListView(TemplateView):
     template_name = 'job-list.html'
 
 
+class PostJobView(TemplateView):
+    template_name = 'post-job.html'
+
+
 class JobDetailView(TemplateView):
     template_name = 'job-details.html'

@@ -32,3 +32,7 @@ class PostJobView(TemplateView):
 
 class JobDetailView(TemplateView):
     template_name = 'job-details.html'
+
+
+class AccountView(TemplateView):
+    template_name = 'account.html'

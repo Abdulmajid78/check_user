@@ -36,3 +36,7 @@ class JobDetailView(TemplateView):
 
 class AccountView(TemplateView):
     template_name = 'account.html'
+
+
+class ResumeView(TemplateView):
+    template_name = 'resume.html'

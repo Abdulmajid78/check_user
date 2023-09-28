@@ -1,0 +1,1122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-29 01:35+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/404.html:13 templates/about.html:12 templates/account.html:12
+#: templates/blog-details.html:13 templates/blog.html:12
+#: templates/candidate-details.html:12 templates/candidate.html:13
+#: templates/contact.html:12 templates/find-employee.html:14
+#: templates/job-details.html:12 templates/job-list.html:13
+#: templates/layouts/footer.html:77 templates/post-job.html:11
+#: templates/reset-password.html:12 templates/sign-in.html:12
+#: templates/sign-up.html:12
+msgid "Home"
+msgstr ""
+
+#: templates/404.html:35
+msgid "Go To Home"
+msgstr ""
+
+#: templates/404.html:50 templates/account.html:253 templates/blog.html:135
+#: templates/candidate-details.html:176 templates/candidate.html:233
+#: templates/contact.html:150 templates/find-employee.html:482
+#: templates/job-details.html:515 templates/post-job.html:137
+#: templates/reset-password.html:53 templates/sign-in.html:93
+#: templates/sign-up.html:99
+msgid "Get New Job Notifications"
+msgstr ""
+
+#: templates/404.html:51 templates/account.html:254 templates/blog.html:136
+#: templates/candidate-details.html:177 templates/candidate.html:234
+#: templates/contact.html:151 templates/find-employee.html:483
+#: templates/job-details.html:516 templates/post-job.html:138
+#: templates/reset-password.html:54 templates/sign-in.html:94
+#: templates/sign-up.html:100
+msgid "Subscribe & get all related jobs notification"
+msgstr ""
+
+#: templates/404.html:61 templates/account.html:263 templates/blog.html:146
+#: templates/candidate-details.html:186 templates/candidate.html:244
+#: templates/contact.html:160 templates/find-employee.html:493
+#: templates/job-details.html:526 templates/post-job.html:147
+#: templates/reset-password.html:63 templates/sign-in.html:104
+#: templates/sign-up.html:109
+msgid "Subscribe"
+msgstr ""
+
+#: templates/about.html:9 templates/about.html:14
+msgid "About Us"
+msgstr ""
+
+#: templates/about.html:33
+msgid "How We Started"
+msgstr ""
+
+#: templates/about.html:59 templates/index.html:455
+msgid "Easiest Way To Use"
+msgstr ""
+
+#: templates/about.html:67 templates/index.html:463
+msgid "Find An Employee Easily"
+msgstr ""
+
+#: templates/about.html:68 templates/index.html:464
+msgid "You can get a lot of information about the worker you want"
+msgstr ""
+
+#: templates/about.html:76 templates/index.html:472
+msgid "Browse Job"
+msgstr ""
+
+#: templates/about.html:77 templates/index.html:473
+msgid ""
+"the easiest way to find a job that you want and that is convenient for you"
+msgstr ""
+
+#: templates/about.html:85 templates/index.html:481
+msgid "Submit Resume"
+msgstr ""
+
+#: templates/about.html:86 templates/index.html:482
+msgid "Fill out your resume to the world standard through our site"
+msgstr ""
+
+#: templates/about.html:98
+msgid "Why You Choose Us Among Other Job Site?"
+msgstr ""
+
+#: templates/about.html:107
+msgid "Advertise Job"
+msgstr ""
+
+#: templates/about.html:116
+msgid "Recruiter Profiles"
+msgstr ""
+
+#: templates/about.html:125
+msgid "Find Your Dream Job"
+msgstr ""
+
+#: templates/about.html:142
+msgid "Grow Your Business Faster With Premium Advertising"
+msgstr ""
+
+#: templates/about.html:157
+msgid "Checkout More"
+msgstr ""
+
+#: templates/about.html:180
+msgid "Job Posted"
+msgstr ""
+
+#: templates/about.html:188 templates/index.html:649
+msgid "Job Filed"
+msgstr ""
+
+#: templates/about.html:196 templates/index.html:656
+#: templates/job-details.html:120 templates/layouts/navbar.html:57
+msgid "Company"
+msgstr ""
+
+#: templates/about.html:204 templates/index.html:663
+msgid "Members"
+msgstr ""
+
+#: templates/about.html:216 templates/index.html:1124
+msgid "What Client’s Say About Us"
+msgstr ""
+
+#: templates/about.html:233 templates/index.html:1139
+msgid "Alisa Meair"
+msgstr ""
+
+#: templates/about.html:234 templates/index.html:1140
+msgid "CEO of Company"
+msgstr ""
+
+#: templates/about.html:248
+msgid "Adam Smith"
+msgstr ""
+
+#: templates/about.html:249 templates/account.html:35 templates/index.html:314
+#: templates/index.html:994 templates/index.html:1096
+msgid "Web Developer"
+msgstr ""
+
+#: templates/about.html:263 templates/index.html:1167
+#: templates/job-details.html:179
+msgid "John Doe"
+msgstr ""
+
+#: templates/about.html:264
+msgid "Graphics Designer"
+msgstr ""
+
+#: templates/about.html:277 templates/index.html:1197
+msgid "News, Tips & Articles"
+msgstr ""
+
+#: templates/about.html:304 templates/index.html:1225
+msgid "How to Indroduce in Yourself in Job Interview?"
+msgstr ""
+
+#: templates/about.html:311 templates/about.html:346 templates/about.html:381
+#: templates/index.html:1232 templates/index.html:1267
+#: templates/index.html:1302
+msgid "Read More"
+msgstr ""
+
+#: templates/about.html:339 templates/index.html:1260
+msgid "Looking for Highly Motivated Product to Build"
+msgstr ""
+
+#: templates/about.html:374 templates/index.html:1295
+msgid "The Reason Why Software Develope is the Best Job"
+msgstr ""
+
+#: templates/account.html:9 templates/account.html:14
+#: templates/layouts/footer.html:39 templates/layouts/navbar.html:87
+msgid "Account"
+msgstr ""
+
+#: templates/account.html:34 templates/candidate-details.html:33
+msgid "John Smith"
+msgstr ""
+
+#: templates/account.html:42
+msgid "My Profile"
+msgstr ""
+
+#: templates/account.html:48
+msgid "My Resume"
+msgstr ""
+
+#: templates/account.html:54
+msgid "Applied Job"
+msgstr ""
+
+#: templates/account.html:60
+msgid "Messages"
+msgstr ""
+
+#: templates/account.html:66
+msgid "Saved Jobs"
+msgstr ""
+
+#: templates/account.html:72
+msgid "Change Password"
+msgstr ""
+
+#: templates/account.html:78
+msgid "Delete Account"
+msgstr ""
+
+#: templates/account.html:84
+msgid "Log Out"
+msgstr ""
+
+#: templates/account.html:93
+msgid "Basic Information"
+msgstr ""
+
+#: templates/account.html:98
+msgid "Your Name"
+msgstr ""
+
+#: templates/account.html:105
+msgid "Your Email"
+msgstr ""
+
+#: templates/account.html:112
+msgid "Your Phone"
+msgstr ""
+
+#: templates/account.html:119 templates/post-job.html:33
+msgid "Job Title"
+msgstr ""
+
+#: templates/account.html:124 templates/account.html:161
+#: templates/account.html:198 templates/account.html:235
+msgid "Edit"
+msgstr ""
+
+#: templates/account.html:125 templates/account.html:162
+#: templates/account.html:199 templates/account.html:236
+msgid "Save"
+msgstr ""
+
+#: templates/account.html:130 templates/layouts/footer.html:141
+msgid "Address"
+msgstr ""
+
+#: templates/account.html:135
+msgid "Your Country"
+msgstr ""
+
+#: templates/account.html:142
+msgid "Your City"
+msgstr ""
+
+#: templates/account.html:149
+msgid "Zip Code"
+msgstr ""
+
+#: templates/account.html:156
+msgid "Region"
+msgstr ""
+
+#: templates/account.html:167
+msgid "Other information"
+msgstr ""
+
+#: templates/account.html:172
+msgid "Age"
+msgstr ""
+
+#: templates/account.html:179
+msgid "Work Experience"
+msgstr ""
+
+#: templates/account.html:186 templates/job-details.html:147
+msgid "Language"
+msgstr ""
+
+#: templates/account.html:193
+msgid "Skill"
+msgstr ""
+
+#: templates/account.html:204
+msgid "Social links"
+msgstr ""
+
+#: templates/blog-details.html:10 templates/blog-details.html:15
+msgid "Blog Details"
+msgstr ""
+
+#: templates/blog-details.html:44
+msgid "Popular Post"
+msgstr ""
+
+#: templates/blog.html:9 templates/blog.html:14
+#: templates/layouts/navbar.html:78
+msgid "Blog"
+msgstr ""
+
+#: templates/candidate-details.html:9 templates/candidate-details.html:14
+#: templates/layouts/navbar.html:30
+msgid "Candidates Details"
+msgstr ""
+
+#: templates/candidate-details.html:34 templates/candidate-details.html:119
+msgid "Manager"
+msgstr ""
+
+#: templates/candidate-details.html:60
+msgid "About Me"
+msgstr ""
+
+#: templates/candidate-details.html:65 templates/find-employee.html:147
+#: templates/index.html:72
+msgid "Education"
+msgstr ""
+
+#: templates/candidate-details.html:68
+msgid "School"
+msgstr ""
+
+#: templates/candidate-details.html:69
+msgid "Amherst School, Uzbekistan"
+msgstr ""
+
+#: templates/candidate-details.html:74
+msgid "College"
+msgstr ""
+
+#: templates/candidate-details.html:75
+msgid "Swarthmore College, Uzbekistan"
+msgstr ""
+
+#: templates/candidate-details.html:80
+msgid "University"
+msgstr ""
+
+#: templates/candidate-details.html:81
+msgid "Princeton University, Uzbekistan"
+msgstr ""
+
+#: templates/candidate-details.html:87 templates/post-job.html:108
+msgid "Experience"
+msgstr ""
+
+#: templates/candidate-details.html:90
+msgid "Proficient in HTML, CSS, Server-Scripting, C/C++, and Oracle"
+msgstr ""
+
+#: templates/candidate-details.html:91
+msgid "Experience with SEO"
+msgstr ""
+
+#: templates/candidate-details.html:92
+msgid "Experience Teaching Web Development"
+msgstr ""
+
+#: templates/candidate-details.html:93
+msgid "Knowledgeable in Online Advertising"
+msgstr ""
+
+#: templates/candidate-details.html:94
+msgid "Expert in LAMP Web Service Stacks"
+msgstr ""
+
+#: templates/candidate-details.html:114 templates/index.html:169
+#: templates/index.html:366 templates/index.html:567
+#: templates/job-details.html:121
+msgid "Euro Print"
+msgstr ""
+
+#: templates/candidate-details.html:119
+msgid "Position"
+msgstr ""
+
+#: templates/candidate-details.html:123 templates/job-details.html:151
+msgid "Salary"
+msgstr ""
+
+#: templates/candidate-details.html:127 templates/job-details.html:124
+#: templates/job-details.html:185 templates/post-job.html:75
+msgid "Location"
+msgstr ""
+
+#: templates/candidate-details.html:131
+msgid "Period of Employment"
+msgstr ""
+
+#: templates/candidate-details.html:131
+msgid "month"
+msgstr ""
+
+#: templates/candidate-details.html:160
+msgid "Hire Me"
+msgstr ""
+
+#: templates/candidate-details.html:161
+msgid "Download CV"
+msgstr ""
+
+#: templates/candidate.html:10 templates/candidate.html:15
+#: templates/layouts/navbar.html:23 templates/layouts/navbar.html:26
+msgid "Candidates"
+msgstr ""
+
+#: templates/contact.html:9 templates/contact.html:14
+#: templates/layouts/navbar.html:81
+msgid "Contact Us"
+msgstr ""
+
+#: templates/contact.html:92
+msgid "Lets' Talk With Us"
+msgstr ""
+
+#: templates/contact.html:132
+msgid "Send Message"
+msgstr ""
+
+#: templates/find-employee.html:11 templates/find-employee.html:16
+msgid "Find an Employee"
+msgstr ""
+
+#: templates/find-employee.html:50 templates/post-job.html:42
+msgid "Category"
+msgstr ""
+
+#: templates/find-employee.html:51
+msgid "Web Development"
+msgstr ""
+
+#: templates/find-employee.html:52
+msgid "Graphics Design"
+msgstr ""
+
+#: templates/find-employee.html:53 templates/find-employee.html:54
+msgid "Data Scientist"
+msgstr ""
+
+#: templates/find-employee.html:55
+msgid "Office Assistant"
+msgstr ""
+
+#: templates/find-employee.html:61 templates/index.html:34
+msgid "Find An Employee"
+msgstr ""
+
+#: templates/find-employee.html:77
+msgid "Popular Jobs Category"
+msgstr ""
+
+#: templates/find-employee.html:87
+msgid "Construction"
+msgstr ""
+
+#: templates/find-employee.html:88 templates/find-employee.html:98
+#: templates/find-employee.html:108 templates/find-employee.html:118
+#: templates/find-employee.html:128 templates/find-employee.html:138
+#: templates/find-employee.html:148 templates/find-employee.html:158
+msgid "new Job"
+msgstr ""
+
+#: templates/find-employee.html:97
+msgid "Finance"
+msgstr ""
+
+#: templates/find-employee.html:107
+msgid "Healthcare"
+msgstr ""
+
+#: templates/find-employee.html:117
+msgid "Graphic Design"
+msgstr ""
+
+#: templates/find-employee.html:127
+msgid "Banking Jobs"
+msgstr ""
+
+#: templates/find-employee.html:137
+msgid "Automotive"
+msgstr ""
+
+#: templates/find-employee.html:157
+msgid "Data Analysis"
+msgstr ""
+
+#: templates/find-employee.html:171 templates/index.html:146
+#: templates/job-details.html:259 templates/job-list.html:31
+msgid "Jobs You May Be Interested In"
+msgstr ""
+
+#: templates/find-employee.html:191 templates/index.html:166
+msgid "Post-Room Operate"
+msgstr ""
+
+#: templates/index.html:11
+msgid "Find Jobs, Employment & Career Opportunities"
+msgstr ""
+
+#: templates/index.html:12
+msgid "Find the employee you are looking for with us!"
+msgstr ""
+
+#: templates/index.html:18
+msgid "First Name"
+msgstr ""
+
+#: templates/index.html:26
+msgid "Last Name"
+msgstr ""
+
+#: templates/index.html:51
+msgid "Choose Your Category"
+msgstr ""
+
+#: templates/index.html:62 templates/index.html:176 templates/index.html:422
+msgid "Accountancy"
+msgstr ""
+
+#: templates/index.html:63 templates/index.html:73 templates/index.html:83
+#: templates/index.html:93 templates/index.html:103 templates/index.html:113
+#: templates/index.html:123 templates/index.html:133
+msgid "open position"
+msgstr ""
+
+#: templates/index.html:82
+msgid "Automotive Jobs"
+msgstr ""
+
+#: templates/index.html:92
+msgid "Business"
+msgstr ""
+
+#: templates/index.html:102
+msgid "Health Care"
+msgstr ""
+
+#: templates/index.html:112
+msgid "IT & Agency"
+msgstr ""
+
+#: templates/index.html:122
+msgid "Engineering"
+msgstr ""
+
+#: templates/index.html:132
+msgid "Legal"
+msgstr ""
+
+#: templates/index.html:172 templates/index.html:369
+#: templates/job-details.html:47 templates/job-details.html:125
+msgid "A.T. Khukandi 130 B, Kokand"
+msgstr ""
+
+#: templates/index.html:180 templates/job-details.html:55
+msgid "Offline"
+msgstr ""
+
+#: templates/index.html:188 templates/job-details.html:129
+#: templates/post-job.html:85
+msgid "Full Time"
+msgstr ""
+
+#: templates/index.html:194 templates/index.html:243 templates/index.html:292
+#: templates/index.html:341 templates/index.html:390 templates/index.html:439
+msgid "Hr Ago"
+msgstr ""
+
+#: templates/index.html:216 templates/index.html:226
+msgid "Data Entry"
+msgstr ""
+
+#: templates/index.html:219
+msgid "Via"
+msgstr ""
+
+#: templates/index.html:219
+msgid "Techno Inc"
+msgstr ""
+
+#: templates/index.html:222
+msgid "Street 40/A, London"
+msgstr ""
+
+#: templates/index.html:230 templates/index.html:279 templates/index.html:328
+#: templates/index.html:377 templates/index.html:426
+msgid "Freelance"
+msgstr ""
+
+#: templates/index.html:265
+msgid "Graphic Designer"
+msgstr ""
+
+#: templates/index.html:268
+msgid "Devon Design"
+msgstr ""
+
+#: templates/index.html:271
+msgid "West Sight, USA"
+msgstr ""
+
+#: templates/index.html:275
+msgid "Graphics"
+msgstr ""
+
+#: templates/index.html:317
+msgid "MegaNews"
+msgstr ""
+
+#: templates/index.html:320
+msgid "San Francisco, California"
+msgstr ""
+
+#: templates/index.html:324
+msgid "Development"
+msgstr ""
+
+#: templates/index.html:363
+msgid "Digital Marketor"
+msgstr ""
+
+#: templates/index.html:373
+msgid "Marketing"
+msgstr ""
+
+#: templates/index.html:412
+msgid "UI/UX Designer"
+msgstr ""
+
+#: templates/index.html:415
+msgid "Design Hunter"
+msgstr ""
+
+#: templates/index.html:418
+msgid "Zoo Rd, Uzbekistan"
+msgstr ""
+
+#: templates/index.html:494
+msgid "Top Companies"
+msgstr ""
+
+#: templates/index.html:495
+msgid ""
+"The top companies on our site have the largest number of employees and the "
+"highest salaries"
+msgstr ""
+
+#: templates/index.html:507
+msgid "Karzinka.uz"
+msgstr ""
+
+#: templates/index.html:510
+msgid "Alisher Navoi, Tashkent"
+msgstr ""
+
+#: templates/index.html:513 templates/index.html:533 templates/index.html:553
+#: templates/index.html:573
+msgid "Open Position"
+msgstr ""
+
+#: templates/index.html:527
+msgid "Trout Design"
+msgstr ""
+
+#: templates/index.html:530
+msgid "Park Avenue, Samarkand"
+msgstr ""
+
+#: templates/index.html:547
+msgid "Resland LTD"
+msgstr ""
+
+#: templates/index.html:550
+msgid "Betas Quence, Qarshi"
+msgstr ""
+
+#: templates/index.html:570
+msgid "Wellesley Rd, Kokand"
+msgstr ""
+
+#: templates/index.html:590
+msgid "Why You Choose Jovie?"
+msgstr ""
+
+#: templates/index.html:601
+msgid "Best Talented People"
+msgstr ""
+
+#: templates/index.html:611
+msgid "Easy To Find Canditate"
+msgstr ""
+
+#: templates/index.html:621
+msgid "Easy To Communicate"
+msgstr ""
+
+#: templates/index.html:631
+msgid "Global Recruitment Option"
+msgstr ""
+
+#: templates/index.html:688
+msgid "Looking For a Job"
+msgstr ""
+
+#: templates/index.html:689 templates/index.html:706
+msgid "Your next role could be with one of these top leading organizations"
+msgstr ""
+
+#: templates/index.html:692 templates/index.html:709
+#: templates/job-details.html:166
+msgid "Apply Now"
+msgstr ""
+
+#: templates/index.html:705
+msgid "Are You Recruiting?"
+msgstr ""
+
+#: templates/index.html:725
+msgid "Buy Our Plans & Packages"
+msgstr ""
+
+#: templates/index.html:735
+msgid "Free Forever"
+msgstr ""
+
+#: templates/index.html:737 templates/index.html:768 templates/index.html:803
+msgid "Month"
+msgstr ""
+
+#: templates/index.html:744
+msgid "Appear in results"
+msgstr ""
+
+#: templates/index.html:748
+msgid "Accept mobile app"
+msgstr ""
+
+#: templates/index.html:752
+msgid "Manage canditates directly"
+msgstr ""
+
+#: templates/index.html:758 templates/index.html:793 templates/index.html:824
+msgid "Find A Job"
+msgstr ""
+
+#: templates/index.html:766
+msgid "Sponsor"
+msgstr ""
+
+#: templates/index.html:775 templates/index.html:814
+msgid "Premium placement"
+msgstr ""
+
+#: templates/index.html:779
+msgid "PPC on your job"
+msgstr ""
+
+#: templates/index.html:783
+msgid "Reach more candidates"
+msgstr ""
+
+#: templates/index.html:787 templates/index.html:818
+msgid "Desktop, mobile job alerts"
+msgstr ""
+
+#: templates/index.html:801
+msgid "Premium Plan"
+msgstr ""
+
+#: templates/index.html:810
+msgid "Job ad live for six-weeks"
+msgstr ""
+
+#: templates/index.html:837
+msgid "Featured Candidates"
+msgstr ""
+
+#: templates/index.html:854 templates/index.html:956
+msgid "Mibraj Alex"
+msgstr ""
+
+#: templates/index.html:858 templates/index.html:960
+msgid "Construction & Property"
+msgstr ""
+
+#: templates/index.html:862 templates/index.html:964
+msgid "Botchergate, Carlisle"
+msgstr ""
+
+#: templates/index.html:869 templates/index.html:903 templates/index.html:937
+#: templates/index.html:971 templates/index.html:1005 templates/index.html:1039
+#: templates/index.html:1073 templates/index.html:1107
+msgid "D ago"
+msgstr ""
+
+#: templates/index.html:888 templates/index.html:1024
+msgid "Felica Kareon"
+msgstr ""
+
+#: templates/index.html:892 templates/index.html:1028
+msgid "SEO Expart"
+msgstr ""
+
+#: templates/index.html:896 templates/index.html:1032
+msgid "Georgetown, USA"
+msgstr ""
+
+#: templates/index.html:922
+msgid "Malisha Patel"
+msgstr ""
+
+#: templates/index.html:926 templates/index.html:1062
+msgid "Project Management"
+msgstr ""
+
+#: templates/index.html:930 templates/index.html:1066
+msgid "Madison, USA"
+msgstr ""
+
+#: templates/index.html:990 templates/index.html:1092
+msgid "Quence Joes"
+msgstr ""
+
+#: templates/index.html:998 templates/index.html:1100
+msgid "Augusta, Maine"
+msgstr ""
+
+#: templates/index.html:1058
+msgid "Malisa Petel"
+msgstr ""
+
+#: templates/index.html:1168
+msgid "Web Designer"
+msgstr ""
+
+#: templates/job-details.html:9 templates/job-details.html:14
+#: templates/job-details.html:114
+msgid "Job Details"
+msgstr ""
+
+#: templates/job-details.html:43
+msgid "Web Designer, Graphic Designer, UI/UX Designer"
+msgstr ""
+
+#: templates/job-details.html:51
+msgid "Sales Manager"
+msgstr ""
+
+#: templates/job-details.html:61
+msgid "Apply Before: September 01,2023"
+msgstr ""
+
+#: templates/job-details.html:69
+msgid "Description"
+msgstr ""
+
+#: templates/job-details.html:82
+msgid "Requirements"
+msgstr ""
+
+#: templates/job-details.html:91
+msgid "Work experience"
+msgstr ""
+
+#: templates/job-details.html:95
+msgid "Skills (soft skills and/or technical skills)"
+msgstr ""
+
+#: templates/job-details.html:99
+msgid "WPersonal qualities and attributes."
+msgstr ""
+
+#: templates/job-details.html:103
+msgid "Support software roll-outs to production."
+msgstr ""
+
+#: templates/job-details.html:107
+msgid "Guide and mentor junior engineers. Serve as team lead if appropriate."
+msgstr ""
+
+#: templates/job-details.html:128 templates/post-job.html:82
+#: templates/post-job.html:84
+msgid "Job Type"
+msgstr ""
+
+#: templates/job-details.html:132 templates/layouts/footer.html:131
+msgid "Email"
+msgstr ""
+
+#: templates/job-details.html:143
+msgid "Experince"
+msgstr ""
+
+#: templates/job-details.html:144
+msgid "Years"
+msgstr ""
+
+#: templates/job-details.html:148
+msgid "Uzbek - Russian"
+msgstr ""
+
+#: templates/job-details.html:155
+msgid "Website"
+msgstr ""
+
+#: templates/job-details.html:176
+msgid "Posted By"
+msgstr ""
+
+#: templates/job-details.html:180
+msgid "CEO of Euro Print"
+msgstr ""
+
+#: templates/job-details.html:192
+msgid "Keywords"
+msgstr ""
+
+#: templates/job-details.html:225
+msgid "Share In"
+msgstr ""
+
+#: templates/job-list.html:10 templates/job-list.html:15
+#: templates/layouts/footer.html:57 templates/layouts/navbar.html:49
+msgid "Job List"
+msgstr ""
+
+#: templates/layouts/footer.html:28
+msgid "For Candidate"
+msgstr ""
+
+#: templates/layouts/footer.html:33
+msgid "Browse Jobs"
+msgstr ""
+
+#: templates/layouts/footer.html:45
+msgid "Browse Categories"
+msgstr ""
+
+#: templates/layouts/footer.html:51 templates/layouts/navbar.html:90
+msgid "Resume"
+msgstr ""
+
+#: templates/layouts/footer.html:63 templates/layouts/navbar.html:100
+#: templates/sign-up.html:9 templates/sign-up.html:14 templates/sign-up.html:48
+msgid "Sign Up"
+msgstr ""
+
+#: templates/layouts/footer.html:72
+msgid "Quick Links"
+msgstr ""
+
+#: templates/layouts/footer.html:83 templates/layouts/navbar.html:35
+msgid "About"
+msgstr ""
+
+#: templates/layouts/footer.html:89 templates/layouts/navbar.html:64
+msgid "FAQ"
+msgstr ""
+
+#: templates/layouts/footer.html:95 templates/layouts/navbar.html:60
+msgid "Pricing"
+msgstr ""
+
+#: templates/layouts/footer.html:101
+msgid "Privacy"
+msgstr ""
+
+#: templates/layouts/footer.html:107
+msgid "Contact"
+msgstr ""
+
+#: templates/layouts/footer.html:116
+msgid "Information"
+msgstr ""
+
+#: templates/layouts/footer.html:121
+msgid "Phone"
+msgstr ""
+
+#: templates/layouts/footer.html:152
+msgid "Copyright @2023 check_user. All Rights Reserved By"
+msgstr ""
+
+#: templates/layouts/navbar.html:39
+msgid "Jobs"
+msgstr ""
+
+#: templates/layouts/navbar.html:43
+msgid "Find An employee"
+msgstr ""
+
+#: templates/layouts/navbar.html:46 templates/post-job.html:122
+msgid "Post A Job"
+msgstr ""
+
+#: templates/layouts/navbar.html:54
+msgid "Pages"
+msgstr ""
+
+#: templates/layouts/navbar.html:67
+msgid "Catagories"
+msgstr ""
+
+#: templates/layouts/navbar.html:70
+msgid "Privacy & Policy"
+msgstr ""
+
+#: templates/layouts/navbar.html:73
+msgid "Terms & Conditions"
+msgstr ""
+
+#: templates/layouts/navbar.html:84
+msgid "Profile"
+msgstr ""
+
+#: templates/layouts/navbar.html:93 templates/reset-password.html:9
+#: templates/reset-password.html:14 templates/reset-password.html:38
+msgid "Reset Password"
+msgstr ""
+
+#: templates/layouts/navbar.html:101 templates/sign-in.html:9
+#: templates/sign-in.html:14 templates/sign-in.html:43
+#: templates/sign-up.html:81
+msgid "Sign In"
+msgstr ""
+
+#: templates/post-job.html:8 templates/post-job.html:13
+msgid "Post a Job"
+msgstr ""
+
+#: templates/post-job.html:29
+msgid "Fill Up Your Job information"
+msgstr ""
+
+#: templates/post-job.html:40
+msgid "Job Category"
+msgstr ""
+
+#: templates/post-job.html:54
+msgid "Company Name"
+msgstr ""
+
+#: templates/post-job.html:61
+msgid "Company Email"
+msgstr ""
+
+#: templates/post-job.html:68
+msgid "Company Website (Optional)"
+msgstr ""
+
+#: templates/post-job.html:86
+msgid "Part Time"
+msgstr ""
+
+#: templates/post-job.html:87
+msgid "Freelancer"
+msgstr ""
+
+#: templates/post-job.html:94
+msgid "Job Tags"
+msgstr ""
+
+#: templates/post-job.html:101
+msgid "Salary (Optional)"
+msgstr ""
+
+#: templates/post-job.html:115
+msgid "Job Description"
+msgstr ""
+
+#: templates/reset-password.html:33 templates/sign-in.html:33
+#: templates/sign-up.html:38
+msgid "Enter Email"
+msgstr ""
+
+#: templates/sign-in.html:38 templates/sign-up.html:43
+msgid "Enter Password"
+msgstr ""
+
+#: templates/sign-in.html:47
+msgid "Or sign in with"
+msgstr ""
+
+#: templates/sign-in.html:73
+msgid "Not have an account?"
+msgstr ""
+
+#: templates/sign-in.html:75
+msgid "Create an account"
+msgstr ""
+
+#: templates/sign-up.html:33
+msgid "Enter Username"
+msgstr ""
+
+#: templates/sign-up.html:52
+msgid "Or sign up with"
+msgstr ""
+
+#: templates/sign-up.html:79
+msgid "Have an Account?"
+msgstr ""

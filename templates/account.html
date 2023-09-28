@@ -1,17 +1,17 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
         <!-- Page Title Start -->
         <section class="page-title title-bg10">
             <div class="d-table">
                 <div class="d-table-cell">
-                    <h2>Account</h2>
+                    <h2>{% trans 'Account' %}</h2>
                     <ul>
                         <li>
-                            <a href="{% url 'main:home' %}">Home</a>
+                            <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                         </li>
-                        <li>Account</li>
+                        <li>{% trans 'Account' %}</li>
                     </ul>
                 </div>
             </div>
@@ -31,57 +31,57 @@
                         <div class="account-information">
                             <div class="profile-thumb">
                                 <img src="{% static 'img/account.jpg' %}" alt="account holder image">
-                                <h3>John Smith</h3>
-                                <p>Web Developer</p>
+                                <h3>{% trans 'John Smith' %}</h3>
+                                <p>{% trans 'Web Developer' %}</p>
                             </div>
 
                             <ul>
                                 <li>
                                     <a href="#" class="active">
                                         <i class='bx bx-user'></i>
-                                        My Profile
+                                        {% trans 'My Profile' %}
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="resume.html">
+                                    <a href="{% url 'users:resume' %}">
                                         <i class='bx bxs-file-doc'></i>
-                                        My Resume
+                                        {% trans 'My Resume' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-briefcase'></i>
-                                        Applied Job
+                                        {% trans 'Applied Job' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-envelope'></i>
-                                        Messages
+                                        {% trans 'Messages' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-heart'></i>
-                                        Saved Jobs
+                                        {% trans 'Saved Jobs' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-lock-alt' ></i>
-                                        Change Password
+                                        {% trans 'Change Password' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-coffee-togo'></i>
-                                        Delete Account
+                                        {% trans 'Delete Account' %}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
                                         <i class='bx bx-log-out'></i>
-                                        Log Out
+                                        {% trans 'Log Out' %}
                                     </a>
                                 </li>
                             </ul>
@@ -90,118 +90,118 @@
 
                     <div class="col-md-8">
                         <div class="account-details">
-                            <h3>Basic Information</h3>
+                            <h3>{% trans 'Basic Information' %}</h3>
                             <form class="basic-info">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Your Name</label>
+                                            <label>{% trans 'Your Name' %}</label>
                                             <input type="text" class="form-control" placeholder="Your Name">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Your Email</label>
+                                            <label>{% trans 'Your Email' %}</label>
                                             <input type="email" class="form-control" placeholder="Your Email">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Your Phone</label>
+                                            <label>{% trans 'Your Phone' %}</label>
                                             <input type="number" class="form-control" placeholder="Your Phone">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Job Title</label>
+                                            <label>{% trans 'Job Title' %}</label>
                                             <input type="text" class="form-control" placeholder="Job Title">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="account-btn">Edit</button>
-                                        <button type="submit" class="account-btn">Save</button>
+                                        <button type="submit" class="account-btn">{% trans 'Edit' %}</button>
+                                        <button type="submit" class="account-btn">{% trans 'Save' %}</button>
                                     </div>
                                 </div>
                             </form>
 
-                            <h3>Address</h3>
+                            <h3>{% trans 'Address' %}</h3>
                             <form class="-candidate-address">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Your Country</label>
+                                            <label>{% trans 'Your Country' %}</label>
                                             <input type="text" class="form-control" placeholder="Your Country">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Your City</label>
+                                            <label>{% trans 'Your City' %}</label>
                                             <input type="text" class="form-control" placeholder="Your City">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Zip Code</label>
+                                            <label>{% trans 'Zip Code' %}</label>
                                             <input type="number" class="form-control" placeholder="City Zip">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Region</label>
+                                            <label>{% trans 'Region' %}</label>
                                             <input type="text" class="form-control" placeholder="Your Region">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="account-btn">Edit</button>
-                                        <button type="submit" class="account-btn">Save</button>
+                                        <button type="submit" class="account-btn">{% trans 'Edit' %}</button>
+                                        <button type="submit" class="account-btn">{% trans 'Save' %}</button>
                                     </div>
                                 </div>
                             </form>
 
-                            <h3>Other information</h3>
+                            <h3>{% trans 'Other information' %}</h3>
                             <form class="cadidate-others">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Age</label>
+                                            <label>{% trans 'Age' %}</label>
                                             <input type="number" class="form-control" placeholder="Your Age">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Work Experience</label>
+                                            <label>{% trans 'Work Experience' %}</label>
                                             <input type="number" class="form-control" placeholder="Work Experience">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Language</label>
+                                            <label>{% trans 'Language' %}</label>
                                             <input type="text" class="form-control" placeholder="Language">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Skill</label>
+                                            <label>{% trans 'Skill' %}</label>
                                             <input type="text" class="form-control" placeholder="Skills">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="account-btn">Edit</button>
-                                        <button type="submit" class="account-btn">Save</button>
+                                        <button type="submit" class="account-btn">{% trans 'Edit' %}</button>
+                                        <button type="submit" class="account-btn">{% trans 'Save' %}</button>
                                     </div>
                                 </div>
                             </form>
 
-                            <h3>Social links</h3>
+                            <h3>{% trans 'Social links' %}</h3>
                             <form class="candidates-sociak">
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -232,8 +232,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="account-btn">Edit</button>
-                                        <button type="submit" class="account-btn">Save</button>
+                                        <button type="submit" class="account-btn">{% trans 'Edit' %}</button>
+                                        <button type="submit" class="account-btn">{% trans 'Save' %}</button>
                                     </div>
                                 </div>
                             </form>
@@ -250,8 +250,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="section-title">
-                            <h2>Get New Job Notifications</h2>
-                            <p>Subscribe & get all related jobs notification</p>
+                            <h2>{% trans 'Get New Job Notifications' %}</h2>
+                            <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                         </div>
                     </div>
 
@@ -260,7 +260,7 @@
                             <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
     
                             <button class="default-btn sub-btn" type="submit">
-                                Subscribe
+                                {% trans 'Subscribe' %}
                             </button>
     
                             <div id="validator-newsletter" class="form-result"></div>

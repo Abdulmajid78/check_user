@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!-- Footer Section Start -->
 <footer class="footer-area pt-100 pb-70">
     <div class="container">
@@ -25,42 +25,42 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget pl-60">
-                    <h3>For Candidate</h3>
+                    <h3>{% trans 'For Candidate' %}</h3>
                     <ul>
                         <li>
-                            <a href="job-grid.html">
+                            <a href="{% url 'users:job-list' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Browse Jobs
+                                {% trans 'Browse Jobs' %}
                             </a>
                         </li>
                         <li>
-                            <a href="account.html">
+                            <a href="{% url 'users:account' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Account
+                                {% trans 'Account' %}
                             </a>
                         </li>
                         <li>
                             <a href="catagories.html">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Browse Categories
+                                {% trans 'Browse Categories' %}
                             </a>
                         </li>
                         <li>
-                            <a href="resume.html">
+                            <a href="{% url 'users:resume' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Resume
+                                {% trans 'Resume' %}
                             </a>
                         </li>
                         <li>
-                            <a href="job-list.html">
+                            <a href="{% url 'users:job-list' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Job List
+                                {% trans 'Job List' %}
                             </a>
                         </li>
                         <li>
-                            <a href="sign-up.html">
+                            <a href="{% url 'users:sign-up' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Sign Up
+                                {% trans 'Sign Up' %}
                             </a>
                         </li>
                     </ul>
@@ -69,42 +69,42 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget pl-60">
-                    <h3>Quick Links</h3>
+                    <h3>{% trans 'Quick Links' %}</h3>
                     <ul>
                         <li>
-                            <a href="index.html">
+                            <a href="{% url 'main:home' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Home
+                                {% trans 'Home' %}
                             </a>
                         </li>
                         <li>
-                            <a href="about.html">
+                            <a href="{% url 'main:about' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                About
+                                {% trans 'About' %}
                             </a>
                         </li>
                         <li>
                             <a href="faq.html">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                FAQ
+                                {% trans 'FAQ' %}
                             </a>
                         </li>
                         <li>
                             <a href="pricing.html">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Pricing
+                                {% trans 'Pricing' %}
                             </a>
                         </li>
                         <li>
                             <a href="privacy.html">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Privacy
+                                {% trans 'Privacy' %}
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="{% url 'main:contacts' %}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
-                                Contact
+                                {% trans 'Contact' %}
                             </a>
                         </li>
                     </ul>
@@ -113,12 +113,12 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget footer-info">
-                    <h3>Information</h3>
+                    <h3>{% trans 'Information' %}</h3>
                     <ul>
                         <li>
 									<span>
 										<i class='bx bxs-phone'></i>
-										Phone:
+										{% trans 'Phone' %}:
 									</span>
                             <a href="tel:882569756">
                                 +101 984 754
@@ -128,7 +128,7 @@
                         <li>
 									<span>
 										<i class='bx bxs-envelope'></i>
-										Email:
+										{% trans 'Email' %}:
 									</span>
                             <a href="mailto:info@jovie.com">
                                 info@jovie.com
@@ -138,7 +138,7 @@
                         <li>
 									<span>
 										<i class='bx bx-location-plus'></i>
-										Address:
+										{% trans 'Address' %}:
 									</span>
                             123, Denver, USA
                         </li>
@@ -149,8 +149,8 @@
     </div>
 </footer>
 <div class="copyright-text text-center">
-    <p>Copyright @2023 check_user. All Rights Reserved By <a href="#"
-                                                        target="_blank">alfapro.uz</a></p>
+    <p>{% trans 'Copyright @2023 check_user. All Rights Reserved By' %} <a href="#"
+                                                                           target="_blank">alfapro.uz</a></p>
 </div>
 <!-- Footer Section End -->
 

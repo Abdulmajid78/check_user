@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
     <!-- Banner Section Start -->
@@ -8,14 +8,14 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="banner-content text-center">
-                        <p>Find Jobs, Employment & Career Opportunities</p>
-                        <h1>Find the employee you are looking for with us!</h1>
+                        <p>{% trans 'Find Jobs, Employment & Career Opportunities' %}</p>
+                        <h1>{% trans 'Find the employee you are looking for with us!' %}</h1>
 
                         <form class="banner-form">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">First Name:</label>
+                                        <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1"
                                                placeholder="Sardor">
                                     </div>
@@ -23,7 +23,7 @@
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail2">Last Name:</label>
+                                        <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
                                         <input type="text" class="form-control" id="exampleInputEmail2"
                                                placeholder="Alixonov">
                                     </div>
@@ -31,7 +31,7 @@
 
                                 <div class="col-md-4">
                                     <button type="submit" class="find-btn">
-                                        Find An Employee
+                                        {% trans 'Find An Employee' %}
                                         <i class='bx bx-search'></i>
                                     </button>
                                 </div>
@@ -48,7 +48,7 @@
     <section class="categories-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Choose Your Category</h2>
+                <h2>{% trans 'Choose Your Category' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
@@ -59,8 +59,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-accounting'></i>
-                            <h3>Accountancy</h3>
-                            <p>301 open position</p>
+                            <h3>{% trans 'Accountancy' %}</h3>
+                            <p>301 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -69,8 +69,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-graduation-cap'></i>
-                            <h3>Education</h3>
-                            <p>210 open position</p>
+                            <h3>{% trans 'Education' %}</h3>
+                            <p>210 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -79,8 +79,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-wrench-and-screwdriver-in-cross'></i>
-                            <h3>Automotive Jobs</h3>
-                            <p>281 open position</p>
+                            <h3>{% trans 'Automotive Jobs' %}</h3>
+                            <p>281 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -89,8 +89,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-consultation'></i>
-                            <h3>Business</h3>
-                            <p>122 open position</p>
+                            <h3>{% trans 'Business' %}</h3>
+                            <p>122 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -99,8 +99,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-heart'></i>
-                            <h3>Health Care</h3>
-                            <p>335 open position</p>
+                            <h3>{% trans 'Health Care' %}</h3>
+                            <p>335 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -109,8 +109,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-computer'></i>
-                            <h3>IT & Agency</h3>
-                            <p>401 open position</p>
+                            <h3>{% trans 'IT & Agency' %}</h3>
+                            <p>401 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -119,8 +119,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-worker'></i>
-                            <h3>Engineering</h3>
-                            <p>100 open position</p>
+                            <h3>{% trans 'Engineering' %}</h3>
+                            <p>100 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -129,8 +129,8 @@
                     <a href="{% url 'users:job-list' %}">
                         <div class="category-card">
                             <i class='flaticon-auction'></i>
-                            <h3>Legal</h3>
-                            <p>201 open position</p>
+                            <h3>{% trans 'Legal' %}</h3>
+                            <p>201 {% trans 'open position' %}</p>
                         </div>
                     </a>
                 </div>
@@ -143,9 +143,8 @@
     <section class="job-section pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Jobs You May Be Interested In</h2>
+                <h2>{% trans 'Jobs You May Be Interested In' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
             </div>
 
@@ -164,21 +163,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">Post-Room Operate</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Post-Room Operate' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Euro Print</a></li>
+                                        <li>Via <a href="#">{% trans 'Euro Print' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            A.T. Khukandi 130 B, Kokand
+                                            {% trans 'A.T. Khukandi 130 B, Kokand' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Accountancy
+                                            {% trans 'Accountancy' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Offline
+                                            {% trans 'Offline' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -186,13 +185,13 @@
 
                             <div class="col-lg-3">
                                 <div class="job-save">
-                                    <span>Full Time</span>
+                                    <span>{% trans 'Full Time' %}</span>
                                     <a href="#">
                                         <i class='bx bx-heart'></i>
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        1 Hr Ago
+                                        1 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -214,21 +213,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">Data Entry</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Data Entry' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Techno Inc.</a></li>
+                                        <li>Via <a href="#">{% trans 'Techno Inc' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            Street 40/A, London
+                                            {% trans 'Street 40/A, London' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Data Entry
+                                            {% trans 'Data Entry' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Freelance
+                                            {% trans 'Freelance' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -241,7 +240,7 @@
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        3 Hr Ago
+                                        3 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -263,21 +262,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">Graphic Designer</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Graphic Designer' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Devon Design</a></li>
+                                        <li>Via <a href="#">{% trans 'Devon Design' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            West Sight, USA
+                                            {% trans 'West Sight, USA' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Graphics
+                                            {% trans 'Graphics' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Freelance
+                                            {% trans 'Freelance' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -290,7 +289,7 @@
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        4 Hr Ago
+                                        4 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -312,21 +311,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">Web Developer</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Web Developer' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">MegaNews</a></li>
+                                        <li>Via <a href="#">{% trans 'MegaNews' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            San Francisco, California
+                                            {% trans 'San Francisco, California' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Development
+                                            {% trans 'Development' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Freelance
+                                            {% trans 'Freelance' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -339,7 +338,7 @@
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        5 Hr Ago
+                                        5 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -361,21 +360,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">Digital Marketor</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Digital Marketor' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Euro Print</a></li>
+                                        <li>Via <a href="#">{% trans 'Euro Print' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            A.T. Khukandi 130 B, Kokand
+                                            {% trans 'A.T. Khukandi 130 B, Kokand' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Marketing
+                                            {% trans 'Marketing' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Freelance
+                                            {% trans 'Freelance' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -388,7 +387,7 @@
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        6 Hr Ago
+                                        6 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -410,21 +409,21 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="{% url 'users:job-detail' %}">UI/UX Designer</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'UI/UX Designer' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Design Hunter</a></li>
+                                        <li>Via <a href="#">{% trans 'Design Hunter' %}</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            Zoo Rd, London
+                                            {% trans 'Zoo Rd, Uzbekistan' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
-                                            Accountancy
+                                            {% trans 'Accountancy' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-briefcase'></i>
-                                            Freelance
+                                            {% trans 'Freelance' %}
                                         </li>
                                     </ul>
                                 </div>
@@ -437,7 +436,7 @@
                                     </a>
                                     <p>
                                         <i class='bx bx-stopwatch'></i>
-                                        8 Hr Ago
+                                        8 {% trans 'Hr Ago' %}
                                     </p>
                                 </div>
                             </div>
@@ -453,7 +452,7 @@
     <section class="use-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Easiest Way To Use</h2>
+                <h2>{% trans 'Easiest Way To Use' %}</h2>
             </div>
 
             <div class="row">
@@ -461,8 +460,8 @@
                     <div class="use-text">
                         <span>1</span>
                         <i class='flaticon-recruitment'></i>
-                        <h3>Find An Employee Easily</h3>
-                        <p>You can get a lot of information about the worker you want</p>
+                        <h3>{% trans 'Find An Employee Easily' %}</h3>
+                        <p>{% trans 'You can get a lot of information about the worker you want' %}</p>
                     </div>
                 </div>
 
@@ -470,8 +469,8 @@
                     <div class="use-text">
                         <span>2</span>
                         <i class='flaticon-website'></i>
-                        <h3>Browse Job</h3>
-                        <p>the easiest way to find a job that you want and that is convenient for you</p>
+                        <h3>{% trans 'Browse Job' %}</h3>
+                        <p>{% trans 'the easiest way to find a job that you want and that is convenient for you' %}</p>
                     </div>
                 </div>
 
@@ -479,8 +478,8 @@
                     <div class="use-text">
                         <span>3</span>
                         <i class='flaticon-login'></i>
-                        <h3>Submit Resume</h3>
-                        <p>Fill out your resume to the world standard through our site</p>
+                        <h3>{% trans 'Submit Resume' %}</h3>
+                        <p>{% trans 'Fill out your resume to the world standard through our site' %}</p>
                     </div>
                 </div>
             </div>
@@ -492,8 +491,8 @@
     <section class="company-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Top Companies</h2>
-                <p>The top companies on our site have the largest number of employees and the highest salaries</p>
+                <h2>{% trans 'Top Companies' %}</h2>
+                <p>{% trans 'The top companies on our site have the largest number of employees and the highest salaries' %}</p>
             </div>
 
             <div class="row">
@@ -505,13 +504,13 @@
                             </a>
                         </div>
                         <div class="company-text">
-                            <h3>Karzinka.uz</h3>
+                            <h3>{% trans 'Karzinka.uz' %}</h3>
                             <p>
                                 <i class='bx bx-location-plus'></i>
-                                Alisher Navoi, Tashkent
+                                {% trans 'Alisher Navoi, Tashkent' %}
                             </p>
                             <a href="{% url 'users:job-list' %}" class="company-btn">
-                                25 Open Position
+                                25 {% trans 'Open Position' %}
                             </a>
                         </div>
                     </div>
@@ -525,13 +524,13 @@
                             </a>
                         </div>
                         <div class="company-text">
-                            <h3>Trout Design</h3>
+                            <h3>{% trans 'Trout Design' %}</h3>
                             <p>
                                 <i class='bx bx-location-plus'></i>
-                                Park Avenue, Samarkand
+                                {% trans 'Park Avenue, Samarkand' %}
                             </p>
                             <a href="{% url 'users:job-list' %}" class="company-btn">
-                                35 Open Position
+                                35 {% trans 'Open Position' %}
                             </a>
                         </div>
                     </div>
@@ -545,13 +544,13 @@
                             </a>
                         </div>
                         <div class="company-text">
-                            <h3>Resland LTD</h3>
+                            <h3>{% trans 'Resland LTD' %}</h3>
                             <p>
                                 <i class='bx bx-location-plus'></i>
-                                Betas Quence, Qarshi
+                                {% trans 'Betas Quence, Qarshi' %}
                             </p>
                             <a href="{% url 'users:job-list' %}" class="company-btn">
-                                20 Open Position
+                                20 {% trans 'Open Position' %}
                             </a>
                         </div>
                     </div>
@@ -565,13 +564,13 @@
                             </a>
                         </div>
                         <div class="company-text">
-                            <h3>Euro Print</h3>
+                            <h3>{% trans 'Euro Print' %}</h3>
                             <p>
                                 <i class='bx bx-location-plus'></i>
-                                Wellesley Rd, Kokand
+                                {% trans 'Wellesley Rd, Kokand' %}
                             </p>
                             <a href="{% url 'users:job-list' %}" class="company-btn">
-                                45 Open Position
+                                45 {% trans 'Open Position' %}
                             </a>
                         </div>
                     </div>
@@ -588,7 +587,7 @@
                 <div class="col-lg-7 p-0">
                     <div class="why-choose-text pt-100 pb-70">
                         <div class="section-title text-center">
-                            <h2>Why You Choose Jovie?</h2>
+                            <h2>{% trans 'Why You Choose Jovie?' %}</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut
                                 labore et dolorei.</p>
@@ -599,7 +598,7 @@
                                 <div class="media">
                                     <i class="flaticon-group align-self-center mr-3"></i>
                                     <div class="media-body">
-                                        <h5 class="mt-0">Best Talented People</h5>
+                                        <h5 class="mt-0">{% trans 'Best Talented People' %}</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     </div>
                                 </div>
@@ -609,7 +608,7 @@
                                 <div class="media">
                                     <i class="flaticon-research align-self-center mr-3"></i>
                                     <div class="media-body">
-                                        <h5 class="mt-0">Easy To Find Canditate</h5>
+                                        <h5 class="mt-0">{% trans 'Easy To Find Canditate' %}</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     </div>
                                 </div>
@@ -619,7 +618,7 @@
                                 <div class="media">
                                     <i class="flaticon-discussion align-self-center mr-3"></i>
                                     <div class="media-body">
-                                        <h5 class="mt-0">Easy To Communicate</h5>
+                                        <h5 class="mt-0">{% trans 'Easy To Communicate' %}</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     </div>
                                 </div>
@@ -629,7 +628,7 @@
                                 <div class="media">
                                     <i class="flaticon-recruitment align-self-center mr-3"></i>
                                     <div class="media-body">
-                                        <h5 class="mt-0">Global Recruitment Option</h5>
+                                        <h5 class="mt-0">{% trans 'Global Recruitment Option' %}</h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                     </div>
                                 </div>
@@ -647,21 +646,21 @@
                             <div class="col-md-3 col-6">
                                 <div class="counter-text">
                                     <h2><span>137</span></h2>
-                                    <p>Job Filed</p>
+                                    <p>{% trans 'Job Filed' %}</p>
                                 </div>
                             </div>
 
                             <div class="col-md-3 col-6">
                                 <div class="counter-text">
                                     <h2><span>180</span></h2>
-                                    <p>Company</p>
+                                    <p>{% trans 'Company' %}</p>
                                 </div>
                             </div>
 
                             <div class="col-md-3 col-6">
                                 <div class="counter-text">
                                     <h2><span>144</span></h2>
-                                    <p>Members</p>
+                                    <p>{% trans 'Members' %}</p>
                                 </div>
                             </div>
                         </div>
@@ -686,11 +685,11 @@
                         <div class="media">
                             <i class='flaticon-group align-self-start mr-3'></i>
                             <div class="media-body">
-                                <h5 class="mt-0">Looking For a Job</h5>
-                                <p>Your next role could be with one of these top leading organizations</p>
+                                <h5 class="mt-0">{% trans 'Looking For a Job' %}</h5>
+                                <p>{% trans 'Your next role could be with one of these top leading organizations' %}</p>
 
                                 <a href="{% url 'users:job-list' %}">
-                                    Apply Now
+                                    {% trans 'Apply Now' %}
                                     <i class='bx bx-chevrons-right'></i>
                                 </a>
                             </div>
@@ -703,11 +702,11 @@
                         <div class="media">
                             <i class='flaticon-resume align-self-start mr-3'></i>
                             <div class="media-body">
-                                <h5 class="mt-0">Are You Recruiting?</h5>
-                                <p>Your next role could be with one of these top leading organizations</p>
+                                <h5 class="mt-0">{% trans 'Are You Recruiting?' %}</h5>
+                                <p>{% trans 'Your next role could be with one of these top leading organizations' %}</p>
 
                                 <a href="{% url 'users:post-job' %}">
-                                    Apply Now
+                                    {% trans 'Apply Now' %}
                                     <i class='bx bx-chevrons-right'></i>
                                 </a>
                             </div>
@@ -723,7 +722,7 @@
     <section class="pricing-section pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Buy Our Plans & Packages</h2>
+                <h2>{% trans 'Buy Our Plans & Packages' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -733,30 +732,30 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="price-card">
                         <div class="price-top">
-                            <h3>Free Forever</h3>
+                            <h3>{% trans 'Free Forever' %}</h3>
                             <i class='bx bx-user'></i>
-                            <h2>0<sub>/Month</sub></h2>
+                            <h2>0<sub>/{% trans 'Month' %}</sub></h2>
                         </div>
 
                         <div class="price-feature">
                             <ul>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Appear in results
+                                    {% trans 'Appear in results' %}
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    <strong>Accept mobile app</strong>
+                                    <strong>{% trans 'Accept mobile app' %}</strong>
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Manage canditates directly
+                                    {% trans 'Manage canditates directly' %}
                                 </li>
                             </ul>
                         </div>
 
                         <div class="price-btn">
-                            <a href="{% url 'users:post-job' %}">Find A Job</a>
+                            <a href="{% url 'users:post-job' %}">{% trans 'Find A Job' %}</a>
                         </div>
                     </div>
                 </div>
@@ -764,34 +763,34 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="price-card mt-12">
                         <div class="price-top">
-                            <h3>Sponsor</h3>
+                            <h3>{% trans 'Sponsor' %}</h3>
                             <i class='bx bx-user'></i>
-                            <h2>10<sub>/Month</sub></h2>
+                            <h2>10<sub>/{% trans 'Month' %}</sub></h2>
                         </div>
 
                         <div class="price-feature">
                             <ul>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Premium placement
+                                    {% trans 'Premium placement' %}
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    <strong>PPC on your job</strong>
+                                    <strong>{% trans 'PPC on your job' %}</strong>
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Reach more candidates
+                                    {% trans 'Reach more candidates' %}
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Desktop, mobile job alerts
+                                    {% trans 'Desktop, mobile job alerts' %}
                                 </li>
                             </ul>
                         </div>
 
                         <div class="price-btn">
-                            <a href="{% url 'users:post-job' %}">Find A Job</a>
+                            <a href="{% url 'users:post-job' %}">{% trans 'Find A Job' %}</a>
                         </div>
                     </div>
                 </div>
@@ -799,30 +798,30 @@
                 <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
                     <div class="price-card">
                         <div class="price-top">
-                            <h3>Premium Plan</h3>
+                            <h3>{% trans 'Premium Plan' %}</h3>
                             <i class='bx bx-user'></i>
-                            <h2>30<sub>/Month</sub></h2>
+                            <h2>30<sub>/{% trans 'Month' %}</sub></h2>
                         </div>
 
                         <div class="price-feature">
                             <ul>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Job ad live for six-weeks
+                                    {% trans 'Job ad live for six-weeks' %}
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    <strong>Premium placement</strong>
+                                    <strong>{% trans 'Premium placement' %}</strong>
                                 </li>
                                 <li>
                                     <i class='bx bx-check'></i>
-                                    Desktop, mobile job alerts
+                                    {% trans 'Desktop, mobile job alerts' %}
                                 </li>
                             </ul>
                         </div>
 
                         <div class="price-btn">
-                            <a href="{% url 'users:post-job' %}">Find A Job</a>
+                            <a href="{% url 'users:post-job' %}">{% trans 'Find A Job' %}</a>
                         </div>
                     </div>
                 </div>
@@ -835,7 +834,7 @@
     <section class="candidate-section pb-100">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Featured Candidates</h2>
+                <h2>{% trans 'Featured Candidates' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
@@ -852,22 +851,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Mibraj Alex</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Mibraj Alex' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Construction & Property
+                                {% trans 'Construction & Property' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Botchergate, Carlisle
+                                {% trans 'Botchergate, Carlisle' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                9D ago
+                                9{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -886,22 +885,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Felica Kareon</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Felica Kareon' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                SEO Expart
+                                {% trans 'SEO Expart' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Georgetown, USA
+                                {% trans 'Georgetown, USA' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                8D ago
+                                8{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -920,22 +919,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Malisha Patel</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Malisha Patel' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Project Management
+                                {% trans 'Project Management' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Madison, USA
+                                {% trans 'Madison, USA' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                1D ago
+                                1{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -954,22 +953,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Mibraj Alex</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Mibraj Alex' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Construction & Property
+                                {% trans 'Construction & Property' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Botchergate, Carlisle
+                                {% trans 'Botchergate, Carlisle' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                9D ago
+                                9{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -988,22 +987,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Quence Joes</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Quence Joes' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Web Developer
+                                {% trans 'Web Developer' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Augusta, Maine
+                                {% trans 'Augusta, Maine' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                8D ago
+                                8{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -1022,22 +1021,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Felica Kareon</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Felica Kareon' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                SEO Expart
+                                {% trans 'SEO Expart' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Georgetown, USA
+                                {% trans 'Georgetown, USA' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                8D ago
+                                8{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -1056,22 +1055,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Malisa Petel</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Malisa Petel' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Project Management
+                                {% trans 'Project Management' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Madison, USA
+                                {% trans 'Madison, USA' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                1D ago
+                                1{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -1090,22 +1089,22 @@
                         <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="candidate-text">
-                        <h3><a href="{% url 'users:candidate-details' %}">Quence Joes</a></h3>
+                        <h3><a href="{% url 'users:candidate-details' %}">{% trans 'Quence Joes' %}</a></h3>
                         <ul>
                             <li>
                                 <i class='bx bx-filter-alt'></i>
-                                Web Developer
+                                {% trans 'Web Developer' %}
                             </li>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                Augusta, Maine
+                                {% trans 'Augusta, Maine' %}
                             </li>
                         </ul>
 
                         <div class="bottom-text">
                             <p>
                                 <i class='bx bx-stopwatch'></i>
-                                8D ago
+                                8{% trans 'D ago' %}
                             </p>
                             <a href="#">
                                 <i class='bx bx-heart'></i>
@@ -1122,7 +1121,7 @@
     <section class="testimonial-section ptb-100">
         <div class="container">
             <div class="section-title text-center">
-                <h2>What Client’s Say About Us</h2>
+                <h2>{% trans 'What Client’s Say About Us' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
@@ -1137,8 +1136,8 @@
                                     <img src="{% static 'img/testimonial-img.jpg' %}" alt="testimonial image">
                                 </div>
                                 <div class="testimonial-img-text">
-                                    <h3>Alisa Meair</h3>
-                                    <p>CEO of Company</p>
+                                    <h3>{% trans 'Alisa Meair' %}</h3>
+                                    <p>{% trans 'CEO of Company' %}</p>
                                 </div>
                             </div>
                             <div class="col-lg-7 p-0">
@@ -1165,8 +1164,8 @@
                                     <img src="{% static 'img/testimonial-img-2.jpg' %}" alt="testimonial image">
                                 </div>
                                 <div class="testimonial-img-text">
-                                    <h3>John Doe</h3>
-                                    <p>Web Designer</p>
+                                    <h3>{% trans 'John Doe' %}</h3>
+                                    <p>{% trans 'Web Designer' %}</p>
                                 </div>
                             </div>
                             <div class="col-lg-7 p-0">
@@ -1195,7 +1194,7 @@
     <section class="blog-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>News, Tips & Articles</h2>
+                <h2>{% trans 'News, Tips & Articles' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
@@ -1223,14 +1222,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    How to Indroduce in Yourself in Job Interview?
+                                    {% trans 'How to Indroduce in Yourself in Job Interview?' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>
@@ -1258,14 +1257,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    Looking for Highly Motivated Product to Build
+                                    {% trans 'Looking for Highly Motivated Product to Build' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>
@@ -1293,14 +1292,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    The Reason Why Software Develope is the Best Job
+                                    {% trans 'The Reason Why Software Develope is the Best Job' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>

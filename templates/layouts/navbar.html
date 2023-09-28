@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 
 
 <!-- Navbar Area Start -->
@@ -20,103 +20,103 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Candidates</a>
+                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Candidates' %}</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'users:candidate' %}" class="nav-link">Candidates</a>
+                                    <a href="{% url 'users:candidate' %}" class="nav-link">{% trans 'Candidates' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:candidate-details' %}" class="nav-link">Candidates
-                                        Details</a>
+                                    <a href="{% url 'users:candidate-details' %}"
+                                       class="nav-link">{% trans 'Candidates Details' %}</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'main:about' %}" class="nav-link">About</a>
+                            <a href="{% url 'main:about' %}" class="nav-link">{% trans 'About' %}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Jobs</a>
+                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Jobs' %}</a>
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'users:find-job' %}" class="nav-link">Find An employee</a>
+                                    <a href="{% url 'users:find-employee' %}" class="nav-link">{% trans 'Find An employee' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:post-job' %}" class="nav-link">Post A Job</a>
+                                    <a href="{% url 'users:post-job' %}" class="nav-link">{% trans 'Post A Job' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:job-list' %}" class="nav-link">Job List</a>
+                                    <a href="{% url 'users:job-list' %}" class="nav-link">{% trans 'Job List' %}</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Pages' %}</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="company.html" class="nav-link">Company</a>
+                                    <a href="company.html" class="nav-link">{% trans 'Company' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                    <a href="pricing.html" class="nav-link">{% trans 'Pricing' %}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="faq.html" class="nav-link">FAQ</a>
+                                    <a href="faq.html" class="nav-link">{% trans 'FAQ' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Catagories</a>
+                                    <a href="#" class="nav-link">{% trans 'Catagories' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="privacy-policy.html" class="nav-link">Privacy & Policy</a>
+                                    <a href="privacy-policy.html" class="nav-link">{% trans 'Privacy & Policy' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="terms-condition.html" class="nav-link">Terms & Conditions</a>
+                                    <a href="terms-condition.html" class="nav-link">{% trans 'Terms & Conditions' %}</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'main:blog' %}" class="nav-link">Blog</a>
+                            <a href="{% url 'main:blog' %}" class="nav-link">{% trans 'Blog' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'main:contacts' %}" class="nav-link">Contact Us</a>
+                            <a href="{% url 'main:contacts' %}" class="nav-link">{% trans 'Contact Us' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Profile</a>
+                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Profile' %}</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'users:account' %}" class="nav-link">Account</a>
+                                    <a href="{% url 'users:account' %}" class="nav-link">{% trans 'Account' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:resume' %}" class="nav-link">Resume</a>
+                                    <a href="{% url 'users:resume' %}" class="nav-link">{% trans 'Resume' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:reset-password' %}" class="nav-link">Reset Password</a>
+                                    <a href="{% url 'users:reset-password' %}" class="nav-link">{% trans 'Reset Password' %}</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
 
                     <div class="other-option">
-                        <a href="{% url 'users:sign-up' %}" class="signup-btn">Sign Up</a>
-                        <a href="{% url 'users:sign-in' %}" class="signin-btn">Sign In</a>
+                        <a href="{% url 'users:sign-up' %}" class="signup-btn">{% trans 'Sign Up' %}</a>
+                        <a href="{% url 'users:sign-in' %}" class="signin-btn">{% trans 'Sign In' %}</a>
                     </div>
                 </div>
                 <li class="settings"><a href="#"><i
-                                class="flag-icon flag-icon-{% if lang == 'en' %}us{% else %}{{ lang }}{% endif %}"></i></a>
-                            <div class="site-settings d-flex d-sm-flex">
-                                <dl class="language">
-                                    {% for lan in LANGUAGES %}
-                                        {% if lan.0 != lang %}
-                                            <a href="/{{ lan.0 }}/{{ request.path|slice:"4:" }}">
-                                                <dd>
-                                                    <i class="active flag-icon flag-icon-{{ lan.1 }}"></i>{{ lan.1|upper }}
-                                                </dd>
-                                            </a>
-                                        {% endif %}
-                                    {% endfor %}
-                                </dl>
-                            </div>
-                        </li>
+                        class="flag-icon flag-icon-{% if lang == 'en' %}us{% else %}{{ lang }}{% endif %}"></i></a>
+                    <div class="site-settings d-flex d-sm-flex">
+                        <dl class="language">
+                            {% for lan in LANGUAGES %}
+                                {% if lan.0 != lang %}
+                                    <a href="/{{ lan.0 }}/{{ request.path|slice:"4:" }}">
+                                        <dd>
+                                            <i class="active flag-icon flag-icon-{{ lan.1 }}"></i>{{ lan.1|upper }}
+                                        </dd>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </dl>
+                    </div>
+                </li>
             </nav>
         </div>
     </div>

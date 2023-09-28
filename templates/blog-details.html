@@ -1,17 +1,18 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
+<!-- ozgaradi dib oxirigiacha perevodi qimadim -->
 
 {% block content %}
     <!-- Page Title Start -->
     <section class="page-title title-bg22">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Blog Details</h2>
+                <h2>{% trans 'Blog Details' %}</h2>
                 <ul>
                     <li>
-                        <a href="{% url 'main:home' %}">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>Blog Details</li>
+                    <li>{% trans 'Blog Details' %}</li>
                 </ul>
             </div>
         </div>
@@ -40,10 +41,10 @@
                     </div>
 
                     <div class="blog-widget">
-                        <h3>Popular Post</h3>
+                        <h3>{% trans 'Popular Post' %}</h3>
 
                         <article class="popular-post">
-                            <a href="blog-details.html" class="blog-thumb">
+                            <a href="{% url 'main:blog-details' %}" class="blog-thumb">
                                 <img src="{% static 'img/blog/popular-post1.jpg' %}" alt="blog image">
                             </a>
 
@@ -56,14 +57,14 @@
                         </article>
 
                         <article class="popular-post">
-                            <a href="blog-details.html" class="blog-thumb">
+                            <a href="{% url 'main:blog-details' %}" class="blog-thumb">
                                 <img src="{% static 'img/blog/popular-post2.jpg' %}" alt="blog image">
                             </a>
 
                             <div class="info">
                                 <time datetime="2021-04-08">May 5, 2021</time>
                                 <h4>
-                                    <a href="blog-details.html">
+                                    <a href="{% url 'main:blog-details' %}">
                                         How to Indroduce in Yourself in Job Interview?
                                     </a>
                                 </h4>
@@ -71,7 +72,7 @@
                         </article>
 
                         <article class="popular-post">
-                            <a href="blog-details.html" class="blog-thumb">
+                            <a href="{% url 'main:blog-details' %}" class="blog-thumb">
                                 <img src="{% static 'img/blog/popular-post3.jpg' %}" alt="blog image">
                             </a>
 

@@ -1,16 +1,18 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
+
+
 {% block content %}
     <!-- Page Title Start -->
     <section class="page-title title-bg7">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Candidates</h2>
+                <h2>{% trans 'Candidates' %}</h2>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>Candidates</li>
+                    <li>{% trans 'Candidates' %}</li>
                 </ul>
             </div>
         </div>
@@ -37,7 +39,7 @@
                             </h3>
                             <ul>
                                 <li>
-                                    Web Developer
+                                    Manager
                                 </li>
                             </ul>
                         </div>
@@ -61,7 +63,7 @@
                             </h3>
                             <ul>
                                 <li>
-                                    PHP Developer
+                                    Salesman
                                 </li>
                             </ul>
                         </div>
@@ -228,8 +230,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="section-title">
-                        <h2>Get New Job Notifications</h2>
-                        <p>Subscribe & get all related jobs notification</p>
+                        <h2>{% trans 'Get New Job Notifications' %}</h2>
+                        <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                     </div>
                 </div>
 
@@ -239,7 +241,7 @@
                                autocomplete="off">
 
                         <button class="default-btn sub-btn" type="submit">
-                            Subscribe
+                            {% trans 'Subscribe' %}
                         </button>
 
                         <div id="validator-newsletter" class="form-result"></div>

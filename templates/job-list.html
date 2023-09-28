@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
 
@@ -7,12 +7,12 @@
     <section class="page-title title-bg4">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Job List</h2>
+                <h2>{% trans 'Job List' %}</h2>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>Job List</li>
+                    <li>{% trans 'Job List' %}</li>
                 </ul>
             </div>
         </div>
@@ -28,7 +28,7 @@
     <section class="job-style-two job-list-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Jobs You May Be Interested In</h2>
+                <h2>{% trans 'Jobs You May Be Interested In' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
             </div>

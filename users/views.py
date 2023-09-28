@@ -18,8 +18,8 @@ class SignUpView(TemplateView):
     template_name = 'sign-up.html'
 
 
-class FindJobView(TemplateView):
-    template_name = 'find-job.html'
+class FindEmployeeView(TemplateView):
+    template_name = 'find-employee.html'
 
 
 class JobListView(TemplateView):

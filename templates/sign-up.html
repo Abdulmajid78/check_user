@@ -1,16 +1,17 @@
 {% extends 'layouts/base.html' %}
+{% load i18n %}
 
 {% block content %}
         <!-- Page Title Start -->
         <section class="page-title title-bg13">
             <div class="d-table">
                 <div class="d-table-cell">
-                    <h2>Sign Up</h2>
+                    <h2>{% trans 'Sign Up' %}</h2>
                     <ul>
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                         </li>
-                        <li>Sign Up</li>
+                        <li>{% trans 'Sign Up' %}</li>
                     </ul>
                 </div>
             </div>
@@ -29,26 +30,26 @@
                     <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
                         <form class="signup-form">
                             <div class="form-group">
-                                <label>Enter Username</label>
+                                <label>{% trans 'Enter Username' %}</label>
                                 <input type="text" class="form-control" placeholder="Enter Username" required>
                             </div>
 
                             <div class="form-group">
-                              <label>Enter Email</label>
+                              <label>{% trans 'Enter Email' %}</label>
                               <input type="email" class="form-control" placeholder="Enter Your Email" required>
                             </div>
 
                             <div class="form-group">
-                                <label>Enter Password</label>
+                                <label>{% trans 'Enter Password' %}</label>
                                 <input type="password" class="form-control" placeholder="Enter Your Password" required>
                             </div>
 
                             <div class="signup-btn text-center">
-                                <button type="submit">Sign Up</button>
+                                <button type="submit">{% trans 'Sign Up' %}</button>
                             </div>
 
                             <div class="other-signup text-center">
-                                <span>Or sign up with</span>
+                                <span>{% trans 'Or sign up with' %}</span>
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -75,9 +76,9 @@
 
                             <div class="create-btn text-center">
                                 <p>
-                                    Have an Account?
-                                    <a href="signin.html">
-                                        Sign In
+                                    {% trans 'Have an Account?' %}
+                                    <a href="{% url 'users:sign-in' %}">
+                                        {% trans 'Sign In' %}
                                         <i class='bx bx-chevrons-right bx-fade-right'></i>
                                     </a>
                                 </p>
@@ -95,8 +96,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="section-title">
-                            <h2>Get New Job Notifications</h2>
-                            <p>Subscribe & get all related jobs notification</p>
+                            <h2>{% trans 'Get New Job Notifications' %}</h2>
+                            <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                         </div>
                     </div>
 
@@ -105,7 +106,7 @@
                             <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
     
                             <button class="default-btn sub-btn" type="submit">
-                                Subscribe
+                                {% trans 'Subscribe' %}
                             </button>
     
                             <div id="validator-newsletter" class="form-result"></div>

@@ -1,17 +1,17 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
     <!-- Page Title Start -->
     <section class="page-title title-bg1">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>About Us</h2>
+                <h2>{% trans 'About Us' %}</h2>
                 <ul>
                     <li>
-                        <a href="{% url 'main:home' %}">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>About Us</li>
+                    <li>{% trans 'About Us' %}</li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <div class="col-lg-6">
                     <div class="about-text">
                         <div class="section-title">
-                            <h2>How We Started</h2>
+                            <h2>{% trans 'How We Started' %}</h2>
                         </div>
 
                         <p>It is a long established fact that a reader will be distracted by the readable content of a
@@ -56,7 +56,7 @@
     <section class="use-section pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Easiest Way To Use</h2>
+                <h2>{% trans 'Easiest Way To Use' %}</h2>
             </div>
 
             <div class="row">
@@ -64,8 +64,8 @@
                     <div class="use-text">
                         <span>1</span>
                         <i class='flaticon-website'></i>
-                        <h3>Browse Job</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <h3>{% trans 'Find An Employee Easily' %}</h3>
+                        <p>{% trans 'You can get a lot of information about the worker you want' %}</p>
                     </div>
                 </div>
 
@@ -73,8 +73,8 @@
                     <div class="use-text">
                         <span>2</span>
                         <i class='flaticon-recruitment'></i>
-                        <h3>Find Your Vaccancy</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <h3>{% trans 'Browse Job' %}</h3>
+                        <p>{% trans 'the easiest way to find a job that you want and that is convenient for you' %}</p>
                     </div>
                 </div>
 
@@ -82,8 +82,8 @@
                     <div class="use-text">
                         <span>3</span>
                         <i class='flaticon-login'></i>
-                        <h3>Submit Resume</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <h3>{% trans 'Submit Resume' %}</h3>
+                        <p>{% trans 'Fill out your resume to the world standard through our site' %}</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
     <section class="why-choose-two pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Why You Choose Us Among Other Job Site?</h2>
+                <h2>{% trans 'Why You Choose Us Among Other Job Site?' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
             </div>
@@ -104,7 +104,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="choose-card">
                         <i class="flaticon-resume"></i>
-                        <h3>Advertise Job</h3>
+                        <h3>{% trans 'Advertise Job' %}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore </p>
                     </div>
@@ -113,7 +113,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="choose-card">
                         <i class="flaticon-recruitment"></i>
-                        <h3>Recruiter Profiles</h3>
+                        <h3>{% trans 'Recruiter Profiles' %}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore </p>
                     </div>
@@ -122,7 +122,7 @@
                 <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
                     <div class="choose-card">
                         <i class="flaticon-employee"></i>
-                        <h3>Find Your Dream Job</h3>
+                        <h3>{% trans 'Find Your Dream Job' %}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore </p>
                     </div>
@@ -139,7 +139,7 @@
                 <div class="col-lg-7">
                     <div class="grow-text">
                         <div class="section-title">
-                            <h2>Grow Your Business Faster With Premium Advertising</h2>
+                            <h2>{% trans 'Grow Your Business Faster With Premium Advertising' %}</h2>
                         </div>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -154,7 +154,7 @@
                         </p>
 
                         <div class="theme-btn">
-                            <a href="#" class="default-btn">Checkout More</a>
+                            <a href="#" class="default-btn">{% trans 'Checkout More' %}</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                     <div class="counter-text">
                         <i class="flaticon-resume"></i>
                         <h2><span>1225</span></h2>
-                        <p>Job Posted</p>
+                        <p>{% trans 'Job Posted' %}</p>
                     </div>
                 </div>
 
@@ -185,7 +185,7 @@
                     <div class="counter-text">
                         <i class="flaticon-recruitment"></i>
                         <h2><span>145</span></h2>
-                        <p>Job Filed</p>
+                        <p>{% trans 'Job Filed' %}</p>
                     </div>
                 </div>
 
@@ -193,7 +193,7 @@
                     <div class="counter-text">
                         <i class="flaticon-portfolio"></i>
                         <h2><span>170</span></h2>
-                        <p>Company</p>
+                        <p>{% trans 'Company' %}</p>
                     </div>
                 </div>
 
@@ -201,7 +201,7 @@
                     <div class="counter-text">
                         <i class="flaticon-employee"></i>
                         <h2><span>125</span></h2>
-                        <p>Members</p>
+                        <p>{% trans 'Members' %}</p>
                     </div>
                 </div>
             </div>
@@ -213,7 +213,7 @@
     <div class="testimonial-style-two ptb-100">
         <div class="container">
             <div class="section-title text-center">
-                <h2>What Client’s Say About Us</h2>
+                <h2>{% trans 'What Client’s Say About Us' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
             </div>
@@ -230,8 +230,8 @@
                         </div>
 
                         <div class="testimonial-info-text">
-                            <h3>Alisa Meair</h3>
-                            <p>CEO of Company</p>
+                            <h3>{% trans 'Alisa Meair' %}</h3>
+                            <p>{% trans 'CEO of Company' %}</p>
                         </div>
                     </div>
 
@@ -245,8 +245,8 @@
                         </div>
 
                         <div class="testimonial-info-text">
-                            <h3>Adam Smith</h3>
-                            <p>Web Developer</p>
+                            <h3>{% trans 'Adam Smith' %}</h3>
+                            <p>{% trans 'Web Developer' %}</p>
                         </div>
                     </div>
 
@@ -260,8 +260,8 @@
                         </div>
 
                         <div class="testimonial-info-text">
-                            <h3>John Doe</h3>
-                            <p>Graphics Designer</p>
+                            <h3>{% trans 'John Doe' %}</h3>
+                            <p>{% trans 'Graphics Designer' %}</p>
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@
     <section class="blog-section pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>News, Tips & Articles</h2>
+                <h2>{% trans 'News, Tips & Articles' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
             </div>
@@ -301,14 +301,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    How to Indroduce in Yourself in Job Interview?
+                                    {% trans 'How to Indroduce in Yourself in Job Interview?' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>
@@ -336,14 +336,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    Looking for Highly Motivated Product to Build
+                                    {% trans 'Looking for Highly Motivated Product to Build' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>
@@ -371,14 +371,14 @@
 
                             <h3>
                                 <a href="{% url 'main:blog-details' %}">
-                                    The Reason Why Software Develope is the Best Job
+                                    {% trans 'The Reason Why Software Develope is the Best Job' %}
                                 </a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt.</p>
 
                             <a href="{% url 'main:blog-details' %}" class="blog-btn">
-                                Read More
+                                {% trans 'Read More' %}
                                 <i class='bx bx-plus bx-spin'></i>
                             </a>
                         </div>

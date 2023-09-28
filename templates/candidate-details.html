@@ -1,17 +1,17 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
         <!-- Page Title Start -->
         <section class="page-title title-bg8">
             <div class="d-table">
                 <div class="d-table-cell">
-                    <h2>Candidates Details</h2>
+                    <h2>{% trans 'Candidates Details' %}</h2>
                     <ul>
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                         </li>
-                        <li>Candidates Details</li>
+                        <li>{% trans 'Candidates Details' %}</li>
                     </ul>
                 </div>
             </div>
@@ -30,8 +30,8 @@
                     <div class="col-lg-4">
                         <div class="candidate-profile">
                             <img src="{% static 'img/client-1.png' %}" alt="candidate image">
-                            <h3>John Smith</h3>
-                            <p>Web Developer</p>
+                            <h3>{% trans 'John Smith' %}</h3>
+                            <p>{% trans 'Manager' %}</p>
 
                             <ul>
                                 <li>                                 
@@ -57,41 +57,41 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="candidate-info-text">
-                            <h3>About Me</h3>
+                            <h3>{% trans 'About Me' %}</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                         </div>
 
                         <div class="candidate-info-text candidate-education">
-                            <h3>Education</h3>
+                            <h3>{% trans 'Education' %}</h3>
 
                             <div class="education-info">
-                                <h4>School</h4>
-                                <p>Amherst School, USA</p>
+                                <h4>{% trans 'School' %}</h4>
+                                <p>{% trans 'Amherst School, Uzbekistan' %}</p>
                                 <span>2000-2010</span>
                             </div>
 
                             <div class="education-info">
-                                <h4>College</h4>
-                                <p>Swarthmore College, USA</p>
+                                <h4>{% trans 'College' %}</h4>
+                                <p>{% trans 'Swarthmore College, Uzbekistan' %}</p>
                                 <span>2010-2012</span> 
                             </div>
 
                             <div class="education-info">
-                                <h4>University</h4>
-                                <p>Princeton University, USA</p>
+                                <h4>{% trans 'University' %}</h4>
+                                <p>{% trans 'Princeton University, Uzbekistan' %}</p>
                                 <span>2012-2016</span>
                             </div>
                         </div>
 
                         <div class="candidate-info-text candidate-experience">
-                            <h3>Experience</h3>
+                            <h3>{% trans 'Experience' %}</h3>
                             
                             <ul>
-                                <li>Proficient in HTML, CSS, Server-Scripting, C/C++, and Oracle</li>
-                                <li>Experience with SEO</li>
-                                <li>Experience Teaching Web Development</li>
-                                <li>Knowledgeable in Online Advertising</li>
-                                <li>Expert in LAMP Web Service Stacks</li>
+                                <li>{% trans 'Proficient in HTML, CSS, Server-Scripting, C/C++, and Oracle' %}</li>
+                                <li>{% trans 'Experience with SEO' %}</li>
+                                <li>{% trans 'Experience Teaching Web Development' %}</li>
+                                <li>{% trans 'Knowledgeable in Online Advertising' %}</li>
+                                <li>{% trans 'Expert in LAMP Web Service Stacks' %}</li>
                             </ul>
                         </div>
 
@@ -102,7 +102,7 @@
                             <div class="row align-items-center">
                                 <div class="col-md-2">
                                     <div class="company-logo d-flex justify-content-center align-content-center">
-                                        <a href="job-details.html">
+                                        <a href="{% url 'users:job-detail' %}">
                                             <img src="{% static 'img/company-logo/1.png' %}" alt="logo">
                                         </a>
                                     </div>
@@ -111,24 +111,24 @@
 
                                     <div class="job-info">
                                         <h3>
-                                            <a href="job-details.html">Euro Print</a>
+                                            <a href="{% url 'users:job-detail' %}">{% trans 'Euro Print' %}</a>
                                         </h3>
                                         <ul>
                                             <li>
                                                 <i class='bx bx-briefcase' ></i>
-                                                lavozimi - Manager
+                                                {% trans 'Position' %} - {% trans 'Manager' %}
                                             </li>
                                             <li>
                                                 <i class='bx bx-briefcase' ></i>
-                                                oyligi - $35000-$38000
+                                                {% trans 'Salary' %} - $35000-$38000
                                             </li>
                                             <li>
                                                 <i class='bx bx-location-plus'></i>
-                                                manzili - Wellesley Rd, London
+                                                {% trans 'Location' %} - Wellesley Rd, Uzbekistan
                                             </li>
                                             <li>
                                                 <i class='bx bx-stopwatch' ></i>
-                                                ishlagan muddati - 1 month
+                                                {% trans 'Period of Employment' %} - 1 {% trans 'month' %}
                                             </li>
                                         </ul>
 
@@ -157,8 +157,8 @@
 
                         <div class="candidate-info-text text-center">
                             <div class="theme-btn">
-                                <a href="#" class="default-btn">Hire Me</a>
-                                <a href="#" class="default-btn">Download CV</a>
+                                <a href="#" class="default-btn">{% trans 'Hire Me' %}</a>
+                                <a href="#" class="default-btn">{% trans 'Download CV' %}</a>
                             </div>
                         </div>
                     </div>
@@ -173,8 +173,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="section-title">
-                            <h2>Get New Job Notifications</h2>
-                            <p>Subscribe & get all related jobs notification</p>
+                            <h2>{% trans 'Get New Job Notifications' %}</h2>
+                            <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@
                             <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
     
                             <button class="default-btn sub-btn" type="submit">
-                                Subscribe
+                                {% trans 'Subscribe' %}
                             </button>
     
                             <div id="validator-newsletter" class="form-result"></div>

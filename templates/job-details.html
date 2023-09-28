@@ -1,17 +1,17 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
     <!-- Page Title Start -->
     <section class="page-title title-bg6">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Job Details</h2>
+                <h2>{% trans 'Job Details' %}</h2>
                 <ul>
                     <li>
-                        <a href="{% url 'main:home' %}">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>Job Details</li>
+                    <li>{% trans 'Job Details' %}</li>
                 </ul>
             </div>
         </div>
@@ -40,25 +40,25 @@
                                         </div>
                                         <div class="col-md-10">
                                             <div class="job-info">
-                                                <h3>Web Designer, Graphic Designer, UI/UX Designer</h3>
+                                                <h3>{% trans 'Web Designer, Graphic Designer, UI/UX Designer' %}</h3>
                                                 <ul>
                                                     <li>
                                                         <i class='bx bx-location-plus'></i>
-                                                        A.T. Khukandi 130 B, Kokand
+                                                        {% trans 'A.T. Khukandi 130 B, Kokand' %}
                                                     </li>
                                                     <li>
                                                         <i class='bx bx-filter-alt'></i>
-                                                        Sales Manager
+                                                        {% trans 'Sales Manager' %}
                                                     </li>
                                                     <li>
                                                         <i class='bx bx-briefcase'></i>
-                                                        Offline
+                                                        {% trans 'Offline' %}
                                                     </li>
                                                 </ul>
 
                                                 <span>
                                                         <i class='bx bx-paper-plane'></i>
-                                                        Apply Before: September 01,2023
+                                                        {% trans 'Apply Before: September 01,2023' %}
                                                     </span>
                                             </div>
                                         </div>
@@ -66,7 +66,7 @@
                                 </div>
 
                                 <div class="details-text">
-                                    <h3>Description</h3>
+                                    <h3>{% trans 'Description' %}</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -79,7 +79,7 @@
                                 </div>
 
                                 <div class="details-text">
-                                    <h3>Requirements</h3>
+                                    <h3>{% trans 'Requirements' %}</h3>
                                     <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -88,48 +88,48 @@
                                     <ul>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Work experience
+                                            {% trans 'Work experience' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Skills (soft skills and/or technical skills)
+                                            {% trans 'Skills (soft skills and/or technical skills)' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            WPersonal qualities and attributes.
+                                            {% trans 'WPersonal qualities and attributes.' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Support software roll-outs to production.
+                                            {% trans 'Support software roll-outs to production.' %}
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Guide and mentor junior engineers. Serve as team lead if appropriate.
+                                            {% trans 'Guide and mentor junior engineers. Serve as team lead if appropriate.' %}
 
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="details-text">
-                                    <h3>Job Details</h3>
+                                    <h3>{% trans 'Job Details' %}</h3>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <table class="table">
                                                 <tbody>
                                                 <tr>
-                                                    <td><span>Company</span></td>
-                                                    <td>&nbsp Euro Print</td>
+                                                    <td><span>{% trans 'Company' %}</span></td>
+                                                    <td>&nbsp {% trans 'Euro Print' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Location</span></td>
-                                                    <td>&nbsp A.T. Khukandi 130 B, Kokand</td>
+                                                    <td><span>{% trans 'Location' %}</span></td>
+                                                    <td>&nbsp {% trans 'A.T. Khukandi 130 B, Kokand' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Job Type</span></td>
-                                                    <td>&nbsp Full Time</td>
+                                                    <td><span>{% trans 'Job Type' %}</span></td>
+                                                    <td>&nbsp {% trans 'Full Time' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Email</span></td>
+                                                    <td><span>{% trans 'Email' %}</span></td>
                                                     <td><a href="mailto:hello@company.com">&nbsp hello@company.com</a>
                                                     </td>
                                                 </tr>
@@ -140,19 +140,19 @@
                                             <table class="table">
                                                 <tbody>
                                                 <tr>
-                                                    <td><span>Experince</span></td>
-                                                    <td>&nbsp 2 Years</td>
+                                                    <td><span>{% trans 'Experince' %}</span></td>
+                                                    <td>&nbsp 2 {% trans 'Years' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Language</span></td>
-                                                    <td>&nbsp Uzbek - Russian</td>
+                                                    <td><span>{% trans 'Language' %}</span></td>
+                                                    <td>&nbsp {% trans 'Uzbek - Russian' %}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Salary</span></td>
+                                                    <td><span>{% trans 'Salary' %}</span></td>
                                                     <td>&nbsp $10,000</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span>Website</span></td>
+                                                    <td><span>{% trans 'Website' %}</span></td>
                                                     <td><a href="#">&nbsp www.europrint.uz</a></td>
                                                 </tr>
                                                 </tbody>
@@ -163,7 +163,7 @@
 
                                 <div class="theme-btn">
                                     <a href="#" class="default-btn">
-                                        Apply Now
+                                        {% trans 'Apply Now' %}
                                     </a>
                                 </div>
                             </div>
@@ -173,23 +173,23 @@
 
                 <div class="col-lg-4">
                     <div class="job-sidebar">
-                        <h3>Posted By</h3>
+                        <h3>{% trans 'Posted By' %}</h3>
                         <div class="posted-by">
                             <img src="{% static 'img/client-1.png' %}" alt="client image">
-                            <h4>John Doe</h4>
-                            <span>CEO of Euro Print</span>
+                            <h4>{% trans 'John Doe' %}</h4>
+                            <span>{% trans 'CEO of Euro Print' %}</span>
                         </div>
                     </div>
 
                     <div class="job-sidebar">
-                        <h3>Location</h3>
+                        <h3>{% trans 'Location' %}</h3>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12125.437424927604!2d70.9282673!3d40.5557409!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bae94ba96c9119%3A0xb07f7b603bee9865!2zRVVST1BSSU5UIEtPS0FORC0g0LrRgNCw0YTRgiDQv9Cw0LrQtdGC0Ysg0YLQsNGI0LrQtdC90YIsINGD0L_QsNC60L7QstC-0YfQvdGL0LUg0L_QsNC60LXRgtGLINCyINGC0LDRiNC60LXQvdGC0LUsINC_0L7Qu9C40LPRgNCw0YTQuNGPINCyINGC0LDRiNC60LXQvdGC0LUsINGC0LjQv9C-0LPRgNCw0YTQuNGPINCyINGC0LDRiNC60LXQvdGC0LUsINGA0LDQt9GA0LDQsdC-0YLQutCwINCx0YDQtdC90LTQsdGD0LrQsCDRgdGC0L7QuNC80L7RgdGC0Yw!5e0!3m2!1sru!2s!4v1695751621720!5m2!1sru!2s"
                                 {# loading="lazy" #} frameborder="0"
                         ></iframe>
                     </div>
 
                     <div class="job-sidebar">
-                        <h3>Keywords</h3>
+                        <h3>{% trans 'Keywords' %}</h3>
                         <ul>
                             <li>
                                 <a href="#">1C</a>
@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="job-sidebar social-share">
-                        <h3>Share In</h3>
+                        <h3>{% trans 'Share In' %}</h3>
                         <ul>
                             <li>
                                 <a href="#" target="_blank">
@@ -256,7 +256,7 @@
     <section class="job-style-two pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Jobs You May Be Interested In</h2>
+                <h2>{% trans 'Jobs You May Be Interested In' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
             </div>
@@ -512,8 +512,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="section-title">
-                        <h2>Get New Job Notifications</h2>
-                        <p>Subscribe & get all related jobs notification</p>
+                        <h2>{% trans 'Get New Job Notifications' %}</h2>
+                        <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                     </div>
                 </div>
 
@@ -523,7 +523,7 @@
                                autocomplete="off">
 
                         <button class="default-btn sub-btn" type="submit">
-                            Subscribe
+                            {% trans 'Subscribe' %}
                         </button>
 
                         <div id="validator-newsletter" class="form-result"></div>

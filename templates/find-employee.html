@@ -1,5 +1,5 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block content %}
 
@@ -8,12 +8,12 @@
     <section class="page-title title-bg2">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Find an Employee</h2>
+                <h2>{% trans 'Find an Employee' %}</h2>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>Find an Employee</li>
+                    <li>{% trans 'Find an Employee' %}</li>
                 </ul>
             </div>
         </div>
@@ -47,18 +47,18 @@
 
                     <div class="col-lg-3">
                         <select class="category">
-                            <option data-display="Category">Category</option>
-                            <option value="1">Web Development</option>
-                            <option value="2">Graphics Design</option>
-                            <option value="4">Data Entry</option>
-                            <option value="5">Visual Editor</option>
-                            <option value="6">Office Assistant</option>
+                            <option data-display="Category">{% trans 'Category' %}</option>
+                            <option value="1">{% trans 'Web Development' %}</option>
+                            <option value="2">{% trans 'Graphics Design' %}</option>
+                            <option value="4">{% trans 'Data Scientist' %}</option>
+                            <option value="5">{% trans 'Data Scientist' %}</option>
+                            <option value="6">{% trans 'Office Assistant' %}</option>
                         </select>
                     </div>
 
                     <div class="col-lg-3">
                         <button type="submit" class="find-btn">
-                            Find An Employee
+                            {% trans 'Find An Employee' %}
                             <i class='bx bx-search'></i>
                         </button>
                     </div>
@@ -74,88 +74,88 @@
     <div class="category-style-two pb-70">
         <div class="container">
             <div class="section-title">
-                <h2>Popular Jobs Category</h2>
+                <h2>{% trans 'Popular Jobs Category' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
             </div>
 
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-wrench-and-screwdriver-in-cross"></i>
-                            <h3>Construction</h3>
-                            <p>6 new Job</p>
+                            <h3>{% trans 'Construction' %}</h3>
+                            <p>6 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-accounting"></i>
-                            <h3>Finance</h3>
-                            <p>8 new Job</p>
+                            <h3>{% trans 'Finance' %}</h3>
+                            <p>8 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-heart"></i>
-                            <h3>Healthcare</h3>
-                            <p>9 new Job</p>
+                            <h3>{% trans 'Healthcare' %}</h3>
+                            <p>9 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-computer-1"></i>
-                            <h3>Graphic Design</h3>
-                            <p>6 new Job</p>
+                            <h3>{% trans 'Graphic Design' %}</h3>
+                            <p>6 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-research"></i>
-                            <h3>Banking Jobs</h3>
-                            <p>5 new Job</p>
+                            <h3>{% trans 'Banking Jobs' %}</h3>
+                            <p>5 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-worker"></i>
-                            <h3>Automotive</h3>
-                            <p>12 new Job</p>
+                            <h3>{% trans 'Automotive' %}</h3>
+                            <p>12 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-graduation-cap"></i>
-                            <h3>Education</h3>
-                            <p>15 new Job</p>
+                            <h3>{% trans 'Education' %}</h3>
+                            <p>15 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-lg-3  col-sm-6">
-                    <a href="job-list.html">
+                    <a href="{% url 'users:job-list' %}">
                         <div class="category-item">
                             <i class="flaticon-computer"></i>
-                            <h3>Data Analysis</h3>
-                            <p>5 new Job</p>
+                            <h3>{% trans 'Data Analysis' %}</h3>
+                            <p>5 {% trans 'new Job' %}</p>
                         </div>
                     </a>
                 </div>
@@ -168,7 +168,7 @@
     <section class="job-section pb-70">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Jobs You May Be Interested In</h2>
+                <h2>{% trans 'Jobs You May Be Interested In' %}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus</p>
             </div>
@@ -179,7 +179,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -188,13 +188,13 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">Post-Room Operate</a>
+                                        <a href="{% url 'users:job-detail' %}">{% trans 'Post-Room Operate' %}</a>
                                     </h3>
                                     <ul>
-                                        <li>Via <a href="#">Tourt Design LTD</a></li>
+                                        <li>Via <a href="#">Euro Print</a></li>
                                         <li>
                                             <i class='bx bx-location-plus'></i>
-                                            Wellesley Rd, London
+                                            Wellesley Rd, Kokand
                                         </li>
                                         <li>
                                             <i class='bx bx-filter-alt'></i>
@@ -229,7 +229,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -238,7 +238,7 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">Data Entry</a>
+                                        <a href="{% url 'users:job-detail' %}">Data Entry</a>
                                     </h3>
                                     <ul>
                                         <li>Via <a href="#">Techno Inc.</a></li>
@@ -278,7 +278,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -287,7 +287,7 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">Graphic Designer</a>
+                                        <a href="{% url 'users:job-detail' %}">Graphic Designer</a>
                                     </h3>
                                     <ul>
                                         <li>Via <a href="#">Devon Design</a></li>
@@ -327,7 +327,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -336,7 +336,7 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">Web Developer</a>
+                                        <a href="">Web Developer</a>
                                     </h3>
                                     <ul>
                                         <li>Via <a href="#">MegaNews</a></li>
@@ -376,7 +376,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -385,7 +385,7 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">Digital Marketor</a>
+                                        <a href="{% url 'users:job-detail' %}">Digital Marketor</a>
                                     </h3>
                                     <ul>
                                         <li>Via <a href="#">AB Marketer LTD</a></li>
@@ -425,7 +425,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="thumb-img">
-                                    <a href="job-details.html">
+                                    <a href="{% url 'users:job-detail' %}">
                                         <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
                                     </a>
                                 </div>
@@ -434,7 +434,7 @@
                             <div class="col-lg-6">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="job-details.html">UI/UX Designer</a>
+                                        <a href="{% url 'users:job-detail' %}">UI/UX Designer</a>
                                     </h3>
                                     <ul>
                                         <li>Via <a href="#">Design Hunter</a></li>
@@ -479,8 +479,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="section-title">
-                        <h2>Get New Job Notifications</h2>
-                        <p>Subscribe & get all related jobs notification</p>
+                        <h2>{% trans 'Get New Job Notifications' %}</h2>
+                        <p>{% trans 'Subscribe & get all related jobs notification' %}</p>
                     </div>
                 </div>
 
@@ -490,7 +490,7 @@
                                autocomplete="off">
 
                         <button class="default-btn sub-btn" type="submit">
-                            Subscribe
+                            {% trans 'Subscribe' %}
                         </button>
 
                         <div id="validator-newsletter" class="form-result"></div>

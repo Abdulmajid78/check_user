@@ -80,7 +80,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us' #default
+LANGUAGE_CODE = 'uz' #page default lang
 
 LANGUAGES = (
     ('en', 'English'),

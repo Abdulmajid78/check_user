@@ -83,9 +83,9 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us' #default
 
 LANGUAGES = (
-    ('en', 'en'),
-    ('uz', 'uz'),
-    ('ru', 'ru'),
+    ('en', 'English'),
+    ('uz', 'O\'zbekcha'),
+    ('ru', 'Русский'),
 )
 
 TIME_ZONE = 'Asia/Tashkent'

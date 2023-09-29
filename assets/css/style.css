@@ -4238,3 +4238,12 @@ h3 {
 }
 
 /* Animation CSS End */
+
+
+/*custom i done */
+
+.navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
+    border-bottom: 1px dashed #4d5877;
+    background: #061742;
+    font-size: 15px !important;
+}

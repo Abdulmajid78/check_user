@@ -1,5 +1,6 @@
 {% load static i18n %}
-
+{% get_current_language as cur_lang %}
+{% get_available_languages as tupl_lang %}
 
 <!-- Navbar Area Start -->
 <div class="navbar-area">
@@ -96,17 +97,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item px-2 nav-item-border dropdown">
-                            <a class="nav-link dropdown-toggle flag-icon flag-icon-en" style="height: 40px" href="#"
-                               role="button" data-bs-toggle="dropdown">312
-                            </a>
-                            <ul class="dropdown-menu language-dropdown">
-                                <li class="text-center"><a class="dropdown-item flag-icon flag-icon-uz" href="#">1</a>
-                                </li>
-                                <li class="text-center"><a class="dropdown-item flag-icon flag-icon-ru" href="#">2</a>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
 
                     <div class="other-option">
@@ -114,6 +104,24 @@
                         <a href="{% url 'users:sign-in' %}" class="signin-btn">{% trans 'Sign In' %}</a>
                     </div>
                 </div>
+
+
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item langua">
+                        <a href="#" class="nav-link dropdown-toggle">{{ cur_lang|upper }}</a>
+                        <ul class="dropdown-menu">
+                            {% for lan in tupl_lang %}
+                                {% if lan.0 != cur_lang %}
+                                    <!-- for hide selected languaage (current) -->
+                                    <li class="nav-item">
+                                        <a href="/{{ lan.0 }}/{{ request.path|slice:'4:' }}"
+                                           class="nav-link">{{ lan.1|capfirst }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
 
             </nav>
         </div>

@@ -6,13 +6,11 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls')),
-    path('', include('main.urls')),
 ]
 
 urlpatterns += i18n_patterns(
-    path('', include('users.urls')),
     path('', include('main.urls')),
+    path('', include('users.urls'))
 )
 
 urlpatterns += static(settings.STATIC_URL, documents_root=settings.STATIC_ROOT)

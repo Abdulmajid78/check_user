@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 01:35+0500\n"
+"POT-Creation-Date: 2023-09-29 15:07+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,7 +133,7 @@ msgid "Job Filed"
 msgstr "Вакансия подана"
 
 #: templates/about.html:196 templates/index.html:656
-#: templates/job-details.html:120 templates/layouts/navbar.html:57
+#: templates/job-details.html:120 templates/layouts/navbar.html:73
 msgid "Company"
 msgstr "Компания"
 
@@ -194,7 +194,7 @@ msgid "The Reason Why Software Develope is the Best Job"
 msgstr "Причина, почему разработчик программного обеспечения — лучшая работа"
 
 #: templates/account.html:9 templates/account.html:14
-#: templates/layouts/footer.html:39 templates/layouts/navbar.html:87
+#: templates/layouts/footer.html:39 templates/layouts/navbar.html:103
 msgid "Account"
 msgstr "Счет"
 
@@ -317,12 +317,12 @@ msgid "Popular Post"
 msgstr "Популярное сообщение"
 
 #: templates/blog.html:9 templates/blog.html:14
-#: templates/layouts/navbar.html:78
+#: templates/layouts/navbar.html:94
 msgid "Blog"
 msgstr "Блог"
 
 #: templates/candidate-details.html:9 templates/candidate-details.html:14
-#: templates/layouts/navbar.html:30
+#: templates/layouts/navbar.html:46
 msgid "Candidates Details"
 msgstr "Подробности о кандидатах"
 
@@ -423,12 +423,12 @@ msgid "Download CV"
 msgstr "Скачать резюме"
 
 #: templates/candidate.html:10 templates/candidate.html:15
-#: templates/layouts/navbar.html:23 templates/layouts/navbar.html:26
+#: templates/layouts/navbar.html:39 templates/layouts/navbar.html:42
 msgid "Candidates"
 msgstr "Кандидаты"
 
 #: templates/contact.html:9 templates/contact.html:14
-#: templates/layouts/navbar.html:81
+#: templates/layouts/navbar.html:97
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
@@ -667,7 +667,8 @@ msgid ""
 "The top companies on our site have the largest number of employees and the "
 "highest salaries"
 msgstr ""
-"Топовые компании на нашем сайте имеют самое большое количество сотрудников и самые высокие зарплаты."
+"Топовые компании на нашем сайте имеют самое большое количество сотрудников и "
+"самые высокие зарплаты."
 
 #: templates/index.html:507
 msgid "Karzinka.uz"
@@ -900,7 +901,9 @@ msgstr "Поддержка внедрения программного обес�
 
 #: templates/job-details.html:107
 msgid "Guide and mentor junior engineers. Serve as team lead if appropriate."
-msgstr "Руководство и наставник младших инженеров. Если возможно, выступите руководителем группы."
+msgstr ""
+"Руководство и наставник младших инженеров. Если возможно, выступите "
+"руководителем группы."
 
 #: templates/job-details.html:128 templates/post-job.html:82
 #: templates/post-job.html:84
@@ -944,7 +947,7 @@ msgid "Share In"
 msgstr "Предоставь к этому доступ"
 
 #: templates/job-list.html:10 templates/job-list.html:15
-#: templates/layouts/footer.html:57 templates/layouts/navbar.html:49
+#: templates/layouts/footer.html:57 templates/layouts/navbar.html:65
 msgid "Job List"
 msgstr "Список вакансий"
 
@@ -960,28 +963,28 @@ msgstr "Просмотр вакансий"
 msgid "Browse Categories"
 msgstr "Просмотр категорий"
 
-#: templates/layouts/footer.html:51 templates/layouts/navbar.html:90
+#: templates/layouts/footer.html:51 templates/layouts/navbar.html:106
 msgid "Resume"
 msgstr "Резюме"
 
-#: templates/layouts/footer.html:63 templates/layouts/navbar.html:100
+#: templates/layouts/footer.html:63 templates/layouts/navbar.html:116
 #: templates/sign-up.html:9 templates/sign-up.html:14 templates/sign-up.html:48
 msgid "Sign Up"
-msgstr "Зарегистрироваться"
+msgstr "Регистрация"
 
 #: templates/layouts/footer.html:72
 msgid "Quick Links"
 msgstr "Быстрые ссылки"
 
-#: templates/layouts/footer.html:83 templates/layouts/navbar.html:35
+#: templates/layouts/footer.html:83 templates/layouts/navbar.html:51
 msgid "About"
 msgstr "о нас"
 
-#: templates/layouts/footer.html:89 templates/layouts/navbar.html:64
+#: templates/layouts/footer.html:89 templates/layouts/navbar.html:80
 msgid "FAQ"
 msgstr "Часто задаваемые вопросы"
 
-#: templates/layouts/footer.html:95 templates/layouts/navbar.html:60
+#: templates/layouts/footer.html:95 templates/layouts/navbar.html:76
 msgid "Pricing"
 msgstr "Цены"
 
@@ -1005,44 +1008,46 @@ msgstr "Телефон"
 msgid "Copyright @2023 check_user. All Rights Reserved By"
 msgstr "Авторские права @2023 check_user. Все права защищены"
 
-#: templates/layouts/navbar.html:39
+#: templates/layouts/navbar.html:55
 msgid "Jobs"
 msgstr "Вакансии"
 
-#: templates/layouts/navbar.html:43
+#: templates/layouts/navbar.html:59
 msgid "Find An employee"
 msgstr "Найти сотрудника"
 
-#: templates/layouts/navbar.html:46 templates/post-job.html:122
+#: templates/layouts/navbar.html:62 templates/post-job.html:122
 msgid "Post A Job"
 msgstr "Опубликовать вакансию"
 
-#: templates/layouts/navbar.html:54
+#: templates/layouts/navbar.html:70
 msgid "Pages"
 msgstr "Страницы"
 
-#: templates/layouts/navbar.html:67
-msgid "Catagories"
+#: templates/layouts/navbar.html:83
+#, fuzzy
+#| msgid "Catagories"
+msgid "Categories"
 msgstr "Категории"
 
-#: templates/layouts/navbar.html:70
+#: templates/layouts/navbar.html:86
 msgid "Privacy & Policy"
 msgstr "Политика конфиденциальности"
 
-#: templates/layouts/navbar.html:73
+#: templates/layouts/navbar.html:89
 msgid "Terms & Conditions"
 msgstr "Условия использования"
 
-#: templates/layouts/navbar.html:84
+#: templates/layouts/navbar.html:100
 msgid "Profile"
 msgstr "Профиль"
 
-#: templates/layouts/navbar.html:93 templates/reset-password.html:9
+#: templates/layouts/navbar.html:109 templates/reset-password.html:9
 #: templates/reset-password.html:14 templates/reset-password.html:38
 msgid "Reset Password"
 msgstr "Сброс пароля"
 
-#: templates/layouts/navbar.html:101 templates/sign-in.html:9
+#: templates/layouts/navbar.html:117 templates/sign-in.html:9
 #: templates/sign-in.html:14 templates/sign-in.html:43
 #: templates/sign-up.html:81
 msgid "Sign In"

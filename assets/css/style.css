@@ -497,6 +497,57 @@ h3 {
 }
 
 /* Category Section CSS End */
+/* Why Choose Section CSS Start */
+.choose-card {
+  border: 1px dashed var(--red-color);
+  padding: 36px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.choose-card i {
+  font-size: 40px;
+  color: var(--red-color);
+  background: var(--light-red-color);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  right: -5px;
+  border: 1px dashed var(--red-color);
+  margin-bottom: 25px;
+}
+
+.choose-card h3 {
+  margin-bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.choose-card p {
+  margin-bottom: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.choose-card:hover {
+  background: var(--red-color);
+}
+
+.choose-card:hover i {
+  border: 1px dashed #ffffff;
+}
+
+.choose-card:hover h3, .choose-card:hover p {
+  color: #ffffff;
+}
+
+/* Why Choose Section CSS End */
 /* Job Section CSS Start */
 .job-style-two {
   background: #fdf8f7;

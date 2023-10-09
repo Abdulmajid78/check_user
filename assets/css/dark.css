@@ -161,7 +161,7 @@ Default CSS
 }
 
 .theme-dark p a:hover {
-    color: #fd1616 !important;
+    color: var(--red-color);
 }
 
 .theme-dark a {
@@ -342,7 +342,7 @@ Default CSS
 }
 
 .theme-dark .counter-area .counter-text h2 {
-    color: #fd1616 !important;
+    color: var(--red-color) !important;
 }
 
 .theme-dark .counter-section {
@@ -691,4 +691,8 @@ Default CSS
 
 .theme-dark .contact-area form .form-group .form-control::placeholder {
     color: #ffffff;
+}
+
+.theme-dark .navbar-area .main-nav {
+    background: rgba(0, 0, 0, 0.5);
 }

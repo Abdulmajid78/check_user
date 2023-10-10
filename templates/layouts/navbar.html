@@ -12,7 +12,7 @@
     </div>
 
     <!-- Menu For Desktop Device -->
-    <div class="main-nav">
+    <div class="main-nav" id="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{% url 'main:home' %}">
@@ -23,14 +23,13 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle">{% trans 'Candidates' %}</a>
                             <ul class="dropdown-menu">
-{#                                <li class="nav-item">#}
-{#                                    <a href="{% url 'jobs:candidate' %}" class="nav-link">{% trans 'Candidates' %}</a>#}
-{#                                </li>#}
+
+                                {#                                <li class="nav-item">#}
+                                {#                                    <a href="{% url 'jobs:candidate' %}" class="nav-link">{% trans 'Candidates' %}</a>#}
+                                {#                                </li>#}
+
 
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'main:about' %}" class="nav-link">{% trans 'About' %}</a>
                         </li>
 
                         <li class="nav-item">
@@ -43,6 +42,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'jobs:post-job' %}" class="nav-link">{% trans 'Post A Job' %}</a>
+
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'jobs:job-list' %}" class="nav-link">{% trans 'Job List' %}</a>
@@ -50,32 +50,36 @@
                             </ul>
                         </li>
 
+                        <li class="nav-item">
+                            <a href="{% url 'main:about' %}" class="nav-link">{% trans 'About' %}</a>
+                        </li>
+
                         <!-- unused pages and links -->
 
-{#                        <li class="nav-item">#}
-{#                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Pages' %}</a>#}
-{#                            <ul class="dropdown-menu">#}
-{#                                <li class="nav-item">#}
-{#                                    <a href="company.html" class="nav-link">{% trans 'Company' %}</a>#}
-{#                                </li>#}
-{#                                <li class="nav-item">#}
-{#                                    <a href="pricing.html" class="nav-link">{% trans 'Pricing' %}</a>#}
-{#                                </li>#}
-{##}
-{#                                <li class="nav-item">#}
-{#                                    <a href="faq.html" class="nav-link">{% trans 'FAQ' %}</a>#}
-{#                                </li>#}
-{#                                <li class="nav-item">#}
-{#                                    <a href="#" class="nav-link">{% trans 'Categories' %}</a>#}
-{#                                </li>#}
-{#                                <li class="nav-item">#}
-{#                                    <a href="privacy-policy.html" class="nav-link">{% trans 'Privacy & Policy' %}</a>#}
-{#                                </li>#}
-{#                                <li class="nav-item">#}
-{#                                    <a href="terms-condition.html" class="nav-link">{% trans 'Terms & Conditions' %}</a>#}
-{#                                </li>#}
-{#                            </ul>#}
-{#                        </li>#}
+                        {#                        <li class="nav-item">#}
+                        {#                            <a href="#" class="nav-link dropdown-toggle">{% trans 'Pages' %}</a>#}
+                        {#                            <ul class="dropdown-menu">#}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="company.html" class="nav-link">{% trans 'Company' %}</a>#}
+                        {#                                </li>#}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="pricing.html" class="nav-link">{% trans 'Pricing' %}</a>#}
+                        {#                                </li>#}
+                        {##}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="faq.html" class="nav-link">{% trans 'FAQ' %}</a>#}
+                        {#                                </li>#}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="#" class="nav-link">{% trans 'Categories' %}</a>#}
+                        {#                                </li>#}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="privacy-policy.html" class="nav-link">{% trans 'Privacy & Policy' %}</a>#}
+                        {#                                </li>#}
+                        {#                                <li class="nav-item">#}
+                        {#                                    <a href="terms-condition.html" class="nav-link">{% trans 'Terms & Conditions' %}</a>#}
+                        {#                                </li>#}
+                        {#                            </ul>#}
+                        {#                        </li>#}
 
                         <!-- unused pages and links end -->
 

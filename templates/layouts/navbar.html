@@ -23,13 +23,10 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle">{% trans 'Candidates' %}</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="{% url 'users:candidate' %}" class="nav-link">{% trans 'Candidates' %}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{% url 'users:candidate-details' %}"
-                                       class="nav-link">{% trans 'Candidates Details' %}</a>
-                                </li>
+{#                                <li class="nav-item">#}
+{#                                    <a href="{% url 'jobs:candidate' %}" class="nav-link">{% trans 'Candidates' %}</a>#}
+{#                                </li>#}
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -41,14 +38,14 @@
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'users:find-employee' %}"
+                                    <a href="{% url 'jobs:find-employee' %}"
                                        class="nav-link">{% trans 'Find An employee' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:post-job' %}" class="nav-link">{% trans 'Post A Job' %}</a>
+                                    <a href="{% url 'jobs:post-job' %}" class="nav-link">{% trans 'Post A Job' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:job-list' %}" class="nav-link">{% trans 'Job List' %}</a>
+                                    <a href="{% url 'jobs:job-list' %}" class="nav-link">{% trans 'Job List' %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -96,7 +93,7 @@
                                     <a href="{% url 'users:account' %}" class="nav-link">{% trans 'Account' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:resume' %}" class="nav-link">{% trans 'Resume' %}</a>
+                                    <a href="{% url 'jobs:resume' %}" class="nav-link">{% trans 'Resume' %}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'users:reset-password' %}"

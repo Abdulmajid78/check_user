@@ -29,9 +29,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
 
-                    <form class="signin-form" action="{% url 'users:sing-in' %}" method="post">
+                    <form class="signin-form" action="" method="post">
                         {% csrf_token %}
-                        {{ form|crispy }}
+                        {{ form.as_p }}
 {#                        <div class="form-group">#}
 {#                            <label>{% trans 'Enter Email' %}</label>#}
 {#                            <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
@@ -42,9 +42,9 @@
 {#                            <input type="password" class="form-control" placeholder="Enter Your Password" required>#}
 {#                        </div>#}
 
-{#                        <div class="signin-btn text-center">#}
-{#                            <button type="submit">{% trans 'Sign In' %}</button>#}
-{#                        </div>#}
+                        <div class="signin-btn text-center">
+                            <button type="submit">{% trans 'Sign In' %}</button>
+                        </div>
 
                         <div class="other-signin text-center">
                             <span>{% trans 'Or sign in with' %}</span>
@@ -74,7 +74,7 @@
 
                         <div class="create-btn text-center">
                             <p>{% trans 'Not have an account?' %}
-                                <a href="{% url 'users:sign-up' %}">
+                                <a href="{% url 'users:register' %}">
                                     {% trans 'Create an account' %}
                                     <i class='bx bx-chevrons-right bx-fade-right'></i>
                                 </a>

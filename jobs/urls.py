@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CandidatesView, EmployeeDetailsView, FindEmployeeView, JobListView, JobDetailView, PostJobView, ResumeView, CommentCreateView
+from .views import CandidatesView, EmployeeDetailsView, FindEmployeeView, JobListView, JobDetailView, PostJobView, ResumeView
 
 app_name = 'jobs'
 

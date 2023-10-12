@@ -4,7 +4,6 @@ from users.models import EmployeeModel
 from django.db.models import Q
 
 from django.shortcuts import get_object_or_404
-from .forms import CommentForm
 
 
 class FindEmployeeView(ListView):

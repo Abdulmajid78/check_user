@@ -1,18 +1,14 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView
+# users/views.py
 
+from django.shortcuts import render, redirect
+from .forms import RegistrationForm
 
-class SignInView(TemplateView):
-    template_name = 'sign-in.html'
-
-
-class SignUpView(TemplateView):
-    template_name = 'sign-up.html'
-
-
-class AccountView(TemplateView):
-    template_name = 'account.html'
-
-
-class ResetPasswordView(TemplateView):
-    template_name = 'reset-password.html'
+def register(request):
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('main:home')  # Redirect to login page or a thank you page
+    else:
+        form = RegistrationForm()
+    return render(request, 'auth/sign-up.html', {'form': form})

@@ -1,17 +1,19 @@
 {% extends 'layouts/base.html' %}
-{% load static i18n %}
+{% load static %}
+{% load i18n %}
+
 
 {% block content %}
     <!-- Page Title Start -->
-    <section class="page-title title-bg12">
+    <section class="page-title title-bg13">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>{% trans 'Sign In' %}</h2>
+                <h2>{% trans 'Sign Up' %}</h2>
                 <ul>
                     <li>
                         <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>{% trans 'Sign In' %}</li>
+                    <li>{% trans 'Sign Up' %}</li>
                 </ul>
             </div>
         </div>
@@ -23,28 +25,36 @@
     </section>
     <!-- Page Title End -->
 
-    <!-- Sign In Section Start -->
-    <div class="signin-section ptb-100">
+    <!-- Sign up Section Start -->
+    <div class="signup-section ptb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
-                    <form class="signin-form">
-                        <div class="form-group">
-                            <label>{% trans 'Enter Email' %}</label>
-                            <input type="email" class="form-control" placeholder="Enter Your Email" required>
+                    <form method="post" class="signup-form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        {#                            <div class="form-group">#}
+                        {#                                <label>{% trans 'Enter Username' %}</label>#}
+                        {#                                <input type="text" class="form-control" placeholder="Enter Username" required>#}
+                        {#                            </div>#}
+                        {##}
+                        {#                            <div class="form-group">#}
+                        {#                              <label>{% trans 'Enter Email' %}</label>#}
+                        {#                              <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
+                        {#                            </div>#}
+                        {##}
+                        {#                            <div class="form-group">#}
+                        {#                                <label>{% trans 'Enter Password' %}</label>#}
+                        {#                                <input type="password" class="form-control" placeholder="Enter Your Password" required>#}
+                        {#                            </div>#}
+                        {##}
+                        <div class="signup-btn text-center">
+                            <button type="submit">{% trans 'Sign Up' %}</button>
                         </div>
 
-                        <div class="form-group">
-                            <label>{% trans 'Enter Password' %}</label>
-                            <input type="password" class="form-control" placeholder="Enter Your Password" required>
-                        </div>
-
-                        <div class="signin-btn text-center">
-                            <button type="submit">{% trans 'Sign In' %}</button>
-                        </div>
-
-                        <div class="other-signin text-center">
-                            <span>{% trans 'Or sign in with' %}</span>
+                        <div class="other-signup text-center">
+                            <span>{% trans 'Or sign up with' %}</span>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -70,9 +80,10 @@
                         </div>
 
                         <div class="create-btn text-center">
-                            <p>{% trans 'Not have an account?' %}
-                                <a href="{% url 'users:sign-up' %}">
-                                    {% trans 'Create an account' %}
+                            <p>
+                                {% trans 'Have an Account?' %}
+                                <a href="">
+                                    {% trans 'Sign In' %}
                                     <i class='bx bx-chevrons-right bx-fade-right'></i>
                                 </a>
                             </p>
@@ -82,7 +93,7 @@
             </div>
         </div>
     </div>
-    <!-- Sign In Section End -->
+    <!-- Sign Up Section End -->
 
     <!-- Subscribe Section Start -->
     <section class="subscribe-section">

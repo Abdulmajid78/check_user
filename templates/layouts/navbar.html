@@ -94,13 +94,13 @@
                             <a href="#" class="nav-link dropdown-toggle">{% trans 'Profile' %}</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{% url 'users:account' %}" class="nav-link">{% trans 'Account' %}</a>
+                                    <a href="" class="nav-link">{% trans 'Account' %}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'jobs:resume' %}" class="nav-link">{% trans 'Resume' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'users:reset-password' %}"
+                                    <a href=""
                                        class="nav-link">{% trans 'Reset Password' %}</a>
                                 </li>
                             </ul>
@@ -108,8 +108,8 @@
                     </ul>
 
                     <div class="other-option">
-                        <a href="{% url 'users:sign-up' %}" class="signup-btn">{% trans 'Sign Up' %}</a>
-                        <a href="{% url 'users:sign-in' %}" class="signin-btn">{% trans 'Sign In' %}</a>
+                        <a href="{% url 'users:register' %}" class="signup-btn">{% trans 'Sign Up' %}</a>
+                        <a href="" class="signin-btn">{% trans 'Sign In' %}</a>
                     </div>
                 </div>
 

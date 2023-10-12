@@ -8,7 +8,6 @@ from django.shortcuts import get_object_or_404
 
 class FindEmployeeView(ListView):
     template_name = 'find-employee.html'
-
     paginate_by = 14
 
     def get_queryset(self):

@@ -1,7 +1,7 @@
 # users/views.py
 
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .forms import RegistrationForm, LoginForm
 
 
@@ -33,3 +33,8 @@ def login_view(request):
     else:
         form = LoginForm()
     return render(request, 'auth/sign-in.html', {'form': form})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('main:home')

@@ -8,7 +8,6 @@ from django.shortcuts import get_object_or_404
 
 class FindEmployeeView(ListView):
     template_name = 'find-employee.html'
-
     paginate_by = 14
 
     def get_queryset(self):
@@ -33,17 +32,6 @@ class FindEmployeeView(ListView):
 class EmployeeDetailsView(DeleteView):
     model = EmployeeModel
     template_name = 'employee-details.html'
-
-
-
-
-
-
-
-
-
-
-
 
 
 class JobListView(TemplateView):

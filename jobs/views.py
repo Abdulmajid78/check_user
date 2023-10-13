@@ -34,17 +34,6 @@ class EmployeeDetailsView(DeleteView):
     template_name = 'employee-details.html'
 
 
-
-
-
-
-
-
-
-
-
-
-
 class JobListView(TemplateView):
     template_name = 'job-list.html'
 

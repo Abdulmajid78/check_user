@@ -14,7 +14,8 @@
                         <form class="banner-form">
                             <div class="row">
 
-                                <form action="{% url 'jobs:find-employee' %}">
+                                <form action="{% url 'main:home' %}">
+                                    {% csrf_token %}
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>

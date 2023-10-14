@@ -284,9 +284,9 @@ h3 {
 
 /* Navbar CSS End */
 /* Banner CSS Start */
-.banner-section {
+.indexxx .banner-section {
     height: 800px;
-    background-image: url(../img/banner/1.jpg);
+    background-image: url(../img/banner/1.jpg) !important;
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -4275,7 +4275,7 @@ h3 {
     background: #fafafa;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .blog__details__comment form .row div textarea {
@@ -4285,7 +4285,7 @@ h3 {
     background: #fafafa;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .blog__details__comment form .row div button {

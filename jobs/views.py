@@ -2,11 +2,9 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404, reverse
 from django.views.generic import TemplateView, ListView, DeleteView, CreateView
 
-
 from users.models import EmployeeModel
 from jobs.models import CommentModel
 from .forms import CommentForm
-
 
 
 class FindEmployeeView(ListView):
@@ -54,7 +52,6 @@ class CommentCreateView(CreateView):
 
     def get_success_url(self):
         return reverse('jobs:employee-detail', kwargs={'pk': self.kwargs.get('pk')})
-
 
 
 class JobListView(TemplateView):

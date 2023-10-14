@@ -293,6 +293,26 @@ h3 {
     z-index: 0;
 }
 
+.find-section .banner-section {
+    background-image: none;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.find-section .banner-section::before {
+    position: absolute;
+    content: none;
+}
+
+.find-section .banner-section .banner-content .banner-form {
+    background: rgba(229, 229, 229, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 45px;
+}
+
 .banner-section::before {
     position: absolute;
     content: '';
@@ -4243,3 +4263,37 @@ h3 {
 
 
 /*custom i done */
+.blog__details__comment form .row div {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.blog__details__comment form .row div input {
+    width: 100%;
+    height: 50px;
+    padding: 5px 20px;
+    background: #fafafa;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.blog__details__comment form .row div textarea {
+    width: 100%;
+    height: 200px;
+    padding: 5px 20px;
+    background: #fafafa;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.blog__details__comment form .row div button {
+    background: var(--red-color);
+    color: #ffffff;
+    padding: 12px 30px;
+    -webkit-transition: .8s;
+    transition: .8s;
+    border-radius: 5px;
+    margin-top: 20px;
+}

@@ -8,7 +8,6 @@
     <section class="page-title title-bg2">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>{% trans 'Find an Employee' %}</h2>
                 <ul>
                     <li>
                         <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
@@ -16,6 +15,7 @@
                     <li>{% trans 'Find an Employee' %}</li>
                 </ul>
             </div>
+
         </div>
         <div class="lines">
             <div class="line"></div>
@@ -27,39 +27,42 @@
 
     <!-- Find Section Start -->
     <div class="find-section ptb-100">
-        <div class="container">
-            <form class="find-form mt-0">
-                <div class="row">
-                    <form action="">
+        <div class="banner-section">
+            <div class="container">
+                <div class="banner-content text-center">
+                    <form class="banner-form">
+                        <div class="row">
 
+                            <form action="{% url 'jobs:find-employee' %}">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                               value="{{ request.GET.q }}" name="q"
+                                               placeholder="Sardor">
+                                    </div>
+                                </div>
 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
-                                <input type="text" class="form-control" value="{{ request.GET.search_name }}"
-                                       name="search_name" id="exampleInputEmail1"
-                                       placeholder="Sardor">
-                            </div>
-                        </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail2"
+                                               value="{{ request.GET.q }}" name="q"
+                                               placeholder="Alixonov">
+                                    </div>
+                                </div>
 
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
-                                <input type="text" class="form-control" value="{{ request.GET.search_surname }}"
-                                       name="search_surname" id="exampleInputEmail2"
-                                       placeholder="Alixonov">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <button type="submit" class="find-btn">
-                                {% trans 'Find An Employee' %}
-                                <i class='bx bx-search'></i>
-                            </button>
+                                <div class="col-md-4">
+                                    <button type="submit" class="find-btn">
+                                        {% trans 'Find An Employee' %}
+                                        <i class='bx bx-search'></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
     <!-- Find Section End -->

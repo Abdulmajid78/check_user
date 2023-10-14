@@ -30,41 +30,39 @@
         <div class="banner-section">
             <div class="container">
                 <div class="banner-content text-center">
-                    <form class="banner-form">
+                    <form method="get" class="banner-form">
                         <div class="row">
-
-                            <form action="{% url 'jobs:find-employee' %}">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                               value="{{ request.GET.q }}" name="q"
-                                               placeholder="Sardor">
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
+                                    <input type="text" class="form-control" value="{{ request.GET.search_name }}"
+                                           name="search_name" id="exampleInputEmail1"
+                                           placeholder="Sardor">
                                 </div>
+                            </div>
 
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail2"
-                                               value="{{ request.GET.q }}" name="q"
-                                               placeholder="Alixonov">
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
+                                    <input type="text" class="form-control" value="{{ request.GET.search_surname }}"
+                                           name="search_surname" id="exampleInputEmail2"
+                                           placeholder="Alixonov">
                                 </div>
+                            </div>
 
-                                <div class="col-md-4">
-                                    <button type="submit" class="find-btn">
-                                        {% trans 'Find An Employee' %}
-                                        <i class='bx bx-search'></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="find-btn">
+                                    {% trans 'Find An Employee' %}
+                                    <i class='bx bx-search'></i>
+                                </button>
+                            </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
+
     <!-- Find Section End -->
 
     <!--agar employee qidirsa shuyoga list bb chiqadi -->

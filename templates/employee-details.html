@@ -58,14 +58,23 @@
                 <div class="col-lg-8">
                     <div class="candidate-info-text">
                         <h3>{% trans 'About Me' %}</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially
-                            unchanged.</p>
+                        {% if not request.user.is_authenticated %}
+                            <p>SOME TEXT WICH WE WILL BLUR</p>
+                            <p><a href="{% url 'users:register' %}">Login & subscribe to unlock</a></p>
+                        {% else %}
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged.</p>
+                        {% endif %}
                     </div>
 
                     <div class="candidate-info-text candidate-education">
+
                         <h3>{% trans 'Education' %}</h3>
 
                         <div class="education-info">
@@ -122,6 +131,7 @@
                                                     <i class='bx bx-briefcase'></i>
                                                     {% trans 'Position' %} - {% trans 'Manager' %}
                                                 </li>
+
                                                 <li>
                                                     <i class='bx bx-briefcase'></i>
                                                     {% trans 'Salary' %} - $35000-$38000
@@ -156,7 +166,6 @@
         </div>
     </section>
     <!-- Candidate Details End -->
-
 
 
 

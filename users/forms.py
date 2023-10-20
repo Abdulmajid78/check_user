@@ -1,8 +1,30 @@
-# users/forms.py
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from .models import CustomUser
+from .models import *
+
+from django.contrib.auth.forms import UserCreationForm
+
+
+class IndividualUserRegistrationForm(UserCreationForm):
+    class Meta:
+        model = IndividualUser
+        fields = ('username', 'company_name', 'password1', 'password2')
+
+
+class CompanyUserRegistrationForm(UserCreationForm):
+    class Meta:
+        model = CompanyUser
+        fields = ('username', 'company_name', 'password1', 'password2')
+
+
+class CompanyProfileForm(forms.ModelForm):
+    class Meta:
+        model = CompanyProfile
+        fields = ['company_name', 'address', 'year_of_establishment']
+
+
+########### down
 
 
 class RegistrationForm(UserCreationForm):
@@ -15,3 +37,4 @@ class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Username'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
 
+########## up

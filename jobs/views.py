@@ -1,10 +1,10 @@
 from django.db.models import Q
-from django.shortcuts import get_object_or_404, reverse
-from django.views.generic import TemplateView, ListView, DeleteView, CreateView
-
+from django.shortcuts import get_object_or_404
+from django.views.generic import TemplateView, ListView, DeleteView, CreateView, DetailView
 from users.models import EmployeeModel
-from jobs.models import CommentModel
+
 from .forms import CommentForm
+from .models import Comment
 
 
 class FindEmployeeView(ListView):
@@ -30,28 +30,54 @@ class FindEmployeeView(ListView):
         return data
 
 
-class EmployeeDetailsView(DeleteView):
+class EmployeeDetailsView(DetailView):
     model = EmployeeModel
     template_name = 'employee-details.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['comment_form'] = CommentForm()
+        pk = self.kwargs["pk"]
+
+        form = CommentForm()
+        employee = get_object_or_404(EmployeeModel, pk=pk)
+        comments = employee.comment_set.all()
+
+        context['employee'] = employee
+        context['comments'] = comments
+        context['form'] = form
+
         return context
 
+    def post(self, request, *args, **kwargs):
+        form = CommentForm(request.POST)
+        self.object = self.get_object()
+        context = super().get_context_data(**kwargs)
 
-class CommentCreateView(CreateView):
-    template_name = 'employee-details.html'
-    form_class = CommentForm
+        post = EmployeeModel.objects.filter(id=self.kwargs['pk'])[0]
+        comments = post.comment_set.all()
 
-    def form_valid(self, form):
-        employee = get_object_or_404(CommentModel, id=self.kwargs.get('pk'))
-        form.instance.employee = employee
-        form.instance.save()
-        return super().form_valid(form)
+        context['post'] = post
+        context['comments'] = comments
+        context['form'] = form
 
-    def get_success_url(self):
-        return reverse('jobs:employee-detail', kwargs={'pk': self.kwargs.get('pk')})
+        if form.is_valid():
+            user = request.user
+            if user.is_authenticated and not user.is_individual:
+                name = form.cleaned_data['name']
+                position = form.cleaned_data['position']
+                employ_from = form.cleaned_data['employ_from']
+                employ_to = form.cleaned_data['employ_to']
+                content = form.cleaned_data['content']
+
+                comment = Comment.objects.create(
+                    name=name, position=position, employ_from=employ_from, employ_to=employ_to, content=content, post=post
+                )
+
+                form = CommentForm()
+                context['form'] = form
+                return self.render_to_response(context=context)
+
+        return self.render_to_response(context=context)
 
 
 class JobListView(TemplateView):

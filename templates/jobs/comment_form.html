@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <div class="blog__details__comment col-8 m-auto">
+                            <h4 class="pt-5">{% trans 'Leave A Comment' %}</h4>
+
+                            <form method="post" action="{% url 'jobs:create-comment' employee_id=employee_id %}">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="site-btn btn-success">
+                                        {% trans 'Post Comment' %}
+                                    </button>
+                                </div>
+                            </form>
+
+
+                        </div>
+{% endblock %}

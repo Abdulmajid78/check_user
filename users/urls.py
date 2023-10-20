@@ -4,17 +4,11 @@ from . import views
 app_name = 'users'
 
 urlpatterns = [
-    path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
 
-    #
-    # path('profile/', ProfileView.as_view(), name='account'),
-    # path('logout/', logout_view, name='logout'),
-    # path('login/', login_view, name='sign-in'),
-    # # path('registration/', user_registration, name='sign-up'),
-    # #####
-    # path('register/', views.user_registration, name='sign-up'),
-    # ###
-    # path('profile/', ResetPasswordView.as_view(), name='reset-password')
+    path('register/individual/', views.register_individual, name='register'),
+    path('register/company/', views.register_company, name='register-company'),
+    path('update-company-profile/<int:pk>/', views.CompanyProfileUpdateView.as_view(), name='update-company-profile'),
 ]
+

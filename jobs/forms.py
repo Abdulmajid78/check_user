@@ -1,12 +1,8 @@
 from django import forms
-from .models import CommentModel
+from .models import Comment
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = CommentModel
-        exclude = ['employee', 'created_at', 'email', 'phone']
-        widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'name'}),
-            'comment': forms.Textarea(attrs={'placeholder': 'comment'}),
-        }
+        model = Comment
+        fields = ('name', 'position', 'employ_from', 'employ_to', 'content')

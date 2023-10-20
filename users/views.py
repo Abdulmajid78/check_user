@@ -1,19 +1,51 @@
-# users/views.py
-
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import RegistrationForm, LoginForm
+from .forms import RegistrationForm, LoginForm, CompanyProfileForm
+
+from django.shortcuts import render, redirect
+from .forms import IndividualUserRegistrationForm, CompanyUserRegistrationForm
+
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView
+from .models import CompanyProfile
+
+from django.views.generic.edit import UpdateView
+from django.urls import reverse_lazy
+from .models import CompanyProfile
+from .forms import CompanyProfileForm
+
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-def register(request):
+class CompanyProfileUpdateView(LoginRequiredMixin, UpdateView):
+    model = CompanyProfile
+    form_class = CompanyProfileForm
+    template_name = 'profile-change.html'
+    success_url = reverse_lazy('main:home')  # Redirect to the desired page after update
+
+
+def register_individual(request):
     if request.method == "POST":
-        form = RegistrationForm(request.POST)
+        form = IndividualUserRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main:home')  # Redirect to login page or a thank you page
+            return redirect('main:home')  # Redirect to the desired page
     else:
-        form = RegistrationForm()
+        form = IndividualUserRegistrationForm()
     return render(request, 'auth/sign-up.html', {'form': form})
+
+
+def register_company(request):
+    if request.method == "POST":
+        form = CompanyUserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('main:home')  # Redirect to the desired page
+    else:
+        form = CompanyUserRegistrationForm()
+    return render(request, 'auth/sign-up-company.html', {'form': form})
 
 
 def login_view(request):

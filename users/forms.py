@@ -38,3 +38,15 @@ class LoginForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
 
 ########## up
+
+
+from django import forms
+from .models import EmployeeModel
+
+
+class EmployeeModelForm(forms.ModelForm):
+    class Meta:
+        model = EmployeeModel
+        fields = ('first_name', 'last_name', 'third_name', 'phone_number', 'born_city', 'current_city')
+
+

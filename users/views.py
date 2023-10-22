@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import RegistrationForm, LoginForm, CompanyProfileForm
 
 from django.shortcuts import render, redirect
-from .forms import IndividualUserRegistrationForm, CompanyUserRegistrationForm
+from .forms import IndividualUserRegistrationForm, CompanyUserRegistrationForm, EmployeeModelForm
 
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
@@ -70,3 +70,19 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('main:home')
+
+
+def add_employee(request):
+    if request.method == "POST":
+        form = EmployeeModelForm(request.POST)
+        if form.is_valid():
+            employee = form.save(commit=False)
+            employee.save()
+            return redirect('main:home')  # Редирект на желаемую страницу после успешного добавления
+    else:
+        form = EmployeeModelForm()
+    return render(request, 'jobs/post-employee.html', {'form': form})
+
+
+
+

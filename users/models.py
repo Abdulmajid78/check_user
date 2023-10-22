@@ -52,7 +52,7 @@ class CompanyProfile(models.Model):
 
 
 class EmployeeModel(models.Model):
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='profiles', null=True, blank=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='profiles', null=True, blank=True)
     #
     first_name = models.CharField(max_length=50, null=True)
     last_name = models.CharField(max_length=50, null=True)

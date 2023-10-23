@@ -227,8 +227,8 @@ h3 {
 
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
     border-bottom: 1px dashed #4d5877;
-    background: rgba(255, 255, 255, 0.3);
-    font-size: 15px !important;
+    background: rgba(164, 164, 164, 0.8);
+    font-size: 18px !important;
 }
 
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
@@ -4263,22 +4263,22 @@ h3 {
 
 
 /*custom i done */
-.blog__details__comment form .row div {
-    margin-bottom: 15px;
-    margin-top: 20px;
+.blog__details__comment form .row .form-gr {
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
-.blog__details__comment form .row div input {
+.candidate-details .container .row .candidate-info-text form .form-gr input {
     width: 100%;
     height: 50px;
     padding: 5px 20px;
-    background: #fafafa;
+    background: #ffffff;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.blog__details__comment form .row div textarea {
+.candidate-details .container .row .candidate-info-text form .form-gr textarea {
     width: 100%;
     height: 200px;
     padding: 5px 20px;
@@ -4288,7 +4288,7 @@ h3 {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.blog__details__comment form .row div button {
+.candidate-details .container .row .candidate-info-text form button {
     background: var(--red-color);
     color: #ffffff;
     padding: 12px 30px;
@@ -4296,4 +4296,10 @@ h3 {
     transition: .8s;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+.candidate-details .container .row .candidate-info-text form .form-gr label {
+    margin: 16px 0 0 0 ;
+    display: flex;
+    align-items: start;
 }

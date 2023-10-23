@@ -1,16 +1,16 @@
 {% extends 'layouts/base.html' %}
-{% load i18n %}
+{% load i18n crispy_forms_tags %}
 {% block content %}
     <!-- Page Title Start -->
     <section class="page-title title-bg3">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>{% trans 'Post a Job' %}</h2>
+                <h2>{% trans 'Add employee' %}</h2>
                 <ul>
                     <li>
                         <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
                     </li>
-                    <li>{% trans 'Post a Job' %}</li>
+                    <li>{% trans 'Add Employee' %}</li>
                 </ul>
             </div>
         </div>
@@ -25,16 +25,19 @@
     <!-- Post Job Section Start -->
     <div class="job-post ptb-100">
         <div class="container">
+
             <form class="job-post-from" method="post">
+             <h2>{% trans 'Fill Up Your Job information' %}</h2>
                 {% csrf_token %}
-                {{ form.as_p }}
-                <h2>{% trans 'Fill Up Your Job information' %}</h2>
+                {{ form|crispy }}
+
+
                 <div class="row">
 
 
                     <div class="col-md-12 text-center">
                         <button type="submit" class="post-btn">
-                            {% trans 'Post A Job' %}
+                            {% trans 'Add employee' %}
                         </button>
                     </div>
                 </div>

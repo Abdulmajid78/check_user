@@ -70,7 +70,8 @@ class EmployeeDetailsView(DetailView):
                 content = form.cleaned_data['content']
 
                 comment = Comment.objects.create(
-                    name=name, position=position, employ_from=employ_from, employ_to=employ_to, content=content, post=post
+                    name=name, position=position, employ_from=employ_from, employ_to=employ_to, content=content,
+                    post=post
                 )
 
                 form = CommentForm()

@@ -26,7 +26,6 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractUser):
-    company_name = models.CharField(max_length=100)
     address = models.TextField()
     is_individual = models.BooleanField(default=False)
 
@@ -36,6 +35,7 @@ class IndividualUser(CustomUser):
 
 
 class CompanyUser(CustomUser):
+    company_name = models.CharField(max_length=100, null=True, blank=True)
     is_individual = False
 
 

@@ -30,7 +30,8 @@ def register_individual(request):
     if request.method == "POST":
         form = IndividualUserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            login(request, user)  # Log in the user immediately after registration
             return redirect('main:home')  # Redirect to the desired page
     else:
         form = IndividualUserRegistrationForm()
@@ -41,7 +42,8 @@ def register_company(request):
     if request.method == "POST":
         form = CompanyUserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            login(request, user)  # Log in the user immediately after registration
             return redirect('main:home')  # Redirect to the desired page
     else:
         form = CompanyUserRegistrationForm()
@@ -82,7 +84,3 @@ def add_employee(request):
     else:
         form = EmployeeModelForm()
     return render(request, 'jobs/post-employee.html', {'form': form})
-
-
-
-

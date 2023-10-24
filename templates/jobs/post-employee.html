@@ -31,8 +31,66 @@
                 {% csrf_token %}
                 {{ form|crispy }}
 
-
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'first_name' %}</label>
+                            <input type="text" class="form-control" name="first_name" id="exampleInput1"
+                                   placeholder="Isim" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'last_name' %}</label>
+                            <input type="text" class="form-control" name="last_name" id="exampleInput1"
+                                   placeholder="familiya" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'third_name' %}</label>
+                            <input type="text" class="form-control" name="third_name" id="exampleInput1"
+                                   placeholder="otchestno" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'Telefon raqam' %}</label>
+                            <input type="text" class="form-control" name="phone_number" id="exampleInput1"
+                                   placeholder="telefon raqam" value="+998 " required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'Tugilgan Viloyat' %}</label>
+                            <select class="category" name="born_city">
+                                <option data-display="Category">{% trans 'Viloyat' %}</option>
+                                <option value="1">Toshkent</option>
+                                <option value="2">Qoqon</option>
+                                <option value="4">Namangan</option>
+                                <option value="5">Samarkand</option>
+                                <option value="6">Buhoro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>{% trans 'Hozirgi Viloyat' %}</label>
+                            <select class="category" name="current_city">
+                                <option data-display="Category">{% trans 'Hozirgi Viloyat' %}</option>
+                                <option value="1">Toshkent</option>
+                                <option value="2">Qoqon</option>
+                                <option value="4">Namangan</option>
+                                <option value="5">Samarkand</option>
+                                <option value="6">Buhoro</option>
+                            </select>
+                        </div>
+                    </div>
 
 
                     <div class="col-md-12 text-center">

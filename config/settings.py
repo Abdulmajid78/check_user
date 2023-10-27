@@ -126,10 +126,6 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 
-# TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')
-# TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
+TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
 
-# gitga tushishiga shunaqa qilindi  >>>>>>
-# deploy qilinvotganda buni ochirib tepadigini ochib qoysa boldi
-TELEGRAM_BOT_TOKEN = "6941231594:AAHA_r9YVMLw3yvzRZna5sV4-gfdV_wzlW4"
-TELEGRAM_CHAT_ID = "-1002097259486"

@@ -1,9 +1,14 @@
 from django.shortcuts import render, redirect
+from django.views import View
 from django.views.generic import TemplateView
+import telegram
+import telegram.error
+from django.conf import settings
+from django.views.generic.edit import FormMixin
+from .forms import ContactForm
+from django.urls import reverse, reverse_lazy
 
-from django.urls import reverse
-
-from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 
 class HomeView(TemplateView):
@@ -19,8 +24,53 @@ class HomeView(TemplateView):
         return super().get(request, *args, **kwargs)
 
 
+class ContactCreateView(View, FormMixin):
+    form_class = ContactForm
+    template_name = 'contact.html'
+    success_url = reverse_lazy('main:contacts')
+
+    async def post(self, request, *args, **kwargs):
+        form = self.get_form()
+
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone_number = form.cleaned_data['phone_number']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            if len(phone_number) == 11:
+                return render(request, "contact.html", _({'error': 'Failed to send message'}))
+            else:
+                pass
+
+            bot = telegram.Bot(token=settings.TELEGRAM_BOT_TOKEN)
+            chat_id = settings.TELEGRAM_CHAT_ID
+            message = (f"Новое сообщение от: \n name: {name}\n email: {email} \n Телефон номер: ({phone_number})"
+                       f"\n subject: ({subject}) \n Сообщение: {message}")
+
+            try:
+                await bot.send_message(chat_id=chat_id, text=message)
+            except telegram.error.TelegramError:
+                return render(request, "contact.html", _({'error': 'Failed to send message'}))
+
+            return super().form_valid(form)
+
+        return render(request, "contact.html", {'form': form})
+
+    async def get(self, request, *args, **kwargs):
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        return render(request, self.template_name, {'form': form})
+
+
 class ContactView(TemplateView):
     template_name = 'contact.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contact_form'] = ContactForm()
+        return context
 
 
 class AboutView(TemplateView):

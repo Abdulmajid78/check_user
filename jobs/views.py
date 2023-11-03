@@ -1,10 +1,28 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.shortcuts import get_object_or_404
-from django.views.generic import TemplateView, ListView, DeleteView, CreateView, DetailView
-from users.models import EmployeeModel
+from django.http import HttpResponseForbidden
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
+from django.views.decorators.http import require_POST
+from django.views.generic import TemplateView, ListView, CreateView, DetailView
+from users.models import CompanyUser
+from .models import EmployeeModel, Comment
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from .forms import EmployeeModelForm, CommentForm
 
-from .forms import CommentForm
-from .models import Comment
+
+@login_required()
+def add_employee(request):
+    if request.method == "POST":
+        form = EmployeeModelForm(request.POST)
+        if form.is_valid():
+            employee = form.save(commit=False)
+            employee.save()
+            return redirect('main:home')  # Редирект на желаемую страницу после успешного добавления
+    else:
+        form = EmployeeModelForm()
+    return render(request, 'jobs/post-employee.html', {'form': form})
 
 
 class FindEmployeeView(ListView):
@@ -30,55 +48,56 @@ class FindEmployeeView(ListView):
         return data
 
 
-class EmployeeDetailsView(DetailView):
+class EmployeeDetailView(DetailView):
     model = EmployeeModel
-    template_name = 'employee-details.html'
+    template_name = 'jobs/employee-details.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        pk = self.kwargs["pk"]
-
-        form = CommentForm()
-        employee = get_object_or_404(EmployeeModel, pk=pk)
-        comments = employee.comment_set.all()
-
-        context['employee'] = employee
-        context['comments'] = comments
-        context['form'] = form
-
+        context['comments'] = Comment.objects.filter(employee=self.object)
+        context['form'] = CommentForm()
         return context
 
-    def post(self, request, *args, **kwargs):
-        form = CommentForm(request.POST)
-        self.object = self.get_object()
-        context = super().get_context_data(**kwargs)
 
-        post = EmployeeModel.objects.filter(id=self.kwargs['pk'])[0]
-        comments = post.comment_set.all()
+@method_decorator(login_required, name='dispatch')
+class CommentCreateView(LoginRequiredMixin, CreateView):
+    form_class = CommentForm
+    template_name = 'jobs/comment.html'
 
-        context['post'] = post
-        context['comments'] = comments
-        context['form'] = form
+    def form_valid(self, form):
+        employee = get_object_or_404(EmployeeModel, pk=self.kwargs.get('pk'))
+        form.instance.employee = employee
 
-        if form.is_valid():
-            user = request.user
-            if user.is_authenticated and not user.is_individual:
-                name = form.cleaned_data['name']
-                position = form.cleaned_data['position']
-                employ_from = form.cleaned_data['employ_from']
-                employ_to = form.cleaned_data['employ_to']
-                content = form.cleaned_data['content']
+        if isinstance(self.request.user, CompanyUser):
+            form.instance.user = self.request.user
+        else:
+            return HttpResponseForbidden("You don't have permission to add comments.")
 
-                comment = Comment.objects.create(
-                    name=name, position=position, employ_from=employ_from, employ_to=employ_to, content=content,
-                    post=post
-                )
+        form.instance.save()
 
-                form = CommentForm()
-                context['form'] = form
-                return self.render_to_response(context=context)
+        return super().form_valid(form)
 
-        return self.render_to_response(context=context)
+    def get_success_url(self):
+        return reverse('jobs:employee-detail', kwargs={'pk': self.kwargs.get('pk')})
+
+
+# @require_POST
+# def employee_comment(request, employee_id):
+#     employee = get_object_or_404(EmployeeModel, id=employee_id, status=EmployeeModel)
+#     comment = None
+#     # Комментарий был отправлен
+#     form = CommentForm(data=request.POST)
+#     if form.is_valid():
+#         # Создать объект класса Comment, не сохраняя его в базе данных
+#         comment = form.save(commit=False)
+#         # Назначить пост комментарию
+#         comment.post = employee
+#         # Сохранить комментарий в базе данных
+#         comment.save()
+#     return render(request, 'jobs/comment.html',
+#                   {'employee': employee,
+#                    'form': form,
+#                    'comment': comment})
 
 
 class JobListView(TemplateView):
@@ -99,3 +118,73 @@ class CandidatesView(TemplateView):
 
 class PostJobView(TemplateView):
     template_name = 'post-job.html'
+
+# class AddReview(View):
+#     def post(self, request, pk):
+#         form = CommentForm(request.POST)
+#         employee = EmployeeModel.objects.get(id=pk)
+#         post = EmployeeModel.objects.get(pk=self.kwargs['pk'])
+#         user = self.request.user
+#
+#         if form.is_valid():
+#             company_name = self.request.user.username
+#             position = form.cleaned_data['position']
+#             employ_from = form.cleaned_data['employ_from']
+#             employ_to = form.cleaned_data['employ_to']
+#             content = form.cleaned_data['content']
+#
+#             form = Comment.objects.create(
+#                 user=company_name,
+#                 position=position,
+#                 employ_from=employ_from,
+#                 employ_to=employ_to,
+#                 content=content,
+#                 post=post
+#             )
+#
+#             form = form.save(commit=False)
+#             form.employee = employee
+#             form.save()
+#
+#         return redirect(employee.get_absolute_url())
+
+
+# @method_decorator(login_required, name='dispatch')
+# class EmployeeDetailsView(DetailView):
+#     model = EmployeeModel
+#     template_name = 'employee-details.html'
+#     context_object_name = 'employee'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['comments'] = Comment.objects.filter(post=self.object)
+#         context['form'] = CommentForm()
+#         print(context)  # Добавьте эту строку для отладки
+#         return context
+#
+#
+# class CommentCreateView(FormView):
+#     form_class = CommentForm
+#     template_name = 'employee-details.html'
+#
+#     def form_valid(self, form):
+#         employee = get_object_or_404(EmployeeModel, pk=self.kwargs['pk'])
+#         user = self.request.user
+#         if not user.is_individual and isinstance(user, CompanyUser):
+#             company_name = user.company_name
+#             position = form.cleaned_data['position']
+#             employ_from = form.cleaned_data['employ_from']
+#             employ_to = form.cleaned_data['employ_to']
+#             content = form.cleaned_data['content']
+#
+#             comment = Comment.objects.create(
+#                 user=user,
+#                 position=position,
+#                 employ_from=employ_from,
+#                 employ_to=employ_to,
+#                 content=content,
+#                 post=employee
+#             )
+#             print('commeeeeent', comment)
+#
+#         return redirect('jobs:employee-detail', pk=employee.pk)

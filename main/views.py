@@ -21,6 +21,7 @@ class HomeView(TemplateView):
         if search_name or search_surname:
             url = reverse('jobs:find-employee') + f'?search_name={search_name}&search_surname={search_surname}'
             return redirect(url)
+
         return super().get(request, *args, **kwargs)
 
 

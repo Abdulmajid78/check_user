@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    {% if comment %}
+        <h2>Your comment has been added.</h2>
+        <p><a href="{{ employee.get_absolute_url }}">Back to the post</a></p>
+    {% else %}
+        {% include 'jobs/includes/comment_form.html' %}
+    {% endif %}
+    {% with comments.count as total_comments %}
+        <h2>
+            {{ total_comments }} comment{{ total_comments|pluralize }}
+        </h2>
+    {% endwith %}
+{% endblock %}

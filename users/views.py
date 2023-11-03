@@ -1,53 +1,56 @@
-from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from .forms import RegistrationForm, LoginForm, CompanyProfileForm
-
 from django.shortcuts import render, redirect
-from .forms import IndividualUserRegistrationForm, CompanyUserRegistrationForm, EmployeeModelForm
-
+from .models import Profile
 from django.contrib.auth.decorators import login_required
-from django.urls import reverse_lazy
-from django.views.generic.edit import UpdateView
-from .models import CompanyProfile
 
-from django.views.generic.edit import UpdateView
-from django.urls import reverse_lazy
-from .models import CompanyProfile
-from .forms import CompanyProfileForm
-
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import LoginForm, UserRegistrationForm, \
+    UserEditForm, ProfileEditForm
 
 
-class CompanyProfileUpdateView(LoginRequiredMixin, UpdateView):
-    model = CompanyProfile
-    form_class = CompanyProfileForm
-    template_name = 'profile-change.html'
-    success_url = reverse_lazy('main:home')  # Redirect to the desired page after update
-
-
-def register_individual(request):
-    if request.method == "POST":
-        form = IndividualUserRegistrationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)  # Log in the user immediately after registration
-            return redirect('main:home')  # Redirect to the desired page
+@login_required
+def edit(request):
+    if request.method == 'POST':
+        user_form = UserEditForm(instance=request.user, data=request.POST)
+        profile_form = ProfileEditForm(
+            instance=request.user.profile,
+            data=request.POST,
+            files=request.FILES)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Profile yangilandi ' 'successfully')
+        else:
+            messages.error(request, 'Hato profile yangilashda')
     else:
-        form = IndividualUserRegistrationForm()
-    return render(request, 'auth/sign-up.html', {'form': form})
+        user_form = UserEditForm(instance=request.user)
+        profile_form = ProfileEditForm(
+            instance=request.user.profile)
+    return render(request,
+                  'account/profile.html',
+                  {'user_form': user_form,
+                   'profile_form': profile_form})
 
 
-def register_company(request):
-    if request.method == "POST":
-        form = CompanyUserRegistrationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)  # Log in the user immediately after registration
-            return redirect('main:home')  # Redirect to the desired page
+def register(request):
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST)
+        if user_form.is_valid():
+            # Создать новый объект пользователя,
+            # но пока не сохранять его
+            new_user = user_form.save(commit=False)
+            # Установить выбранный пароль
+            new_user.set_password(user_form.cleaned_data['password'])
+            # Сохранить объект User
+            new_user.save()
+            # Создать профиль пользователя
+            Profile.objects.create(user=new_user)
+            return redirect('main:home')
     else:
-        form = CompanyUserRegistrationForm()
-    return render(request, 'auth/sign-up-company.html', {'form': form})
+        user_form = UserRegistrationForm()
+    return render(request,
+                  'account/register.html',
+                  {'user_form': user_form})
 
 
 def login_view(request):
@@ -66,7 +69,7 @@ def login_view(request):
                 form.add_error(None, 'Invalid username or password.')
     else:
         form = LoginForm()
-    return render(request, 'auth/sign-in.html', {'form': form})
+    return render(request, 'account/sign-in.html', {'form': form})
 
 
 def logout_view(request):
@@ -74,13 +77,81 @@ def logout_view(request):
     return redirect('main:home')
 
 
-def add_employee(request):
-    if request.method == "POST":
-        form = EmployeeModelForm(request.POST)
-        if form.is_valid():
-            employee = form.save(commit=False)
-            employee.save()
-            return redirect('main:home')  # Редирект на желаемую страницу после успешного добавления
-    else:
-        form = EmployeeModelForm()
-    return render(request, 'jobs/post-employee.html', {'form': form})
+@login_required
+def dashboard(request):
+    return render(request,
+                  'account/dashboard.html',
+                  {'section': 'dashboard'})
+
+# def register_company(request):
+#     if request.method == "POST":
+#         form = CompanyUserRegistrationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save(commit=False)
+#             user.is_individual = False  # Устанавливаем is_individual в False для компаний
+#             user.save()
+#             login(request, user)  # Log in the user immediately after registration
+#             return redirect('main:home')  # Redirect to the desired page
+#     else:
+#         form = CompanyUserRegistrationForm()
+#     return render(request, 'auth/sign-up-company.html', {'form': form})
+
+
+# @login_required
+# def company_profile_view(request):
+#     company_profile, created = Profile.objects.get_or_create(user=request.user)
+#
+#     if request.method == 'POST':
+#         form = CompanyProfileForm(request.POST, instance=company_profile)
+#         if form.is_valid():
+#             form.save()
+#     else:
+#         form = CompanyProfileForm(instance=company_profile)
+#
+#     return render(request, 'auth/company-account.html', {'form': form})
+
+
+# def register_individual(request):
+#     if request.method == "POST":
+#         form = IndividualUserRegistrationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)  # Log in the user immediately after registration
+#             return redirect('main:home')  # Redirect to the desired page
+#     else:
+#         form = IndividualUserRegistrationForm()
+#     return render(request, 'auth/sign-up.html', {'form': form})
+
+
+# Пока обычные пользователи не имеют профиля
+# @login_required
+# def user_profile_view(request):
+#     user_profile = UserProfile.objects.get(user=request.user)
+#
+#     if request.method == 'POST':
+#         form = UserProfileForm(request.POST, instance=user_profile)
+#         if form.is_valid():
+#             form.save()
+#     else:
+#         form = UserProfileForm(instance=user_profile)
+#
+#     return render(request, 'auth/user-account.html', {'form': form})
+
+
+# class CompanyProfileUpdateView(LoginRequiredMixin, UpdateView):
+#     model = ProfileModel
+#     form_class = CompanyProfileForm
+#     template_name = 'profile-change.html'
+#     success_url = reverse_lazy('main:home')  # Redirect to the desired page after update
+
+
+# @login_required
+# def profile_view(request):
+#     if request.method == 'POST':
+#         form = ProfileForm(request.POST, instance=request.user)
+#         if form.is_valid():
+#             form.save()
+#     else:
+#         form = ProfileForm(instance=request.user)
+#
+#     return render(request, 'auth/account.html', {'form': form})

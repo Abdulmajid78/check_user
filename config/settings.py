@@ -119,11 +119,25 @@ try:
 except ImportError:
     pass
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'users.CompanyUser'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+LOGIN_REDIRECT_URL = 'main.home'
+
+LOGIN_URL = 'users.login'
+
+LOGOUT_URL = 'users.logout'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'users.authentication.EmailAuthBackend',
+]
 
 
 TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')

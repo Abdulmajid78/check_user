@@ -112,59 +112,64 @@
                         <div class="col-lg-12">
                             <div class="job-card-two">
                                 <h3>Qayoda ishlaganlari</h3>
-                                {% if comments %}
-                                    <div class="row mt-5">
-                                        <div class="col-lg-6 offset-lg-3">
-                                            Comment{{ comments.count|pluralize }}
-                                            <span class="badge bg-warning ml-2">{{ comments.count }}</span>
-                                        </div>
-                                        {% for comment in comments %}
-                                            <div class="row align-items-center">
-                                                <div class="col-md-2">
-                                                    <div class="company-logo d-flex justify-content-center align-content-center">
-                                                        <a href="{% url 'jobs:job-detail' %}">
-                                                            <img src="{% static 'img/company-logo/1.png' %}" alt="logo">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-8">
-
-                                                    <div class="job-info">
-                                                        <h3>
-                                                            <a href="{% url 'jobs:job-detail' %}">{{ comment.name }}</a>
-                                                        </h3>
-
-                                                        <ul>
-                                                            <li>
-                                                                <i class='bx bx-briefcase'></i>
-                                                                {% trans 'Position' %} - {{ comment.position }}
-                                                            </li>
-
-                                                            <li>
-                                                                <i class='bx bx-location-plus'></i>
-                                                                {% trans 'Location' %} - Wellesley Rd, Uzbekistan !!!
-                                                            </li>
-                                                            <li>
-                                                                <i class='bx bx-stopwatch'></i>
-                                                                {% trans 'Period of Employment' %}
-                                                                - ({{ comment.employ_from|date:"d-m-Y" }}
-                                                                - {{ comment.employ_to|date:"d-m-y" }})
-                                                            </li>
-                                                            <li>
-                                                                <p class="m-1 mt-3">{{ comment.content }}</p>
-                                                            </li>
-                                                            <p class="text-right text-muted">
-                                                                <small>{{ comment.created }}</small>
-                                                            </p>
-                                                        </ul>
-
-
-                                                    </div>
+                                {#                                {% if comments %}#}
+                                <div class="row mt-5">
+                                    <div class="col-lg-6 offset-lg-3">
+                                        Comment{{ comments.count|pluralize }}
+                                        <span class="badge bg-warning ml-2">{{ comments.count }}</span>
+                                    </div>
+                                    {% for comment in comments %}
+                                        <div class="row align-items-center">
+                                            <div class="col-md-2">
+                                                <div class="company-logo d-flex justify-content-center align-content-center">
+                                                    <a href="{% url 'jobs:job-detail' %}">
+                                                        <img src="{% static 'img/company-logo/1.png' %}" alt="logo">
+                                                    </a>
                                                 </div>
                                             </div>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
+                                            <div class="col-md-8">
+
+                                                <div class="job-info">
+                                                    <h3>
+                                                        <a href="{% url 'jobs:job-detail' %}">{{ comment.user.company_name }}</a>
+                                                    </h3>
+
+                                                    <ul>
+                                                        <li>
+                                                            <i class='bx bx-briefcase'></i>
+                                                            {% trans 'Position' %} - {{ comment.position }}
+                                                        </li>
+
+                                                        <li>
+                                                            <i class='bx bx-location-plus'></i>
+                                                            {% trans 'Location' %} - Wellesley Rd, Uzbekistan !!!
+                                                        </li>
+                                                        <li>
+                                                            <i class='bx bx-stopwatch'></i>
+                                                            {% trans 'Period of Employment' %}
+                                                            - ({{ comment.employ_from|date:"d-m-Y" }}
+                                                            - {{ comment.employ_to|date:"d-m-y" }})
+                                                        </li>
+                                                        <li>
+                                                            <p class="m-1 mt-3">{{ comment.content }}</p>
+                                                        </li>
+                                                        <p class="text-right text-muted">
+                                                            <small>{{ comment.created }}</small>
+                                                        </p>
+                                                    </ul>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% empty %}
+                                        <p>There are no comments.</p>
+                                    {% endfor %}
+
+
+
+                                </div>
+                                {#                                {% endif %}#}
                             </div>
                         </div>
                     </div>
@@ -175,49 +180,15 @@
                             <!-- Form to leave comment -->
                             <div class="row mt-5">
                                 <div class="col-lg-12">
-                                    <h3>Leave a Comment</h3>
-                                    <form method='POST'>
-                                        {% csrf_token %}
-                                        <div class="form-gr">
-                                            <span class="mt-1">{{ form.name.label_tag }}</span>
-                                            <input type="text"
-                                                   class="form-control {% if form.name.errors %}is-invalid{% endif %}"
-                                                   id="id_name"
-                                                   name="name" value="{{ form.name.value|default:'' }}">
-                                        </div>
-                                        <div class="form-gr">
-                                            <span class="mt-1"></span>{{ form.position.label_tag }}
-                                            <input type="text"
-                                                   class="form-control {% if form.position.errors %}is-invalid{% endif %}"
-
-                                                   name="position" value="{{ form.position.value|default:'' }}">
-                                        </div>
-
-                                        <div class="form-gr">
-                                            <span class="mt-1"></span>{{ form.employ_from.label_tag }}
-                                            <input type="date"
-                                                   class="form-control {% if form.employ_from.errors %}is-invalid{% endif %}"
-                                                   name="employ_from" value="{{ form.employ_from.value|default:'' }}">
-                                        </div>
-                                        <div class="form-gr">
-                                            <span class="mt-1"></span>{{ form.employ_to.label_tag }}
-                                            <input type="date"
-                                                   class="form-control {% if form.employ_to.errors %}is-invalid{% endif %}"
-
-                                                   name="employ_to" value="{{ form.employ_to.value|default:'' }}">
-                                        </div>
-
-
-                                        <div class="form-gr">
-                                            <span class=""></span>{{ form.content.label_tag }}
-                                            <textarea
-                                                    class="form-control {% if form.content.errors %}is-invalid{% endif %}"
-                                                    id="id_content"
-                                                    name="content">
-                                                {{ form.content.value|default:'' }}</textarea>
-                                        </div>
-                                        <button class="btn btn-primary ml-2" type="submit">Reply</button>
-                                    </form>
+                                    {% if request.user.is_authenticated %}
+                                        {% include 'jobs/includes/comment_form.html' %}
+{#                                        <h3>Leave a Comment</h3>#}
+{##}
+{#
+                                    {% else %}
+                                        <h3>AGAR BU ISHCHINI SIZDA ISHLAGANI TOGRISIDA MALUMOT BERMOQCHI BOLSANGIZ, <a
+                                                href="{% url 'users:login' %}">TIZIMGA KIRING</a></h3>
+                                    {% endif %}
                                 </div>
                             </div>
 

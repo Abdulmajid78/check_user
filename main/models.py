@@ -16,3 +16,4 @@ class ContactMessageModel(models.Model):
     class Meta:
         verbose_name = 'Связаться с нами'
         verbose_name_plural = 'Связаться с нами'
+

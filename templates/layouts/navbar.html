@@ -34,10 +34,15 @@
 
                             <ul class="dropdown-menu">
 
-                                <li class="nav-item">
-                                    <a href="{% url 'jobs:add_employee' %}"
-                                       class="nav-link">{% trans 'Add employee' %}</a>
-                                </li>
+
+
+                                {% if  request.user.is_authenticated %}
+                                    <li class="nav-item">
+                                        <a href="{% url 'users:add_employee' %}"
+                                           class="nav-link">{% trans 'Add employee' %}</a>
+                                    </li>
+                                {% endif %}
+
                                 <li class="nav-item">
                                     <a href="{% url 'jobs:post-job' %}" class="nav-link">{% trans 'Post A Job' %}</a>
 

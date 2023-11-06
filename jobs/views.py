@@ -12,14 +12,13 @@ from django.utils.decorators import method_decorator
 from .forms import EmployeeModelForm, CommentForm
 
 
-@login_required()
+@login_required
 def add_employee(request):
     if request.method == "POST":
         form = EmployeeModelForm(request.POST)
         if form.is_valid():
-            employee = form.save(commit=False)
-            employee.save()
-            return redirect('main:home')  # Редирект на желаемую страницу после успешного добавления
+            employee = form.save()  # Save the instance
+            return redirect('main:home')
     else:
         form = EmployeeModelForm()
     return render(request, 'jobs/post-employee.html', {'form': form})

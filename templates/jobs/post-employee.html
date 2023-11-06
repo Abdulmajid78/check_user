@@ -26,103 +26,131 @@
     <div class="job-post ptb-100">
         <div class="container">
 
-            <form class="job-post-from" method="post">
-             <h2>{% trans 'Fill Up Your Job information' %}</h2>
-                {% csrf_token %}
+        <form class="job-post-from" method="post">
+    <h2>{% trans 'Fill Up Your Job information' %}</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="col-md-12 text-center">
+        <button type="submit" class="post-btn">
+            {% trans 'Add employee' %}
+        </button>
+    </div>
+</form>
+
+{#            <form class="job-post-from" method="post">#}
+{#             <h2>{% trans 'Fill Up Your Job information' %}</h2>#}
+{#                {% csrf_token %}#}
 {#                {{ form|crispy }}#}
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'first_name' %}</label>
-                            <input type="text" class="form-control" name="first_name" id="exampleInput1"
-                                   placeholder="Isim" required>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'last_name' %}</label>
-                            <input type="text" class="form-control" name="last_name" id="exampleInput1"
-                                   placeholder="familiya" required>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'third_name' %}</label>
-                            <input type="text" class="form-control" name="third_name" id="exampleInput1"
-                                   placeholder="otchestno" required>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'Telefon raqam' %}</label>
-                            <input type="text" class="form-control" name="phone_number" id="exampleInput1"
-                                   placeholder="telefon raqam" value="+998 " required>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'Tugilgan Viloyatingiz' %}</label>
-                            <select class="category" name="born_city">
-                                <option value="Toshkent">Toshkent</option>
-                                <option value="Toshkent viloyat">Toshkent viloyat</option>
-
-                                <option value="Andijan">Andijan</option>
-                                <option value="Bukhara">Bukhara</option>
-                                <option value="Fergana ">Fergana </option>
-                                <option value="Jizzakh">Jizzakh</option>
-
-                                <option value="Namangan">Namangan</option>
-                                <option value="Navoiy">Navoiy</option>
-                                <option value="Qashqadaryo">Qashqadaryo</option>
-                                <option value="Samarqand ">Samarqand </option>
-                                <option value="Sirdaryo">Sirdaryo</option>
-
-                                <option value="Surxondaryo">Surxondaryo</option>
-                                <option value="Xorazm">Xorazm</option>
-                                <option value="Karakalpakstan">Karakalpakstan</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>{% trans 'Hozirgi istiqomat qilayotkan viloyatingiz' %}</label>
-                            <select class="category" name="current_city">
-                                <option data-display="Viloyatni tanlang">{% trans 'Hozirgi Viloyat' %}</option>
-                                <option value="Toshkent">Toshkent</option>
-                                <option value="Toshkent viloyat">Toshkent viloyat</option>
-
-                                <option value="Andijan">Andijan</option>
-                                <option value="Bukhara">Bukhara</option>
-                                <option value="Fergana ">Fergana </option>
-                                <option value="Jizzakh">Jizzakh</option>
-
-                                <option value="Namangan">Namangan</option>
-                                <option value="Navoiy">Navoiy</option>
-                                <option value="Qashqadaryo">Qashqadaryo</option>
-                                <option value="Samarqand ">Samarqand </option>
-                                <option value="Sirdaryo">Sirdaryo</option>
-
-                                <option value="Surxondaryo">Surxondaryo</option>
-                                <option value="Xorazm">Xorazm</option>
-                                <option value="Karakalpakstan">Karakalpakstan</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="post-btn">
-                            {% trans 'Add employee' %}
-                        </button>
-                    </div>
-                </div>
-            </form>
+{##}
+{#                <div class="row">#}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Ismingiz' %}</label>#}
+{#                            <input type="text" class="form-control" name="first_name" id="exampleInput1"#}
+{#                                   placeholder="Isim" required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Familiya' %}</label>#}
+{#                            <input type="text" class="form-control" name="last_name" id="exampleInput1"#}
+{#                                   placeholder="familiya" required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Sharif' %}</label>#}
+{#                            <input type="text" class="form-control" name="third_name" id="exampleInput1"#}
+{#                                   placeholder="otchestno" required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Telefon raqam' %}</label>#}
+{#                            <input type="text" class="form-control" name="phone_number" id="exampleInput1"#}
+{#                                   placeholder="telefon raqam" value="+998 " required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'about' %}</label>#}
+{#                            <input type="text" class="form-control" name="about" id="exampleInput1"#}
+{#                                   placeholder="about" required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'experience' %}</label>#}
+{#                            <input type="text" class="form-control" name="experience" id="exampleInput1"#}
+{#                                   placeholder="experience" required>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Tugilgan Viloyatingiz' %}</label>#}
+{#                            <select class="category" name="born_city">#}
+{#                                <option value="Toshkent">Toshkent</option>#}
+{#                                <option value="Toshkent viloyat">Toshkent viloyat</option>#}
+{##}
+{#                                <option value="Andijan">Andijan</option>#}
+{#                                <option value="Bukhara">Bukhara</option>#}
+{#                                <option value="Fergana ">Fergana </option>#}
+{#                                <option value="Jizzakh">Jizzakh</option>#}
+{##}
+{#                                <option value="Namangan">Namangan</option>#}
+{#                                <option value="Navoiy">Navoiy</option>#}
+{#                                <option value="Qashqadaryo">Qashqadaryo</option>#}
+{#                                <option value="Samarqand ">Samarqand </option>#}
+{#                                <option value="Sirdaryo">Sirdaryo</option>#}
+{##}
+{#                                <option value="Surxondaryo">Surxondaryo</option>#}
+{#                                <option value="Xorazm">Xorazm</option>#}
+{#                                <option value="Karakalpakstan">Karakalpakstan</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-6">#}
+{#                        <div class="form-group">#}
+{#                            <label>{% trans 'Hozirgi istiqomat qilayotkan viloyatingiz' %}</label>#}
+{#                            <select class="category" name="current_city">#}
+{#                                <option data-display="Viloyatni tanlang">{% trans 'Hozirgi Viloyat' %}</option>#}
+{#                                <option value="Toshkent">Toshkent</option>#}
+{#                                <option value="Toshkent viloyat">Toshkent viloyat</option>#}
+{##}
+{#                                <option value="Andijan">Andijan</option>#}
+{#                                <option value="Bukhara">Bukhara</option>#}
+{#                                <option value="Fergana ">Fergana </option>#}
+{#                                <option value="Jizzakh">Jizzakh</option>#}
+{##}
+{#                                <option value="Namangan">Namangan</option>#}
+{#                                <option value="Navoiy">Navoiy</option>#}
+{#                                <option value="Qashqadaryo">Qashqadaryo</option>#}
+{#                                <option value="Samarqand ">Samarqand </option>#}
+{#                                <option value="Sirdaryo">Sirdaryo</option>#}
+{##}
+{#                                <option value="Surxondaryo">Surxondaryo</option>#}
+{#                                <option value="Xorazm">Xorazm</option>#}
+{#                                <option value="Karakalpakstan">Karakalpakstan</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{##}
+{#                    <div class="col-md-12 text-center">#}
+{#                        <button type="submit" class="post-btn">#}
+{#                            {% trans 'Add employee' %}#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </form>#}
         </div>
     </div>
     <!-- Post Job Section End -->

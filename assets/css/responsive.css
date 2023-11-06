@@ -31,7 +31,7 @@
     position: relative;
   }
   .navbar-area .mean-container .mean-bar {
-    background-color: #010c29;
+    background-color: var(--nav-color);
     padding: 0;
   }
   .navbar-area .mean-container .mean-bar nav .navbar-nav {

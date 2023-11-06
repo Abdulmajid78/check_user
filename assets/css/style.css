@@ -49,7 +49,7 @@
     --body-color: #707070;
     --heading-color: #001935;
     --red-color: #0065FF;
-    --light-red-color: #dfebf6;
+    --light-red-color: #dfebf6; /*kokro rang och*/
     --white-color: #ffffff;
     --nav-color: #818181;
 
@@ -228,7 +228,7 @@ h3 {
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
     border-bottom: 1px dashed #4d5877;
     background: rgba(164, 164, 164, 0.8);
-    font-size: 18px !important;
+    font-size: 17px !important;
 }
 
 .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active, .navbar-area .main-nav .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover {
@@ -3966,7 +3966,7 @@ h3 {
 /* Back To Top CSS End */
 /* Pre-loader CSS Start */
 .loader-content {
-    background: var(--heading-color);
+    background: black;
     height: 100%;
     width: 100%;
     position: fixed;

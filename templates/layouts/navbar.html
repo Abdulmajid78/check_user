@@ -133,7 +133,7 @@
 
                     <div class="other-option">
                         {% if request.user.is_authenticated %}
-                            Hello {{ request.user.first_name|default:request.user.username }},
+                            Hello {{ request.user.company_name|default:request.user.username }},
                             <a href="{% url 'users:logout' %}" class="signin-btn">{% trans 'Logout' %}</a>.
                             <a href="{% url 'users:edit' %}" class="signin-btn">{% trans 'Profile' %}</a>
                         {% else %}

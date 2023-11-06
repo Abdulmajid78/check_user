@@ -123,7 +123,9 @@
                                             <div class="col-md-2">
                                                 <div class="company-logo d-flex justify-content-center align-content-center">
                                                     <a href="{% url 'jobs:job-detail' %}">
-                                                        <img src="{% static 'img/company-logo/1.png' %}" alt="logo">
+                                                        <img src="{{ comment.profile_picture }}" alt="logo">
+
+
                                                     </a>
                                                 </div>
                                             </div>
@@ -183,8 +185,6 @@
                                     {% if request.user.is_authenticated %}
                                         {% include 'jobs/includes/comment_form.html' %}
 {#                                        <h3>Leave a Comment</h3>#}
-{##}
-{#
                                     {% else %}
                                         <h3>AGAR BU ISHCHINI SIZDA ISHLAGANI TOGRISIDA MALUMOT BERMOQCHI BOLSANGIZ, <a
                                                 href="{% url 'users:login' %}">TIZIMGA KIRING</a></h3>

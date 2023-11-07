@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.views.generic import TemplateView, ListView, CreateView, DetailView
 from users.models import CompanyUser
-from .models import EmployeeModel, Comment
+from .models import EmployeeModel, Comment, CompanyModel
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .forms import EmployeeModelForm, CommentForm
@@ -25,7 +25,7 @@ def add_employee(request):
 
 
 class FindEmployeeView(ListView):
-    template_name = 'find-employee.html'
+    template_name = 'jobs/find-employee.html'
     paginate_by = 14
 
     def get_queryset(self):
@@ -80,6 +80,40 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
         return reverse('jobs:employee-detail', kwargs={'pk': self.kwargs.get('pk')})
 
 
+class CompanyListView(ListView):
+    model = CompanyModel
+    template_name = 'jobs/companies-list.html'
+    paginate_by = 20
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        data = super().get_context_data()
+        data['companies'] = CompanyModel.objects.all()
+        return data
+
+
+class CompanyDetailView(DetailView):
+    model = EmployeeModel
+    template_name = 'jobs/company-details.html'
+
+
+class ResumeView(TemplateView):
+    template_name = 'resume.html'
+
+
+class JobDetailView(TemplateView):
+    template_name = 'jobs/company-details.html'
+
+
+class CandidatesView(TemplateView):
+    template_name = 'candidate.html'
+
+
+class PostJobView(TemplateView):
+    template_name = 'post-job.html'
+
+
+
+
 # @require_POST
 # def employee_comment(request, employee_id):
 #     employee = get_object_or_404(EmployeeModel, id=employee_id, status=EmployeeModel)
@@ -99,24 +133,6 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 #                    'comment': comment})
 
 
-class JobListView(TemplateView):
-    template_name = 'job-list.html'
-
-
-class ResumeView(TemplateView):
-    template_name = 'resume.html'
-
-
-class JobDetailView(TemplateView):
-    template_name = 'job-details.html'
-
-
-class CandidatesView(TemplateView):
-    template_name = 'candidate.html'
-
-
-class PostJobView(TemplateView):
-    template_name = 'post-job.html'
 
 # class AddReview(View):
 #     def post(self, request, pk):

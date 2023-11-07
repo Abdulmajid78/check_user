@@ -38,7 +38,7 @@
 
                                 {% if  request.user.is_authenticated %}
                                     <li class="nav-item">
-                                        <a href="{% url 'users:add_employee' %}"
+                                        <a href="{% url 'jobs:add_employee' %}"
                                            class="nav-link">{% trans 'Add employee' %}</a>
                                     </li>
                                 {% endif %}
@@ -48,7 +48,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'jobs:job-list' %}" class="nav-link">{% trans 'Job List' %}</a>
+                                    <a href="{% url 'jobs:companies-list' %}" class="nav-link">{% trans 'Job List' %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -60,6 +60,10 @@
                         <li class="nav-item">
                             <a href="{% url 'jobs:find-employee' %}"
                                class="nav-link">{% trans 'Ishchilar royhati' %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'jobs:companies-list' %}"
+                               class="nav-link">{% trans 'Kompaniyalar royhati' %}</a>
                         </li>
 
                         <!-- unused pages and links -->

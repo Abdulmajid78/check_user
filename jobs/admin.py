@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Comment, EmployeeModel, ExperienceModel, CityModel
+from .models import Comment, EmployeeModel, ExperienceModel, CityModel, CompanyModel
+
+
+@admin.register(CompanyModel)
+class CompanyModelAdmin(admin.ModelAdmin):
+    list_display = ['company_name', 'phone_number']
+    list_display_links = ['company_name', 'phone_number']
+    search_fields = ['company_name', 'phone_number']
 
 
 @admin.register(CityModel)

@@ -69,8 +69,10 @@ class CompanyModel(models.Model):
     user = models.OneToOneField(users.models.CompanyUser, on_delete=models.CASCADE, null=True, blank=True)
 
     company_name = models.CharField(max_length=255)
+    business_type = models.CharField(max_length=255)  # Виды деятельности, в последующим сделаем ManyToManyField
     phone_number = models.CharField(max_length=24)
     address = models.TextField()
+    location = models.CharField(max_length=400, null=True, blank=True)
     description = models.TextField()
     site = models.CharField(max_length=255)
     is_individual = models.BooleanField(default=False)

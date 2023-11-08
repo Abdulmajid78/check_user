@@ -6,7 +6,7 @@
     <section class="page-title title-bg8">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>{% trans 'Candidates Details' %}</h2>
+                <h2>{% trans 'Employee Details' %}</h2>
                 <ul>
                     <li>
                         <a href="{% url 'main:home' %}">{% trans 'Home' %}</a>
@@ -82,24 +82,23 @@
                             <div class="job-card-two">
                                 <h3>Qayoda ishlaganlari</h3>
                                 {#                                {% if comments %}#}
-                                <div class="row mt-5">
-                                    <div class="col-lg-6 offset-lg-3">
+                                <div class="row mt-5 px-5">
+                                    <div class="col-4 mb-2 offset-lg-81">
                                         Comment{{ comments.count|pluralize }}
-                                        <span class="badge bg-warning ml-2">{{ comments.count }}</span>
+                                        <span class="badge bg-primary ms-1">{{ comments.count }}</span>
                                     </div>
                                     {% for comment in comments %}
-                                        <div class="row align-items-center">
+                                        <div class="row bg-lightsilver mb-3 align-items-center">
                                             <div class="col-md-2">
                                                 <div class="company-logo d-flex justify-content-center align-content-center">
                                                     <a href="{% url 'jobs:job-detail' %}">
+                                                        <!-- company profile photo kelish kk
+                                                         requestga teng bogan-->
                                                         <img src="{{ comment.profile_picture }}" alt="logo">
-
-
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-md-8">
-
                                                 <div class="job-info">
                                                     <h3>
                                                         <a href="{% url 'jobs:job-detail' %}">{{ request.user.first_name }}</a>
@@ -107,13 +106,11 @@
                                                     <h3>
                                                         <a href="{% url 'jobs:job-detail' %}">{{ comment.name }}</a>
                                                     </h3>
-
                                                     <ul>
                                                         <li>
                                                             <i class='bx bx-briefcase'></i>
                                                             {% trans 'Position' %} - {{ comment.position }}
                                                         </li>
-
                                                         <li>
                                                             <i class='bx bx-location-plus'></i>
                                                             {% trans 'Location' %} - Wellesley Rd, Uzbekistan !!!
@@ -131,8 +128,6 @@
                                                             <small>{{ comment.created }}</small>
                                                         </p>
                                                     </ul>
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -167,10 +162,10 @@
                         {# COMMENT ENDS #}
 
 
-                        <div class="theme-btn">
-                            <a href="#" class="default-btn">{% trans 'Hire Me' %}</a>
-                            <a href="#" class="default-btn">{% trans 'Download CV' %}</a>
-                        </div>
+{#                        <div class="theme-btn">#}
+{#                            <a href="#" class="default-btn">{% trans 'Hire Me' %}</a>#}
+{#                            <a href="#" class="default-btn">{% trans 'Download CV' %}</a>#}
+{#                        </div>#}
                     </div>
 
                 </div>

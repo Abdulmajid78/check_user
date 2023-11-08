@@ -57,6 +57,14 @@
 
 /* Others Variables */
 
+.bg-lightsilver {
+    background-color: rgba(185, 185, 185, 0.19);
+}
+
+.offset-lg-81 {
+    margin-left: 81.3%;
+}
+
 body {
     font-size: 17px;
     font-family: "IBM Plex Sans", sans-serif;
@@ -600,7 +608,6 @@ h3 {
 .job-card-two {
     background: #ffffff;
     margin-bottom: 30px;
-    padding: 40px 30px;
 }
 
 .job-card-two .company-logo {
@@ -2685,6 +2692,10 @@ h3 {
 
 .candidate-info-text.candidate-experience ul {
     padding-left: 20px;
+}
+
+.candidate-info-text.candidate-experience .job-info ul {
+    padding-left: 0;
 }
 
 .candidate-info-text.candidate-experience ul li {

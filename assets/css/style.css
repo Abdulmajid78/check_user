@@ -57,6 +57,14 @@
 
 /* Others Variables */
 
+.bg-lightsilver {
+    background-color: rgba(185, 185, 185, 0.19);
+}
+
+.offset-lg-81 {
+    margin-left: 81.3%;
+}
+
 body {
     font-size: 17px;
     font-family: "IBM Plex Sans", sans-serif;
@@ -179,7 +187,7 @@ h3 {
 /* Default CSS End */
 /*---------- Home Page One CSS Start ----------*/
 /* Navbar CSS Start */
-.navbar-area .main-nav {
+.navbar-area .main-nave {
     background: var(--nav-color);
     padding: 20px 0;
     position: relative;
@@ -245,7 +253,7 @@ h3 {
     font-family: "Catamaran", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    padding: 5px 20px;
+    padding: 5px 15px;
     background: var(--red-color);
     border-radius: 5px;
 }
@@ -255,15 +263,11 @@ h3 {
     color: var(--heading-color);
 }
 
-.navbar-area .main-nav .navbar .other-option .signup-btn {
-    background: none;
-    padding: 0;
-    margin-right: 10px;
-}
-
-.navbar-area .main-nav .navbar .other-option .signup-btn:hover {
-    color: var(--red-color);
-    background: none;
+.navbar-area .main-nav .navbar .other-option .sign-reg {
+    background-color: #0a53be;
+    border-radius: 51px;
+    padding: 6px 6px 6px 0;
+    margin: 5px;
 }
 
 .is-sticky {
@@ -280,6 +284,17 @@ h3 {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     width: 100% !important;
+}
+
+.first-navbar .collapse .other-option  {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.first-navbar .collapse .other-option ul {
+    list-style: none;
+    padding-left: 0;
 }
 
 /* Navbar CSS End */
@@ -593,7 +608,6 @@ h3 {
 .job-card-two {
     background: #ffffff;
     margin-bottom: 30px;
-    padding: 40px 30px;
 }
 
 .job-card-two .company-logo {
@@ -2678,6 +2692,10 @@ h3 {
 
 .candidate-info-text.candidate-experience ul {
     padding-left: 20px;
+}
+
+.candidate-info-text.candidate-experience .job-info ul {
+    padding-left: 0;
 }
 
 .candidate-info-text.candidate-experience ul li {

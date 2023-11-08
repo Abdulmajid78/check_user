@@ -132,12 +132,36 @@
                 {% empty %}
                     <li>Нет результатов</li>
                 {% endfor %}
-
-
             </div>
         </div>
     </section>
     <!-- Jobs Section End -->
+
+    <!--  pagination  -->
+
+    {% if page_obj.paginator.count >= 14 %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                        <i class='bx bx-chevrons-left bx-fade-left'></i>
+                                    </a>
+                                </li>
+                                {% for page in page_obj.paginator.page_range %}
+                                    <li class="page-item">
+                                        <a class="page-link {% if page == page_obj.number %}active{% endif %}"
+                                           href="?page={{ page }}">{{ page }}</a>
+                                    </li>
+
+                                {% endfor %}
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class='bx bx-chevrons-right bx-fade-right'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    {% endif %}
 
     <!-- Job Category Section Start -->
     <div class="category-style-two pb-70">
@@ -232,7 +256,6 @@
         </div>
     </div>
     <!-- Job Category Section End -->
-
 
     <!-- Subscribe Section Start -->
     <section class="subscribe-section">

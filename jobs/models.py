@@ -82,7 +82,7 @@ class CompanyModel(models.Model):
     address = models.TextField()
     location_url = models.CharField(max_length=400, null=True, blank=True)
     description = models.TextField()
-    site = models.CharField(max_length=255)
+    site = models.CharField(max_length=255, null=True, blank=True)
     is_individual = models.BooleanField(default=False)
 
     def __str__(self):

@@ -9,6 +9,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', include('main.urls')),
     path('auth/', include('users.urls')),
     path('', include('jobs.urls'))

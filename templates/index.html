@@ -3,54 +3,56 @@
 
 {% block content %}
     <div class="indexxx">
-    <!-- Banner Section Start -->
-    <div class="banner-section">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="banner-content text-center">
-                        <p>{% trans 'Find Jobs, Employment & Career Opportunities' %}</p>
-                        <h1>{% trans 'Find the employee you are looking for with us!' %}</h1>
+        <!-- Banner Section Start -->
+        <div class="banner-section">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="banner-content text-center">
+                            <p>{% trans 'Find Jobs, Employment & Career Opportunities' %}</p>
+                            <h1>{% trans 'Find the employee you are looking for with us!' %}</h1>
 
-                        <form class="banner-form">
-                            <div class="row">
+                            <form class="banner-form">
+                                <div class="row">
 
-                                <form action="{% url 'main:home' %}">
-                                    {% csrf_token %}
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" value="{{ request.GET.search_name }}" name="search_name"
-                                                   placeholder="Sardor">
+                                    <form action="{% url 'main:home' %}">
+                                        {% csrf_token %}
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">{% trans 'First Name' %}:</label>
+                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                       value="{{ request.GET.search_name }}" name="search_name"
+                                                       placeholder="Sardor">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
-                                            <input type="text" class="form-control" value="{{ request.GET.search_surname }}"
-                                                   name="search_surname"
-                                                   id="exampleInputEmail2"
-                                                   placeholder="Alixonov">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail2">{% trans 'Last Name' %}:</label>
+                                                <input type="text" class="form-control"
+                                                       value="{{ request.GET.search_surname }}"
+                                                       name="search_surname"
+                                                       id="exampleInputEmail2"
+                                                       placeholder="Alixonov">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="col-md-4">
-                                        <button type="submit" class="find-btn">
-                                            {% trans 'Find An Employee' %}
-                                            <i class='bx bx-search'></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </form>
+                                        <div class="col-md-4">
+                                            <button type="submit" class="find-btn">
+                                                {% trans 'Find An Employee' %}
+                                                <i class='bx bx-search'></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Banner Section End -->
     </div>
-    <!-- Banner Section End -->
-</div>
     <!-- Category Section Start -->
     <section class="categories-section pt-100 pb-70">
         <div class="container">
@@ -63,7 +65,7 @@
 
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-accounting'></i>
                             <h3>{% trans 'Accountancy' %}</h3>
@@ -83,7 +85,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-wrench-and-screwdriver-in-cross'></i>
                             <h3>{% trans 'Automotive Jobs' %}</h3>
@@ -93,7 +95,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-consultation'></i>
                             <h3>{% trans 'Business' %}</h3>
@@ -103,7 +105,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-heart'></i>
                             <h3>{% trans 'Health Care' %}</h3>
@@ -123,7 +125,7 @@
                 </div>
 
                 <div class="col-lg-3  col-md-4 col-sm-6 offset-md-2 offset-lg-0">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-worker'></i>
                             <h3>{% trans 'Engineering' %}</h3>
@@ -133,7 +135,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <a href="{% url 'jobs:companies-list' %}">
+                    <a href="{% url 'jobs:find-employee' %}">
                         <div class="category-card">
                             <i class='flaticon-auction'></i>
                             <h3>{% trans 'Legal' %}</h3>
@@ -156,300 +158,58 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
 
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'Post-Room Operate' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>Via <a href="#">{% trans 'Euro Print' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'A.T. Khukandi 130 B, Kokand' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Accountancy' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Offline' %}
-                                        </li>
-                                    </ul>
+                {% for employee in employees %}
+                    <div class="col-sm-6">
+                        <div class="job-card">
+                            <div class="row align-items-center">
+                                <div class="col-lg-3">
+                                    <div class="thumb-img">
+                                        <a href="{% url 'jobs:job-detail' %}">
+                                            <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <span>{% trans 'Full Time' %}</span>
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        1 {% trans 'Hr Ago' %}
-                                    </p>
+                                <div class="col-lg-6">
+                                    <div class="job-info">
+                                        <h3>
+                                            <a href="{% url 'jobs:job-detail' %}">{{ employee.first_name }} {{ employee.last_name }}</a>
+                                        </h3>
+                                        <ul>
+                                            <li>Via <a href="#">{% trans 'Euro Print' %}</a></li>
+                                            <li>
+                                                <i class='bx bx-location-plus'></i>
+                                                {% trans 'A.T. Khukandi 130 B, Kokand' %}
+                                            </li>
+                                            <li>
+                                                <i class='bx bx-filter-alt'></i>
+                                                {% trans 'Accountancy' %}
+                                            </li>
+                                            <li>
+                                                <i class='bx bx-briefcase'></i>
+                                                {% trans 'Offline' %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="job-save">
+                                        <span>{% trans 'Full Time' %}</span>
+                                        <a href="#">
+                                            <i class='bx bx-heart'></i>
+                                        </a>
+                                        <p>
+                                            <i class='bx bx-stopwatch'></i>
+                                            1 {% trans 'Hr Ago' %}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/2.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'Data Entry' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>{% trans 'Via' %} <a href="#">{% trans 'Techno Inc' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'Street 40/A, London' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Data Entry' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Freelance' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        3 {% trans 'Hr Ago' %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/3.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'Graphic Designer' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>Via <a href="#">{% trans 'Devon Design' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'West Sight, USA' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Graphics' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Freelance' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        4 {% trans 'Hr Ago' %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/4.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'Web Developer' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>Via <a href="#">{% trans 'MegaNews' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'San Francisco, California' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Development' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Freelance' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        5 {% trans 'Hr Ago' %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'Digital Marketor' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>Via <a href="#">{% trans 'Euro Print' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'A.T. Khukandi 130 B, Kokand' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Marketing' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Freelance' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        6 {% trans 'Hr Ago' %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="job-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-3">
-                                <div class="thumb-img">
-                                    <a href="{% url 'jobs:job-detail' %}">
-                                        <img src="{% static 'img/company-logo/1.png' %}" alt="company logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="job-info">
-                                    <h3>
-                                        <a href="{% url 'jobs:job-detail' %}">{% trans 'UI/UX Designer' %}</a>
-                                    </h3>
-                                    <ul>
-                                        <li>Via <a href="#">{% trans 'Design Hunter' %}</a></li>
-                                        <li>
-                                            <i class='bx bx-location-plus'></i>
-                                            {% trans 'Zoo Rd, Uzbekistan' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-filter-alt'></i>
-                                            {% trans 'Accountancy' %}
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-briefcase'></i>
-                                            {% trans 'Freelance' %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3">
-                                <div class="job-save">
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                    </a>
-                                    <p>
-                                        <i class='bx bx-stopwatch'></i>
-                                        8 {% trans 'Hr Ago' %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

@@ -5,6 +5,8 @@ import telegram
 import telegram.error
 from django.conf import settings
 from django.views.generic.edit import FormMixin
+
+from jobs.models import EmployeeModel
 from .forms import ContactForm
 from django.urls import reverse, reverse_lazy
 
@@ -23,6 +25,11 @@ class HomeView(TemplateView):
             return redirect(url)
 
         return super().get(request, *args, **kwargs)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        data = super().get_context_data()
+        data['employees'] = EmployeeModel.objects.order_by('?')[:9]
+        return data
 
 
 class ContactCreateView(View, FormMixin):

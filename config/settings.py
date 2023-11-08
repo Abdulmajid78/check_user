@@ -114,10 +114,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
 
 AUTH_USER_MODEL = 'users.CompanyUser'
 
@@ -142,4 +138,21 @@ AUTHENTICATION_BACKENDS = [
 
 TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')
 TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
+
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+# CKEDITOR_UPLOAD_PATH = "uploads/"
+#
+# CKEDITOR_CONFIGS = {
+#     'awesome_ckeditor': {
+#         'toolbar': 'Basic',
+#     },
+# }
+#
+
 

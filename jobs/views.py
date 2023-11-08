@@ -83,7 +83,7 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 class CompanyListView(ListView):
     model = CompanyModel
     template_name = 'jobs/companies-list.html'
-    paginate_by = 20
+    paginate_by = 1
 
     def get_context_data(self, *, object_list=None, **kwargs):
         data = super().get_context_data()

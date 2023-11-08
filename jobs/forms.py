@@ -16,12 +16,6 @@ class CommentForm(forms.ModelForm):
             'content': forms.TextInput(attrs={'placeholder': 'content', 'class': 'form-control'}),
         }
 
-    # def __init__(self, *args, **kwargs):
-    #     super(CommentForm, self).__init__(*args, **kwargs)
-    #     if 'user' in self.fields:
-    #         self.fields['user'].widget = forms.HiddenInput()
-
-
 
 class EmployeeModelForm(forms.ModelForm):
     class Meta:

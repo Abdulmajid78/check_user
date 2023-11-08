@@ -6,9 +6,10 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
 
-        exclude = ['employee', 'created_at','active']
+        exclude = ['employee', 'created_at', 'active']
         widgets = {
 
+            'name': forms.TextInput(attrs={'placeholder': 'Name', 'class': 'form-control'}),
             'position': forms.TextInput(attrs={'placeholder': 'Position', 'class': 'form-control'}),
             'employ_from': forms.DateInput(attrs={'placeholder': 'employ_from', 'class': 'form-control', 'type': 'date'}),
             'employ_to': forms.TextInput(attrs={'placeholder': 'employ_to', 'class': 'form-control', 'type': 'date'}),
@@ -21,11 +22,11 @@ class CommentForm(forms.ModelForm):
     #         self.fields['user'].widget = forms.HiddenInput()
 
 
+
 class EmployeeModelForm(forms.ModelForm):
     class Meta:
         model = EmployeeModel
-        fields = ('first_name', 'last_name', 'third_name', 'phone_number', 'born_city', 'current_city')
-
+        fields = ('first_name', 'last_name', 'third_name', 'phone_number', 'about', 'experience', 'born_city', 'current_city', 'born_date')
 
 
 

@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+
+import users.models
 from users.models import CompanyUser
 
 
@@ -63,6 +65,27 @@ class EmployeeModel(models.Model):
         ordering = ('-id',)
 
 
+class CompanyModel(models.Model):
+    user = models.OneToOneField(users.models.CompanyUser, on_delete=models.CASCADE, null=True, blank=True)
+
+    company_name = models.CharField(max_length=255)
+    business_type = models.CharField(max_length=255)  # Виды деятельности, в последующим сделаем ManyToManyField
+    phone_number = models.CharField(max_length=24)
+    address = models.TextField()
+    location = models.CharField(max_length=400, null=True, blank=True)
+    description = models.TextField()
+    site = models.CharField(max_length=255)
+    is_individual = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.company_name
+
+    class Meta:
+        verbose_name = 'Kompaniya'
+        verbose_name_plural = 'Kompaniyalar'
+        ordering = ('-id',)
+
+
 class Comment(models.Model):
     employee = models.ForeignKey(EmployeeModel, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
@@ -87,21 +110,3 @@ class Comment(models.Model):
     def __str__(self):
         return f'Comment by {self.name} on {self.employee}'
 
-# class CommentModel(models.Model):
-#     user = models.ForeignKey(CompanyUser, on_delete=models.CASCADE, null=True,
-#                              blank=True)  # Связать комментарий с пользователем-компанией
-#     employee = models.ForeignKey(EmployeeModel, on_delete=models.RESTRICT, related_name='comments')
-#
-#     position = models.CharField(max_length=60)
-#     employ_from = models.DateField()
-#     employ_to = models.DateField()
-#     content = models.TextField(null=True, blank=True)
-#     created_at = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return 'Comment by {}'.format(self.user.company_name)
-#
-#     class Meta:
-#         verbose_name = 'Ish tajriba'
-#         verbose_name_plural = 'Ish tajribalar'
-#         ordering = ('created_at',)

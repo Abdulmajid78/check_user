@@ -41,7 +41,7 @@ class ContactCreateView(View, FormMixin):
             message = form.cleaned_data['message']
 
             if len(phone_number) == 11:
-                return render(request, "contact.html", _({'error': 'Failed to send message'}))
+                return render(request, "main/contact.html", _({'error': 'Failed to send message'}))
             else:
                 pass
 
@@ -53,11 +53,11 @@ class ContactCreateView(View, FormMixin):
             try:
                 await bot.send_message(chat_id=chat_id, text=message)
             except telegram.error.TelegramError:
-                return render(request, "contact.html", _({'error': 'Failed to send message'}))
+                return render(request, "main/contact.html", _({'error': 'Failed to send message'}))
 
             return super().form_valid(form)
 
-        return render(request, "contact.html", {'form': form})
+        return render(request, "main/contact.html", {'form': form})
 
     async def get(self, request, *args, **kwargs):
         form_class = self.get_form_class()
@@ -66,7 +66,7 @@ class ContactCreateView(View, FormMixin):
 
 
 class ContactView(TemplateView):
-    template_name = 'contact.html'
+    template_name = 'main/contact.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -75,7 +75,7 @@ class ContactView(TemplateView):
 
 
 class AboutView(TemplateView):
-    template_name = 'about.html'
+    template_name = 'main/about.html'
 
 
 class BlogView(TemplateView):

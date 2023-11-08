@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .views import (CandidatesView, EmployeeDetailView, FindEmployeeView, JobListView, JobDetailView, PostJobView,
+from .views import (CandidatesView, EmployeeDetailView, FindEmployeeView, CompanyListView, CompanyDetailView, JobDetailView, PostJobView,
                     ResumeView, CommentCreateView)
 
 app_name = 'jobs'
@@ -13,9 +13,10 @@ urlpatterns = [
 
     path('employee/<int:pk>/comment/', CommentCreateView.as_view(), name='comment'),
 
+    path('companies-list/', CompanyListView.as_view(), name='companies-list'),
+    path('company/<int:pk>/', CompanyDetailView.as_view(), name='company-detail'),
 
     path('candidates/', CandidatesView.as_view(), name='candidate'),
-    path('job-list/', JobListView.as_view(), name='job-list'),
     path('job-list/post', PostJobView.as_view(), name='post-job'),
     path('job-list/details/', JobDetailView.as_view(), name='job-detail'),
     path('resume/', ResumeView.as_view(), name='resume'),

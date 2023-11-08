@@ -55,6 +55,8 @@
                         {#                              <label>{% trans 'Enter Email' %}</label>#}
                         {#                              <input type="email" class="form-control" placeholder="Enter Your Email" required>#}
                         {#                            </div>#}
+                        <label for="{{ user_form.profile_picture.id_for_label }}">Profile Picture:</label>
+                        {{ user_form.profile_picture }}
 
                         <div class="form-group">
                             <label>{% trans 'Enter Password' %}</label>

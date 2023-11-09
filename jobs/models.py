@@ -78,6 +78,7 @@ class CompanyModel(models.Model):
 
     company_name = models.CharField(max_length=255)
     business_type = models.CharField(max_length=255)  # Виды деятельности, в последующим сделаем ManyToManyField
+    established = models.PositiveSmallIntegerField()
     phone_number = models.CharField(max_length=24)
     address = models.TextField()
     location_url = models.CharField(max_length=400, null=True, blank=True)

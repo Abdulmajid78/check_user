@@ -40,7 +40,7 @@
                                         </div>
                                         <div class="col-md-10">
                                             <div class="job-info">
-                                                <h3>{% trans 'Web Designer, Graphic Designer, UI/UX Designer' %}</h3>
+                                                <h3>{% trans 'Web Designer, Graphic Designer, UI/UX Designer' %}</h3>{{ company.company_name }}
                                                 <ul>
                                                     <li>
                                                         <i class='bx bx-location-plus'></i>
@@ -176,8 +176,8 @@
                         <h3>{% trans 'Posted By' %}</h3>
                         <div class="posted-by">
                             <img src="{% static 'img/client-1.png' %}" alt="client image">
-                            <h4>{% trans 'John Doe' %}</h4>
-                            <span>{% trans 'CEO of Euro Print' %}</span>
+                            <h4>{{ object.hr_first_name }} {{ object.hr_hr_last_name }} {{ object.hr_third_name }}</h4>
+                            <span>{{ object.hr_position }}</span>
                         </div>
                     </div>
 
@@ -194,30 +194,6 @@
                             <li>
                                 <a href="#">1C</a>
                             </li>
-                            <li>
-                                <a href="#">Exec</a>
-                            </li>
-                            <li>
-                                <a href="#">Word</a>
-                            </li>
-                            <li>
-                                <a href="#">Content Writter</a>
-                            </li>
-                            <li>
-                                <a href="#">Finance</a>
-                            </li>
-                            <li>
-                                <a href="#">Business</a>
-                            </li>
-                            <li>
-                                <a href="#">Education</a>
-                            </li>
-                            <li>
-                                <a href="#">Graphics</a>
-                            </li>
-                            <li>
-                                <a href="#">Video</a>
-                            </li>
                         </ul>
                     </div>
 
@@ -225,23 +201,8 @@
                         <h3>{% trans 'Share In' %}</h3>
                         <ul>
                             <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-pinterest"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-linkedin"></i>
+                                <a href="https://t.me/share/url?url=http://127.0.0.1:8000{{ request.get_full_path }}" target="_blank">
+                                    <i class="bx bxl-telegram"></i>
                                 </a>
                             </li>
                         </ul>
@@ -275,7 +236,7 @@
                             <div class="col-md-8">
                                 <div class="job-info">
                                     <h3>
-                                        <a href="#">Web Designer, Graphic Designer, UI/UX Designer </a>
+                                        <a href="#">{{ object.company_name }} </a>
                                     </h3>
                                     <ul>
                                         <li>

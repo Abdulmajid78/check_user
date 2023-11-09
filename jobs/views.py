@@ -94,6 +94,7 @@ class CompanyListView(ListView):
 class CompanyDetailView(DetailView):
     model = EmployeeModel
     template_name = 'jobs/company-details.html'
+    context_object_name = 'company'
 
 
 class ResumeView(TemplateView):

@@ -4,14 +4,17 @@ backports.zoneinfo==0.2.1
 certifi==2023.7.22
 crispy-bootstrap5==0.7
 Django==4.2.5
+django-ckeditor==6.7.0
 django-crispy-forms==2.1
 django-environ==0.11.2
+django-js-asset==2.1.0
 exceptiongroup==1.1.3
 h11==0.14.0
 httpcore==0.18.0
 httpx==0.25.0
 idna==3.4
 mysqlclient==2.2.0
+Pillow==10.1.0
 python-decouple==3.8
 python-telegram-bot==20.6
 sniffio==1.3.0

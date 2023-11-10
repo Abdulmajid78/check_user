@@ -4,9 +4,52 @@
 
 <!-- Navbar Area Start -->
 <div class="navbar-area">
+    <div class="first-navbar bg-white py-0" id="first-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand">
+                <div class="collapse navbar-collapse" style="height: 45px" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <div class="other-option">
+                            {% if request.user.is_authenticated %}
+                                <span class="me-2">Hello <strong>{{ request.user.company_name|default:request.user.username|capfirst }}</strong></span>
+                                <a href="{% url 'users:logout' %}" class="signin-btn">{% trans 'Logout' %}</a>
 
+                            {% else %}
+                                <div class="btn-group rounded-5">
+                                    <a href="{% url 'users:login' %}"
+                                       class="btn btn-primary active">{% trans 'Sign In' %}</a>
+                                    <a class="btn btn-outline-primary"
+                                       href="{% url 'users:register' %}">{% trans 'Register' %}</a>
+                                </div>
+                            {% endif %}
+                        </div>
+
+
+                        {# lang ul #}
+                        <ul class="navbar-nave m-auto">
+                            <li class="nav-item langua">
+                                <a href="#" class="nav-link dropdown-toggle">{{ cur_lang|upper }}</a>
+
+                                {% for lan in tupl_lang %}
+                                    {% if lan.0 != cur_lang %}
+                                        <!-- for hide selected languaage (current) -->
+                                        <li class="nav-item">
+                                            <a href="/{{ lan.0 }}/{{ request.path|slice:'4:' }}"
+                                               class="nav-link">{{ lan.0|capfirst }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
     <!-- Menu For Mobile Device -->
     <div class="mobile-nav">
+
         <a href="{% url 'main:home' %}" class="logo">
             <img src="{% static 'img/logo.png' %}" alt="logo">
         </a>
@@ -17,7 +60,7 @@
         <div class="first-navbar bg-white py-0" id="first-nav">
             <div class="container">
                 <nav class="navbar navbar-expand">
-                    <div class="collapse navbar-collapse mean-menu" style="height: 45px" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" style="height: 45px" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                             <div class="other-option">
                                 {% if request.user.is_authenticated %}
@@ -60,7 +103,8 @@
                                     </ul>
                                 {% else %}
                                     <div class="btn-group rounded-5">
-                                        <a href="{% url 'users:login' %}" class="btn btn-primary active">{% trans 'Sign In' %}</a>
+                                        <a href="{% url 'users:login' %}"
+                                           class="btn btn-primary active">{% trans 'Sign In' %}</a>
                                         <a class="btn btn-outline-primary"
                                            href="{% url 'users:register' %}">{% trans 'Register' %}</a>
                                     </div>
@@ -182,7 +226,41 @@
                             <li class="nav-item">
                                 <a href="{% url 'main:contacts' %}" class="nav-link">{% trans 'Contact Us' %}</a>
                             </li>
+                        <li class="nav-item">
+                                <a href="#" class="nav-link dropdown-toggle mean-last"
+                                   data-toggle="dropdown">{% trans 'Profile' %}</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        {% if company_profile %}
+                                            <a href="{% url 'users:update-company-profile' pk=company_profile.pk %}"
+                                               class="nav-link">{% trans 'Account' %}</a>
+                                        {% endif %}
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{% url 'jobs:resume' %}"
+                                           class="nav-link">{% trans 'Resume' %}</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{% url 'users:password_change' %}"
+                                           class="nav-link">{% trans 'Reset Password' %}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{% url 'users:edit' %}"
+                                           class="nav-link">{% trans 'Edit' %}</a>
+                                    </li>
+                                    {% if request.user.is_authenticated %}
+                                        <li class="nav-item">
+
+                                            <a href="{% url "users:dashboard" %}" class="nav-link">My
+                                                dashboard</a>
+
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
                         </ul>
+
                     </div>
                 </nav>
             </div>

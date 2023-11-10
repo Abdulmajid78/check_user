@@ -729,6 +729,22 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 991px) {
+  .navbar-area .first-navbar .signin-btn {
+    color: var(--white-color);
+    font-family: "Catamaran", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 15px;
+     background: var(--red-color);
+     border-radius: 5px;
+   }
+
+  .first-navbar .collapse .navbar-nav ul {
+    list-style: none!important;
+    padding-left: 0;
+}
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* Custom CSS */
@@ -778,7 +794,7 @@
     font-size: 20px;
   }
   .navbar-area .mean-container .mean-bar {
-    background-color: #010c29;
+    background-color: var(--nav-color);
     padding: 0;
   }
   .navbar-area .mean-container a.meanmenu-reveal {

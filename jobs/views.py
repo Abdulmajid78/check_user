@@ -81,9 +81,9 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 
 
 class CompanyListView(ListView):
-    model = CompanyModel
     template_name = 'jobs/companies-list.html'
-    paginate_by = 1
+    paginate_by = 4
+    model = CompanyModel
 
     def get_context_data(self, *, object_list=None, **kwargs):
         data = super().get_context_data()
@@ -112,9 +112,6 @@ class CandidatesView(TemplateView):
 class PostJobView(TemplateView):
     template_name = 'post-job.html'
 
-
-
-
 # @require_POST
 # def employee_comment(request, employee_id):
 #     employee = get_object_or_404(EmployeeModel, id=employee_id, status=EmployeeModel)
@@ -132,7 +129,6 @@ class PostJobView(TemplateView):
 #                   {'employee': employee,
 #                    'form': form,
 #                    'comment': comment})
-
 
 
 # class AddReview(View):

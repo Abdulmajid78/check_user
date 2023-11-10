@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 15:07+0500\n"
+"POT-Creation-Date: 2023-11-10 17:16+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,293 +18,189 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/404.html:13 templates/about.html:12 templates/account.html:12
-#: templates/blog-details.html:13 templates/blog.html:12
-#: templates/candidate-details.html:12 templates/candidate.html:13
-#: templates/contact.html:12 templates/find-employee.html:14
-#: templates/job-details.html:12 templates/job-list.html:13
-#: templates/layouts/footer.html:77 templates/post-job.html:11
-#: templates/reset-password.html:12 templates/sign-in.html:12
-#: templates/sign-up.html:12
+#: main/views.py:51 main/views.py:63
+msgid "error"
+msgstr ""
+
+#: templates/account/profile.html:9
+#, fuzzy
+#| msgid "Have an Account?"
+msgid "Company Account"
+msgstr "Hisobingiz bormi?"
+
+#: templates/account/profile.html:12 templates/account/register.html:14
+#: templates/account/sign-in.html:13 templates/blog-details.html:13
+#: templates/blog.html:12 templates/candidate.html:13
+#: templates/jobs/companies-list.html:13 templates/jobs/company-details.html:12
+#: templates/jobs/employee-details.html:12 templates/jobs/find-employee.html:13
+#: templates/jobs/post-employee.html:11 templates/layouts/footer.html:77
+#: templates/main/404.html:13 templates/main/about.html:12
+#: templates/main/blog.html:12 templates/main/contact.html:12
+#: templates/post-job.html:11 templates/profile-change.html:11
+#: templates/registration/password_change_done.html:12
+#: templates/registration/password_change_form.html:12
+#: templates/removed/sign-up.html:14 templates/removed/user-account.html:12
 msgid "Home"
 msgstr "Asosiy Sahifa"
 
-#: templates/404.html:35
-msgid "Go To Home"
-msgstr "bosh sahifaga o'ting"
-
-#: templates/404.html:50 templates/account.html:253 templates/blog.html:135
-#: templates/candidate-details.html:176 templates/candidate.html:233
-#: templates/contact.html:150 templates/find-employee.html:482
-#: templates/job-details.html:515 templates/post-job.html:137
-#: templates/reset-password.html:53 templates/sign-in.html:93
-#: templates/sign-up.html:99
-msgid "Get New Job Notifications"
-msgstr "Yangi ish bildirishnomalarini oling"
-
-#: templates/404.html:51 templates/account.html:254 templates/blog.html:136
-#: templates/candidate-details.html:177 templates/candidate.html:234
-#: templates/contact.html:151 templates/find-employee.html:483
-#: templates/job-details.html:516 templates/post-job.html:138
-#: templates/reset-password.html:54 templates/sign-in.html:94
-#: templates/sign-up.html:100
-msgid "Subscribe & get all related jobs notification"
-msgstr "Obuna bo'ling va barcha tegishli ish bildirishnomalarini oling"
-
-#: templates/404.html:61 templates/account.html:263 templates/blog.html:146
-#: templates/candidate-details.html:186 templates/candidate.html:244
-#: templates/contact.html:160 templates/find-employee.html:493
-#: templates/job-details.html:526 templates/post-job.html:147
-#: templates/reset-password.html:63 templates/sign-in.html:104
-#: templates/sign-up.html:109
-msgid "Subscribe"
-msgstr "Obuna boʻling"
-
-#: templates/about.html:9 templates/about.html:14
-msgid "About Us"
-msgstr "Biz haqimizda"
-
-#: templates/about.html:33
-msgid "How We Started"
-msgstr "Biz qanday boshladik"
-
-#: templates/about.html:59 templates/index.html:455
-msgid "Easiest Way To Use"
-msgstr "Foydalanishning eng oson usuli"
-
-#: templates/about.html:67 templates/index.html:463
-msgid "Find An Employee Easily"
-msgstr "Xodimni osongina toping"
-
-#: templates/about.html:68 templates/index.html:464
-msgid "You can get a lot of information about the worker you want"
-msgstr "Siz xohlagan ishchi haqida juda ko'p ma'lumot olishingiz mumkin"
-
-#: templates/about.html:76 templates/index.html:472
-msgid "Browse Job"
-msgstr "Ishni ko'rib chiqish"
-
-#: templates/about.html:77 templates/index.html:473
-msgid ""
-"the easiest way to find a job that you want and that is convenient for you"
-msgstr ""
-"o'zingiz xohlagan va siz uchun qulay bo'lgan ishni topishning eng oson yo'li"
-
-#: templates/about.html:85 templates/index.html:481
-msgid "Submit Resume"
-msgstr "Rezyumeni yuborish"
-
-#: templates/about.html:86 templates/index.html:482
-msgid "Fill out your resume to the world standard through our site"
-msgstr "Saytimiz orqali jahon standartiga mos rezyumeni to'ldiring"
-
-#: templates/about.html:98
-msgid "Why You Choose Us Among Other Job Site?"
-msgstr "Nima uchun boshqa ish saytlari orasida bizni tanlaysiz?"
-
-#: templates/about.html:107
-msgid "Advertise Job"
-msgstr "Ishni reklama qilish"
-
-#: templates/about.html:116
-msgid "Recruiter Profiles"
-msgstr "Ishga qabul qilish profillari"
-
-#: templates/about.html:125
-msgid "Find Your Dream Job"
-msgstr "O'zingizning orzuyingizdagi ishni toping"
-
-#: templates/about.html:142
-msgid "Grow Your Business Faster With Premium Advertising"
-msgstr "Premium reklama bilan biznesingizni tezroq rivojlantiring"
-
-#: templates/about.html:157
-msgid "Checkout More"
-msgstr "Batafsil hisob"
-
-#: templates/about.html:180
-msgid "Job Posted"
-msgstr "Ish e'lon qilindi"
-
-#: templates/about.html:188 templates/index.html:649
-msgid "Job Filed"
-msgstr "Ish topshirildi"
-
-#: templates/about.html:196 templates/index.html:656
-#: templates/job-details.html:120 templates/layouts/navbar.html:73
-msgid "Company"
-msgstr "Kompaniya"
-
-#: templates/about.html:204 templates/index.html:663
-msgid "Members"
-msgstr "A'zolar"
-
-#: templates/about.html:216 templates/index.html:1124
-msgid "What Client’s Say About Us"
-msgstr "Mijoz biz haqimizda nima deydi"
-
-#: templates/about.html:233 templates/index.html:1139
-msgid "Alisa Meair"
-msgstr "Alisa Meair"
-
-#: templates/about.html:234 templates/index.html:1140
-msgid "CEO of Company"
-msgstr "Kompaniya bosh direktori"
-
-#: templates/about.html:248
-msgid "Adam Smith"
-msgstr "Adam Smith"
-
-#: templates/about.html:249 templates/account.html:35 templates/index.html:314
-#: templates/index.html:994 templates/index.html:1096
-msgid "Web Developer"
-msgstr "Veb dasturchi"
-
-#: templates/about.html:263 templates/index.html:1167
-#: templates/job-details.html:179
-msgid "John Doe"
-msgstr "John Doe"
-
-#: templates/about.html:264
-msgid "Graphics Designer"
-msgstr "Grafik dizayner"
-
-#: templates/about.html:277 templates/index.html:1197
-msgid "News, Tips & Articles"
-msgstr "Yangiliklar, maslahatlar va maqolalar"
-
-#: templates/about.html:304 templates/index.html:1225
-msgid "How to Indroduce in Yourself in Job Interview?"
-msgstr "Ish suhbatida o'zingizni qanday tanishtirish kerak?"
-
-#: templates/about.html:311 templates/about.html:346 templates/about.html:381
-#: templates/index.html:1232 templates/index.html:1267
-#: templates/index.html:1302
-msgid "Read More"
-msgstr "Ko'proq o'qish"
-
-#: templates/about.html:339 templates/index.html:1260
-msgid "Looking for Highly Motivated Product to Build"
-msgstr "Qurilish uchun yuqori motivatsiyali mahsulotni qidirmoqda"
-
-#: templates/about.html:374 templates/index.html:1295
-msgid "The Reason Why Software Develope is the Best Job"
-msgstr "Nima uchun dasturiy ta'minot ishlab chiqaruvchisi eng yaxshi ishdir"
-
-#: templates/account.html:9 templates/account.html:14
-#: templates/layouts/footer.html:39 templates/layouts/navbar.html:103
+#: templates/account/profile.html:14 templates/layouts/footer.html:39
+#: templates/layouts/navbar.html:77 templates/layouts/navbar.html:236
+#: templates/removed/user-account.html:14
 msgid "Account"
 msgstr "Hisob"
 
-#: templates/account.html:34 templates/candidate-details.html:33
+#: templates/account/profile.html:34 templates/removed/user-account.html:34
 msgid "John Smith"
 msgstr "John Smith"
 
-#: templates/account.html:42
+#: templates/account/profile.html:35 templates/index.html:761
+#: templates/index.html:863 templates/main/about.html:249
+#: templates/removed/user-account.html:35
+msgid "Web Developer"
+msgstr "Veb dasturchi"
+
+#: templates/account/profile.html:42 templates/removed/user-account.html:42
 msgid "My Profile"
 msgstr "Mening profilim"
 
-#: templates/account.html:48
+#: templates/account/profile.html:48 templates/removed/user-account.html:48
 msgid "My Resume"
 msgstr "Mening rezyumeyim"
 
-#: templates/account.html:54
+#: templates/account/profile.html:54 templates/removed/user-account.html:54
 msgid "Applied Job"
 msgstr "Qabul qilingan ish"
 
-#: templates/account.html:60
+#: templates/account/profile.html:60 templates/removed/user-account.html:60
 msgid "Messages"
 msgstr "Xabarlar"
 
-#: templates/account.html:66
+#: templates/account/profile.html:66 templates/removed/user-account.html:66
 msgid "Saved Jobs"
 msgstr "Saqlangan ishlar"
 
-#: templates/account.html:72
+#: templates/account/profile.html:72 templates/removed/user-account.html:72
 msgid "Change Password"
 msgstr "Parolni o'zgartirish"
 
-#: templates/account.html:78
+#: templates/account/profile.html:78 templates/removed/user-account.html:78
 msgid "Delete Account"
 msgstr "Hisobni o'chirish"
 
-#: templates/account.html:84
+#: templates/account/profile.html:84 templates/removed/user-account.html:84
 msgid "Log Out"
 msgstr "Chiqish"
 
-#: templates/account.html:93
+#: templates/account/profile.html:93 templates/removed/user-account.html:93
 msgid "Basic Information"
 msgstr "Asosiy ma'lumotlar"
 
-#: templates/account.html:98
-msgid "Your Name"
-msgstr "Ismingiz"
-
-#: templates/account.html:105
-msgid "Your Email"
-msgstr "Sizning e-manzilingiz"
-
-#: templates/account.html:112
-msgid "Your Phone"
-msgstr "Telefon raqamingiz"
-
-#: templates/account.html:119 templates/post-job.html:33
-msgid "Job Title"
-msgstr "Lavozim"
-
-#: templates/account.html:124 templates/account.html:161
-#: templates/account.html:198 templates/account.html:235
-msgid "Edit"
-msgstr "Tahrirlash"
-
-#: templates/account.html:125 templates/account.html:162
-#: templates/account.html:199 templates/account.html:236
+#: templates/account/profile.html:235 templates/removed/user-account.html:125
+#: templates/removed/user-account.html:162
+#: templates/removed/user-account.html:199
+#: templates/removed/user-account.html:236
 msgid "Save"
 msgstr "Saqlash"
 
-#: templates/account.html:130 templates/layouts/footer.html:141
-msgid "Address"
-msgstr "Manzil"
+#: templates/account/profile.html:253 templates/account/register.html:124
+#: templates/account/sign-in.html:112 templates/blog.html:135
+#: templates/candidate.html:233 templates/jobs/company-details.html:515
+#: templates/jobs/employee-details.html:185
+#: templates/jobs/find-employee.html:266 templates/jobs/post-employee.html:164
+#: templates/main/404.html:50 templates/main/blog.html:135
+#: templates/main/contact.html:149 templates/post-job.html:137
+#: templates/profile-change.html:137
+#: templates/registration/password_change_done.html:44
+#: templates/registration/password_change_form.html:67
+#: templates/removed/sign-up.html:104 templates/removed/user-account.html:253
+msgid "Get New Job Notifications"
+msgstr "Yangi ish bildirishnomalarini oling"
 
-#: templates/account.html:135
-msgid "Your Country"
-msgstr "Sizning mamlakatingiz"
+#: templates/account/profile.html:254 templates/account/register.html:125
+#: templates/account/sign-in.html:113 templates/blog.html:136
+#: templates/candidate.html:234 templates/jobs/company-details.html:516
+#: templates/jobs/employee-details.html:186
+#: templates/jobs/find-employee.html:267 templates/jobs/post-employee.html:165
+#: templates/main/404.html:51 templates/main/blog.html:136
+#: templates/main/contact.html:150 templates/post-job.html:138
+#: templates/profile-change.html:138
+#: templates/registration/password_change_done.html:45
+#: templates/registration/password_change_form.html:68
+#: templates/removed/sign-up.html:105 templates/removed/user-account.html:254
+msgid "Subscribe & get all related jobs notification"
+msgstr "Obuna bo'ling va barcha tegishli ish bildirishnomalarini oling"
 
-#: templates/account.html:142
-msgid "Your City"
-msgstr "Sizning shahringiz"
+#: templates/account/profile.html:264 templates/account/register.html:135
+#: templates/account/sign-in.html:123 templates/blog.html:146
+#: templates/candidate.html:244 templates/jobs/company-details.html:526
+#: templates/jobs/employee-details.html:196
+#: templates/jobs/find-employee.html:277 templates/jobs/post-employee.html:175
+#: templates/main/404.html:61 templates/main/blog.html:146
+#: templates/main/contact.html:160 templates/post-job.html:147
+#: templates/profile-change.html:147
+#: templates/registration/password_change_done.html:55
+#: templates/registration/password_change_form.html:78
+#: templates/removed/sign-up.html:115 templates/removed/user-account.html:263
+msgid "Subscribe"
+msgstr "Obuna boʻling"
 
-#: templates/account.html:149
-msgid "Zip Code"
-msgstr "Pochta indeksi"
+#: templates/account/register.html:11 templates/account/register.html:16
+#: templates/account/register.html:73 templates/layouts/footer.html:63
+#: templates/removed/sign-up.html:11 templates/removed/sign-up.html:16
+#: templates/removed/sign-up.html:53
+msgid "Sign Up"
+msgstr "Ro'yxatdan o'tish"
 
-#: templates/account.html:156
-msgid "Region"
-msgstr "Mintaqa"
+#: templates/account/register.html:38
+msgid "Enter Username"
+msgstr "Foydalanuvchi nomini kiriting"
 
-#: templates/account.html:167
-msgid "Other information"
-msgstr "Boshqa ma'lumotlar"
+#: templates/account/register.html:44
+#, fuzzy
+#| msgid "Company Name"
+msgid "Enter Company name"
+msgstr "Shirkat nomi"
 
-#: templates/account.html:172
-msgid "Age"
-msgstr "Yosh"
+#: templates/account/register.html:62 templates/account/register.html:67
+msgid "Enter Password"
+msgstr "Parolni kiriting"
 
-#: templates/account.html:179
-msgid "Work Experience"
-msgstr "Ish tajribasi"
+#: templates/account/register.html:77 templates/removed/sign-up.html:57
+msgid "Or sign up with"
+msgstr "Yoki ro'yxatdan o'ting"
 
-#: templates/account.html:186 templates/job-details.html:147
-msgid "Language"
-msgstr "Til"
+#: templates/account/register.html:104 templates/removed/sign-up.html:84
+msgid "Have an Account?"
+msgstr "Hisobingiz bormi?"
 
-#: templates/account.html:193
-msgid "Skill"
-msgstr "Malaka"
+#: templates/account/register.html:106 templates/account/sign-in.html:10
+#: templates/account/sign-in.html:15 templates/account/sign-in.html:47
+#: templates/layouts/navbar.html:20 templates/layouts/navbar.html:107
+#: templates/removed/sign-up.html:86
+msgid "Sign In"
+msgstr "Tizimga kirish"
 
-#: templates/account.html:204
-msgid "Social links"
-msgstr "Ijtimoiy havolalar"
+#: templates/account/sign-in.html:51
+msgid "Or sign in with"
+msgstr "Yoki hisobingizga kiring"
+
+#: templates/account/sign-in.html:77
+msgid "Not have an account?"
+msgstr "Hisobingiz yo'qmi?"
+
+#: templates/account/sign-in.html:79
+msgid "Create an account"
+msgstr "Hisob ochish"
+
+#: templates/account/sign-in.html:86
+msgid "Forgotten your password?"
+msgstr ""
+
+#: templates/account/sign-in.html:88
+#, fuzzy
+#| msgid "Reset Password"
+msgid "get new password"
+msgstr "Parolni tiklash"
 
 #: templates/blog-details.html:10 templates/blog-details.html:15
 msgid "Blog Details"
@@ -315,352 +211,140 @@ msgid "Popular Post"
 msgstr "Mashhur post"
 
 #: templates/blog.html:9 templates/blog.html:14
-#: templates/layouts/navbar.html:94
+#: templates/layouts/navbar.html:224 templates/main/blog.html:9
+#: templates/main/blog.html:14
 msgid "Blog"
 msgstr "Blog"
 
-#: templates/candidate-details.html:9 templates/candidate-details.html:14
-#: templates/layouts/navbar.html:46
-msgid "Candidates Details"
-msgstr "Nomzodlar tafsilotlari"
-
-#: templates/candidate-details.html:34 templates/candidate-details.html:119
-msgid "Manager"
-msgstr "Menejer"
-
-#: templates/candidate-details.html:60
-msgid "About Me"
-msgstr "Men haqimda"
-
-#: templates/candidate-details.html:65 templates/find-employee.html:147
-#: templates/index.html:72
-msgid "Education"
-msgstr "Ta'lim"
-
-#: templates/candidate-details.html:68
-msgid "School"
-msgstr "Maktab"
-
-#: templates/candidate-details.html:69
-msgid "Amherst School, Uzbekistan"
-msgstr "Amherst maktabi, O'zbekiston"
-
-#: templates/candidate-details.html:74
-msgid "College"
-msgstr "Kollej"
-
-#: templates/candidate-details.html:75
-msgid "Swarthmore College, Uzbekistan"
-msgstr "Svartmor kolleji, Oʻzbekiston"
-
-#: templates/candidate-details.html:80
-msgid "University"
-msgstr "Universitet"
-
-#: templates/candidate-details.html:81
-msgid "Princeton University, Uzbekistan"
-msgstr "Prinston universiteti, Oʻzbekiston"
-
-#: templates/candidate-details.html:87 templates/post-job.html:108
-msgid "Experience"
-msgstr "Tajriba"
-
-#: templates/candidate-details.html:90
-msgid "Proficient in HTML, CSS, Server-Scripting, C/C++, and Oracle"
-msgstr "HTML, CSS, Server-skript, C/C++ va Oracle tillarida malakali"
-
-#: templates/candidate-details.html:91
-msgid "Experience with SEO"
-msgstr "SEO bilan tajriba"
-
-#: templates/candidate-details.html:92
-msgid "Experience Teaching Web Development"
-msgstr "Veb-ishlab chiqishni o'rgatish tajribasi"
-
-#: templates/candidate-details.html:93
-msgid "Knowledgeable in Online Advertising"
-msgstr "Onlayn reklama sohasida bilimga ega"
-
-#: templates/candidate-details.html:94
-msgid "Expert in LAMP Web Service Stacks"
-msgstr "LAMP Web Service Stacks bo'yicha mutaxassis"
-
-#: templates/candidate-details.html:114 templates/index.html:169
-#: templates/index.html:366 templates/index.html:567
-#: templates/job-details.html:121
-msgid "Euro Print"
-msgstr "Euro Print"
-
-#: templates/candidate-details.html:119
-msgid "Position"
-msgstr "Lavozim"
-
-#: templates/candidate-details.html:123 templates/job-details.html:151
-msgid "Salary"
-msgstr "Ish haqi"
-
-#: templates/candidate-details.html:127 templates/job-details.html:124
-#: templates/job-details.html:185 templates/post-job.html:75
-msgid "Location"
-msgstr "Manzil"
-
-#: templates/candidate-details.html:131
-msgid "Period of Employment"
-msgstr "Ishga qabul qilish muddati"
-
-#: templates/candidate-details.html:131
-msgid "month"
-msgstr "oy"
-
-#: templates/candidate-details.html:160
-msgid "Hire Me"
-msgstr "Meni ishga oling"
-
-#: templates/candidate-details.html:161
-msgid "Download CV"
-msgstr "CV yuklab olish"
-
 #: templates/candidate.html:10 templates/candidate.html:15
-#: templates/layouts/navbar.html:39 templates/layouts/navbar.html:42
 msgid "Candidates"
 msgstr "Nomzodlar"
 
-#: templates/contact.html:9 templates/contact.html:14
-#: templates/layouts/navbar.html:97
-msgid "Contact Us"
-msgstr "Biz bilan bog'lanish"
-
-#: templates/contact.html:92
-msgid "Lets' Talk With Us"
-msgstr "Biz bilan gaplashing"
-
-#: templates/contact.html:132
-msgid "Send Message"
-msgstr "Xabar yuborish"
-
-#: templates/find-employee.html:11 templates/find-employee.html:16
-msgid "Find an Employee"
-msgstr "Xodim topish"
-
-#: templates/find-employee.html:50 templates/post-job.html:42
-msgid "Category"
-msgstr "Turkum"
-
-#: templates/find-employee.html:51
-msgid "Web Development"
-msgstr "Veb-ishlab chiqish"
-
-#: templates/find-employee.html:52
-msgid "Graphics Design"
-msgstr "Grafik dizayn"
-
-#: templates/find-employee.html:53 templates/find-employee.html:54
-msgid "Data Scientist"
-msgstr "Ma'lumot olimi"
-
-#: templates/find-employee.html:55
-msgid "Office Assistant"
-msgstr "Ofis yordamchisi"
-
-#: templates/find-employee.html:61 templates/index.html:34
-msgid "Find An Employee"
-msgstr "Xodimni toping"
-
-#: templates/find-employee.html:77
-msgid "Popular Jobs Category"
-msgstr "Mashhur ish o'rinlari toifasi"
-
-#: templates/find-employee.html:87
-msgid "Construction"
-msgstr "Qurilish"
-
-#: templates/find-employee.html:88 templates/find-employee.html:98
-#: templates/find-employee.html:108 templates/find-employee.html:118
-#: templates/find-employee.html:128 templates/find-employee.html:138
-#: templates/find-employee.html:148 templates/find-employee.html:158
-msgid "new Job"
-msgstr "yangi ish"
-
-#: templates/find-employee.html:97
-msgid "Finance"
-msgstr "Moliya"
-
-#: templates/find-employee.html:107
-msgid "Healthcare"
-msgstr "Sog'liqni saqlash"
-
-#: templates/find-employee.html:117
-msgid "Graphic Design"
-msgstr "Grafika dizayni"
-
-#: templates/find-employee.html:127
-msgid "Banking Jobs"
-msgstr "Bank ishlari"
-
-#: templates/find-employee.html:137
-msgid "Automotive"
-msgstr "Avtomobilsozlik"
-
-#: templates/find-employee.html:157
-msgid "Data Analysis"
-msgstr "Ma'lumotlarni tahlil qilish"
-
-#: templates/find-employee.html:171 templates/index.html:146
-#: templates/job-details.html:259 templates/job-list.html:31
-msgid "Jobs You May Be Interested In"
-msgstr "Sizni qiziqtirishi mumkin bo'lgan ishlar"
-
-#: templates/find-employee.html:191 templates/index.html:166
-msgid "Post-Room Operate"
-msgstr "Xonadan keyingi operatsiya"
-
-#: templates/index.html:11
+#: templates/index.html:12
 msgid "Find Jobs, Employment & Career Opportunities"
 msgstr "Ish, ish va martaba imkoniyatlarini toping"
 
-#: templates/index.html:12
+#: templates/index.html:13
 msgid "Find the employee you are looking for with us!"
 msgstr "Izlayotgan xodimingizni biz bilan toping!"
 
-#: templates/index.html:18
+#: templates/index.html:22 templates/jobs/find-employee.html:37
 msgid "First Name"
 msgstr "Ism"
 
-#: templates/index.html:26
+#: templates/index.html:31 templates/jobs/find-employee.html:46
 msgid "Last Name"
 msgstr "Familiya"
 
-#: templates/index.html:51
+#: templates/index.html:42 templates/jobs/find-employee.html:55
+msgid "Find An Employee"
+msgstr "Xodimni toping"
+
+#: templates/index.html:60
 msgid "Choose Your Category"
 msgstr "Kategoriyangizni tanlang"
 
-#: templates/index.html:62 templates/index.html:176 templates/index.html:422
+#: templates/index.html:71 templates/index.html:187
 msgid "Accountancy"
 msgstr "Buxgalteriya"
 
-#: templates/index.html:63 templates/index.html:73 templates/index.html:83
-#: templates/index.html:93 templates/index.html:103 templates/index.html:113
-#: templates/index.html:123 templates/index.html:133
+#: templates/index.html:72 templates/index.html:82 templates/index.html:92
+#: templates/index.html:102 templates/index.html:112 templates/index.html:122
+#: templates/index.html:132 templates/index.html:142
 msgid "open position"
 msgstr "ochiq pozitsiya"
 
-#: templates/index.html:82
+#: templates/index.html:81 templates/jobs/find-employee.html:240
+msgid "Education"
+msgstr "Ta'lim"
+
+#: templates/index.html:91
 msgid "Automotive Jobs"
 msgstr "Avtomobil ishlari"
 
-#: templates/index.html:92
+#: templates/index.html:101
 msgid "Business"
 msgstr "Biznes"
 
-#: templates/index.html:102
+#: templates/index.html:111
 msgid "Health Care"
 msgstr "Sog'liqni saqlash"
 
-#: templates/index.html:112
+#: templates/index.html:121
 msgid "IT & Agency"
 msgstr "IT va agentlik"
 
-#: templates/index.html:122
+#: templates/index.html:131
 msgid "Engineering"
 msgstr "Muhandislik"
 
-#: templates/index.html:132
+#: templates/index.html:141
 msgid "Legal"
 msgstr "Huquq"
 
-#: templates/index.html:172 templates/index.html:369
-#: templates/job-details.html:47 templates/job-details.html:125
+#: templates/index.html:155 templates/jobs/companies-list.html:31
+#: templates/jobs/company-details.html:259 templates/jobs/find-employee.html:75
+msgid "Jobs You May Be Interested In"
+msgstr "Sizni qiziqtirishi mumkin bo'lgan ishlar"
+
+#: templates/index.html:180 templates/index.html:334
+#: templates/jobs/company-details.html:121
+msgid "Euro Print"
+msgstr "Euro Print"
+
+#: templates/index.html:183 templates/jobs/company-details.html:47
+#: templates/jobs/company-details.html:125
 msgid "A.T. Khukandi 130 B, Kokand"
 msgstr "A.T Hukandi 130 B, Qoʻqon"
 
-#: templates/index.html:180 templates/job-details.html:55
+#: templates/index.html:191 templates/jobs/company-details.html:55
 msgid "Offline"
 msgstr "Oflayn"
 
-#: templates/index.html:188 templates/job-details.html:129
-#: templates/post-job.html:85
+#: templates/index.html:199 templates/jobs/company-details.html:129
+#: templates/post-job.html:85 templates/profile-change.html:85
 msgid "Full Time"
 msgstr "To'liq stavka"
 
-#: templates/index.html:194 templates/index.html:243 templates/index.html:292
-#: templates/index.html:341 templates/index.html:390 templates/index.html:439
+#: templates/index.html:205
 msgid "Hr Ago"
 msgstr "Hr Ago"
 
-#: templates/index.html:216 templates/index.html:226
-msgid "Data Entry"
-msgstr "Ma'lumotlarni kiritish"
+#: templates/index.html:222 templates/main/about.html:59
+msgid "Easiest Way To Use"
+msgstr "Foydalanishning eng oson usuli"
 
-#: templates/index.html:219
-msgid "Via"
-msgstr "orqali"
+#: templates/index.html:230 templates/main/about.html:67
+msgid "Find An Employee Easily"
+msgstr "Xodimni osongina toping"
 
-#: templates/index.html:219
-msgid "Techno Inc"
-msgstr "Techno Inc"
+#: templates/index.html:231 templates/main/about.html:68
+msgid "You can get a lot of information about the worker you want"
+msgstr "Siz xohlagan ishchi haqida juda ko'p ma'lumot olishingiz mumkin"
 
-#: templates/index.html:222
-msgid "Street 40/A, London"
-msgstr "Ko'cha 40/A, London"
+#: templates/index.html:239 templates/main/about.html:76
+msgid "Browse Job"
+msgstr "Ishni ko'rib chiqish"
 
-#: templates/index.html:230 templates/index.html:279 templates/index.html:328
-#: templates/index.html:377 templates/index.html:426
-msgid "Freelance"
-msgstr "Freelance"
+#: templates/index.html:240 templates/main/about.html:77
+msgid ""
+"the easiest way to find a job that you want and that is convenient for you"
+msgstr ""
+"o'zingiz xohlagan va siz uchun qulay bo'lgan ishni topishning eng oson yo'li"
 
-#: templates/index.html:265
-msgid "Graphic Designer"
-msgstr "Grafik dizayner"
+#: templates/index.html:248 templates/main/about.html:85
+msgid "Submit Resume"
+msgstr "Rezyumeni yuborish"
 
-#: templates/index.html:268
-msgid "Devon Design"
-msgstr "Devon dizayni"
+#: templates/index.html:249 templates/main/about.html:86
+msgid "Fill out your resume to the world standard through our site"
+msgstr "Saytimiz orqali jahon standartiga mos rezyumeni to'ldiring"
 
-#: templates/index.html:271
-msgid "West Sight, USA"
-msgstr "West Sight, AQSh"
-
-#: templates/index.html:275
-msgid "Graphics"
-msgstr "Grafika"
-
-#: templates/index.html:317
-msgid "MegaNews"
-msgstr "MegaNews"
-
-#: templates/index.html:320
-msgid "San Francisco, California"
-msgstr "San-Fransisko, Kaliforniya"
-
-#: templates/index.html:324
-msgid "Development"
-msgstr "Rivojlanish"
-
-#: templates/index.html:363
-msgid "Digital Marketor"
-msgstr "Raqamli marketolog"
-
-#: templates/index.html:373
-msgid "Marketing"
-msgstr "Marketing"
-
-#: templates/index.html:412
-msgid "UI/UX Designer"
-msgstr "UI/UX dizayneri"
-
-#: templates/index.html:415
-msgid "Design Hunter"
-msgstr "Dizayn ovchisi"
-
-#: templates/index.html:418
-msgid "Zoo Rd, Uzbekistan"
-msgstr "Alisher ko'chasi, O'zbekiston"
-
-#: templates/index.html:494
+#: templates/index.html:261
 msgid "Top Companies"
 msgstr "Eng To'p kompaniyalar"
 
-#: templates/index.html:495
+#: templates/index.html:262
 msgid ""
 "The top companies on our site have the largest number of employees and the "
 "highest salaries"
@@ -668,287 +352,448 @@ msgstr ""
 "Saytimizdagi eng yaxshi kompaniyalar eng ko'p xodimlar soni va eng yuqori "
 "maoshga ega"
 
-#: templates/index.html:507
+#: templates/index.html:274
 msgid "Karzinka.uz"
 msgstr "Karzinka.uz"
 
-#: templates/index.html:510
+#: templates/index.html:277
 msgid "Alisher Navoi, Tashkent"
 msgstr "Alisher Navoiy, Toshkent"
 
-#: templates/index.html:513 templates/index.html:533 templates/index.html:553
-#: templates/index.html:573
+#: templates/index.html:280 templates/index.html:300 templates/index.html:320
+#: templates/index.html:340
 msgid "Open Position"
 msgstr "Ochiq pozitsiya"
 
-#: templates/index.html:527
+#: templates/index.html:294
 msgid "Trout Design"
 msgstr "Trout Design"
 
-#: templates/index.html:530
+#: templates/index.html:297
 msgid "Park Avenue, Samarkand"
 msgstr "Park Avenue, Samarkand"
 
-#: templates/index.html:547
+#: templates/index.html:314
 msgid "Resland LTD"
 msgstr "Resland LTD"
 
-#: templates/index.html:550
+#: templates/index.html:317
 msgid "Betas Quence, Qarshi"
 msgstr "Betas Quence, Qarshi"
 
-#: templates/index.html:570
+#: templates/index.html:337
 msgid "Wellesley Rd, Kokand"
 msgstr "Uelsli ko'chasi, Qo'qon"
 
-#: templates/index.html:590
+#: templates/index.html:357
 msgid "Why You Choose Jovie?"
 msgstr "Nega siz Jovini tanlaysiz?"
 
-#: templates/index.html:601
+#: templates/index.html:368
 msgid "Best Talented People"
 msgstr "Eng yaxshi iqtidorli odamlar"
 
-#: templates/index.html:611
+#: templates/index.html:378
 msgid "Easy To Find Canditate"
 msgstr "Nomzodni topish oson"
 
-#: templates/index.html:621
+#: templates/index.html:388
 msgid "Easy To Communicate"
 msgstr "Muloqot qilish oson"
 
-#: templates/index.html:631
+#: templates/index.html:398
 msgid "Global Recruitment Option"
 msgstr "Global ishga qabul qilish opsiyasi"
 
-#: templates/index.html:688
+#: templates/index.html:416 templates/main/about.html:188
+msgid "Job Filed"
+msgstr "Ish topshirildi"
+
+#: templates/index.html:423 templates/jobs/company-details.html:120
+#: templates/main/about.html:196
+msgid "Company"
+msgstr "Kompaniya"
+
+#: templates/index.html:430 templates/main/about.html:204
+msgid "Members"
+msgstr "A'zolar"
+
+#: templates/index.html:455
 msgid "Looking For a Job"
 msgstr "Ish qidirish"
 
-#: templates/index.html:689 templates/index.html:706
+#: templates/index.html:456 templates/index.html:473
 msgid "Your next role could be with one of these top leading organizations"
 msgstr ""
 "Sizning keyingi rolingiz ushbu etakchi tashkilotlardan birida bo'lishi mumkin"
 
-#: templates/index.html:692 templates/index.html:709
-#: templates/job-details.html:166
+#: templates/index.html:459 templates/index.html:476
+#: templates/jobs/company-details.html:166
 msgid "Apply Now"
 msgstr "Hozir murojaat qiling"
 
-#: templates/index.html:705
+#: templates/index.html:472
 msgid "Are You Recruiting?"
 msgstr "Ishga qabul qilyapsizmi?"
 
-#: templates/index.html:725
+#: templates/index.html:492
 msgid "Buy Our Plans & Packages"
 msgstr "Bizning rejalarimiz va paketlarimizni sotib oling"
 
-#: templates/index.html:735
+#: templates/index.html:502
 msgid "Free Forever"
 msgstr "Abadiy bepul"
 
-#: templates/index.html:737 templates/index.html:768 templates/index.html:803
+#: templates/index.html:504 templates/index.html:535 templates/index.html:570
 msgid "Month"
 msgstr "Oy"
 
-#: templates/index.html:744
+#: templates/index.html:511
 msgid "Appear in results"
 msgstr "Natijalarda paydo bo'lish"
 
-#: templates/index.html:748
+#: templates/index.html:515
 msgid "Accept mobile app"
 msgstr "Mobil ilovani qabul qiling"
 
-#: templates/index.html:752
+#: templates/index.html:519
 msgid "Manage canditates directly"
 msgstr "Nomzodlarni bevosita boshqaring"
 
-#: templates/index.html:758 templates/index.html:793 templates/index.html:824
+#: templates/index.html:525 templates/index.html:560 templates/index.html:591
 msgid "Find A Job"
 msgstr "Ish topmoq"
 
-#: templates/index.html:766
+#: templates/index.html:533
 msgid "Sponsor"
 msgstr "Homiy"
 
-#: templates/index.html:775 templates/index.html:814
+#: templates/index.html:542 templates/index.html:581
 msgid "Premium placement"
 msgstr "Premium joylashtirish"
 
-#: templates/index.html:779
+#: templates/index.html:546
 msgid "PPC on your job"
 msgstr "Sizning ishingizda PPC"
 
-#: templates/index.html:783
+#: templates/index.html:550
 msgid "Reach more candidates"
 msgstr "Ko'proq nomzodlarga murojaat qiling"
 
-#: templates/index.html:787 templates/index.html:818
+#: templates/index.html:554 templates/index.html:585
 msgid "Desktop, mobile job alerts"
 msgstr "Kompyuter, mobil telefon ish haqida ogohlantirishlar"
 
-#: templates/index.html:801
+#: templates/index.html:568
 msgid "Premium Plan"
 msgstr "Premium tarif rejasi"
 
-#: templates/index.html:810
+#: templates/index.html:577
 msgid "Job ad live for six-weeks"
 msgstr "Ish bo'yicha e'lon olti hafta davomida jonli"
 
-#: templates/index.html:837
+#: templates/index.html:604
 msgid "Featured Candidates"
 msgstr "Tanlangan nomzodlar"
 
-#: templates/index.html:854 templates/index.html:956
+#: templates/index.html:621 templates/index.html:723
 msgid "Mibraj Alex"
 msgstr "Mibraj Alex"
 
-#: templates/index.html:858 templates/index.html:960
+#: templates/index.html:625 templates/index.html:727
 msgid "Construction & Property"
 msgstr "Qurilish va mulk"
 
-#: templates/index.html:862 templates/index.html:964
+#: templates/index.html:629 templates/index.html:731
 msgid "Botchergate, Carlisle"
 msgstr "Botchergeyt, Karlayl"
 
-#: templates/index.html:869 templates/index.html:903 templates/index.html:937
-#: templates/index.html:971 templates/index.html:1005 templates/index.html:1039
-#: templates/index.html:1073 templates/index.html:1107
+#: templates/index.html:636 templates/index.html:670 templates/index.html:704
+#: templates/index.html:738 templates/index.html:772 templates/index.html:806
+#: templates/index.html:840 templates/index.html:874
 msgid "D ago"
 msgstr "Kun oldin"
 
-#: templates/index.html:888 templates/index.html:1024
+#: templates/index.html:655 templates/index.html:791
 msgid "Felica Kareon"
 msgstr "Felika Kareon"
 
-#: templates/index.html:892 templates/index.html:1028
+#: templates/index.html:659 templates/index.html:795
 msgid "SEO Expart"
 msgstr "SEO mutaxassisi"
 
-#: templates/index.html:896 templates/index.html:1032
+#: templates/index.html:663 templates/index.html:799
 msgid "Georgetown, USA"
 msgstr "Jorjtaun, AQSh"
 
-#: templates/index.html:922
+#: templates/index.html:689
 msgid "Malisha Patel"
 msgstr "Malisha Patel"
 
-#: templates/index.html:926 templates/index.html:1062
+#: templates/index.html:693 templates/index.html:829
 msgid "Project Management"
 msgstr "Loyihalar boshqaruvi"
 
-#: templates/index.html:930 templates/index.html:1066
+#: templates/index.html:697 templates/index.html:833
 msgid "Madison, USA"
 msgstr "Madison, AQSh"
 
-#: templates/index.html:990 templates/index.html:1092
+#: templates/index.html:757 templates/index.html:859
 msgid "Quence Joes"
 msgstr "Quens Joes"
 
-#: templates/index.html:998 templates/index.html:1100
+#: templates/index.html:765 templates/index.html:867
 msgid "Augusta, Maine"
 msgstr "Augusta, Meyn"
 
-#: templates/index.html:1058
+#: templates/index.html:825
 msgid "Malisa Petel"
 msgstr "Malisa Petel"
 
-#: templates/index.html:1168
+#: templates/index.html:891 templates/main/about.html:216
+msgid "What Client’s Say About Us"
+msgstr "Mijoz biz haqimizda nima deydi"
+
+#: templates/index.html:906 templates/main/about.html:233
+msgid "Alisa Meair"
+msgstr "Alisa Meair"
+
+#: templates/index.html:907 templates/main/about.html:234
+msgid "CEO of Company"
+msgstr "Kompaniya bosh direktori"
+
+#: templates/index.html:934 templates/jobs/company-details.html:179
+#: templates/main/about.html:263
+msgid "John Doe"
+msgstr "John Doe"
+
+#: templates/index.html:935
 msgid "Web Designer"
 msgstr "Veb-dizayner"
 
-#: templates/job-details.html:9 templates/job-details.html:14
-#: templates/job-details.html:114
+#: templates/index.html:964 templates/main/about.html:277
+msgid "News, Tips & Articles"
+msgstr "Yangiliklar, maslahatlar va maqolalar"
+
+#: templates/index.html:992 templates/main/about.html:304
+msgid "How to Indroduce in Yourself in Job Interview?"
+msgstr "Ish suhbatida o'zingizni qanday tanishtirish kerak?"
+
+#: templates/index.html:999 templates/index.html:1034 templates/index.html:1069
+#: templates/main/about.html:311 templates/main/about.html:346
+#: templates/main/about.html:381
+msgid "Read More"
+msgstr "Ko'proq o'qish"
+
+#: templates/index.html:1027 templates/main/about.html:339
+msgid "Looking for Highly Motivated Product to Build"
+msgstr "Qurilish uchun yuqori motivatsiyali mahsulotni qidirmoqda"
+
+#: templates/index.html:1062 templates/main/about.html:374
+msgid "The Reason Why Software Develope is the Best Job"
+msgstr "Nima uchun dasturiy ta'minot ishlab chiqaruvchisi eng yaxshi ishdir"
+
+#: templates/jobs/companies-list.html:10 templates/jobs/companies-list.html:15
+#: templates/layouts/footer.html:57 templates/layouts/navbar.html:175
+msgid "Job List"
+msgstr "Ish ro'yxati"
+
+#: templates/jobs/company-details.html:9 templates/jobs/company-details.html:14
+#: templates/jobs/company-details.html:114
 msgid "Job Details"
 msgstr "Ish tafsilotlari"
 
-#: templates/job-details.html:43
+#: templates/jobs/company-details.html:43
 msgid "Web Designer, Graphic Designer, UI/UX Designer"
 msgstr "Veb-dizayner, grafik dizayner, UI/UX dizayneri"
 
-#: templates/job-details.html:51
+#: templates/jobs/company-details.html:51
 msgid "Sales Manager"
 msgstr "Sotish bo'yicha menejer"
 
-#: templates/job-details.html:61
+#: templates/jobs/company-details.html:61
 msgid "Apply Before: September 01,2023"
 msgstr "Oldin ariza berish: 2023 yil 01 sentyabr"
 
-#: templates/job-details.html:69
+#: templates/jobs/company-details.html:69
 msgid "Description"
 msgstr "Tavsif"
 
-#: templates/job-details.html:82
+#: templates/jobs/company-details.html:82
 msgid "Requirements"
 msgstr "Talablar"
 
-#: templates/job-details.html:91
+#: templates/jobs/company-details.html:91
 msgid "Work experience"
 msgstr "Ish tajribasi"
 
-#: templates/job-details.html:95
+#: templates/jobs/company-details.html:95
 msgid "Skills (soft skills and/or technical skills)"
 msgstr "Ko'nikmalar (yumshoq ko'nikmalar va/yoki texnik ko'nikmalar)"
 
-#: templates/job-details.html:99
+#: templates/jobs/company-details.html:99
 msgid "Personal qualities and attributes."
 msgstr "Shaxsiy fazilatlar va fazilatlar."
 
-#: templates/job-details.html:103
+#: templates/jobs/company-details.html:103
 msgid "Support software roll-outs to production."
 msgstr "Dasturiy ta'minotni ishlab chiqarishga chiqarishni qo'llab-quvvatlash."
 
-#: templates/job-details.html:107
+#: templates/jobs/company-details.html:107
 msgid "Guide and mentor junior engineers. Serve as team lead if appropriate."
 msgstr ""
 "Kichik muhandislarga rahbarlik va maslahatchi. Agar kerak bo'lsa, jamoa "
 "rahbari sifatida xizmat qiling."
 
-#: templates/job-details.html:128 templates/post-job.html:82
-#: templates/post-job.html:84
+#: templates/jobs/company-details.html:124
+#: templates/jobs/company-details.html:185
+#: templates/jobs/employee-details.html:116 templates/post-job.html:75
+#: templates/profile-change.html:75
+msgid "Location"
+msgstr "Manzil"
+
+#: templates/jobs/company-details.html:128 templates/post-job.html:82
+#: templates/post-job.html:84 templates/profile-change.html:82
+#: templates/profile-change.html:84
 msgid "Job Type"
 msgstr "Ish turi"
 
-#: templates/job-details.html:132 templates/layouts/footer.html:131
+#: templates/jobs/company-details.html:132 templates/layouts/footer.html:131
 msgid "Email"
 msgstr "Elektron pochta"
 
-#: templates/job-details.html:143
+#: templates/jobs/company-details.html:143
 msgid "Experince"
 msgstr "Tajriba"
 
-#: templates/job-details.html:144
+#: templates/jobs/company-details.html:144
 msgid "Years"
 msgstr "Yillar"
 
-#: templates/job-details.html:148
+#: templates/jobs/company-details.html:147
+#: templates/removed/user-account.html:186
+msgid "Language"
+msgstr "Til"
+
+#: templates/jobs/company-details.html:148
 msgid "Uzbek - Russian"
 msgstr "O'zbek - Rus"
 
-#: templates/job-details.html:155
+#: templates/jobs/company-details.html:151
+msgid "Salary"
+msgstr "Ish haqi"
+
+#: templates/jobs/company-details.html:155
 msgid "Website"
 msgstr "Veb-sayt"
 
-#: templates/job-details.html:176
+#: templates/jobs/company-details.html:176
 msgid "Posted By"
 msgstr "Posted by"
 
-#: templates/job-details.html:180
+#: templates/jobs/company-details.html:180
 msgid "CEO of Euro Print"
 msgstr "Euro Print bosh direktori"
 
-#: templates/job-details.html:192
+#: templates/jobs/company-details.html:192
 msgid "Keywords"
 msgstr "Kalit so'zlar"
 
-#: templates/job-details.html:225
+#: templates/jobs/company-details.html:225
 msgid "Share In"
 msgstr "Ulashish"
 
-#: templates/job-list.html:10 templates/job-list.html:15
-#: templates/layouts/footer.html:57 templates/layouts/navbar.html:65
-msgid "Job List"
-msgstr "Ish ro'yxati"
+#: templates/jobs/employee-details.html:9
+#, fuzzy
+#| msgid "Blog Details"
+msgid "Employee Details"
+msgstr "Blog tafsilotlari"
+
+#: templates/jobs/employee-details.html:14
+msgid "Candidates Details"
+msgstr "Nomzodlar tafsilotlari"
+
+#: templates/jobs/employee-details.html:34
+msgid "Manager"
+msgstr "Menejer"
+
+#: templates/jobs/employee-details.html:60
+msgid "About Me"
+msgstr "Men haqimda"
+
+#: templates/jobs/employee-details.html:70 templates/post-job.html:108
+#: templates/profile-change.html:108
+msgid "Experience"
+msgstr "Tajriba"
+
+#: templates/jobs/employee-details.html:112
+msgid "Position"
+msgstr "Lavozim"
+
+#: templates/jobs/employee-details.html:120
+msgid "Period of Employment"
+msgstr "Ishga qabul qilish muddati"
+
+#: templates/jobs/find-employee.html:15
+msgid "Find an Employee"
+msgstr "Xodim topish"
+
+#: templates/jobs/find-employee.html:170
+msgid "Popular Jobs Category"
+msgstr "Mashhur ish o'rinlari toifasi"
+
+#: templates/jobs/find-employee.html:180
+msgid "Construction"
+msgstr "Qurilish"
+
+#: templates/jobs/find-employee.html:181 templates/jobs/find-employee.html:191
+#: templates/jobs/find-employee.html:201 templates/jobs/find-employee.html:211
+#: templates/jobs/find-employee.html:221 templates/jobs/find-employee.html:231
+#: templates/jobs/find-employee.html:241 templates/jobs/find-employee.html:251
+msgid "new Job"
+msgstr "yangi ish"
+
+#: templates/jobs/find-employee.html:190
+msgid "Finance"
+msgstr "Moliya"
+
+#: templates/jobs/find-employee.html:200
+msgid "Healthcare"
+msgstr "Sog'liqni saqlash"
+
+#: templates/jobs/find-employee.html:210
+msgid "Graphic Design"
+msgstr "Grafika dizayni"
+
+#: templates/jobs/find-employee.html:220
+msgid "Banking Jobs"
+msgstr "Bank ishlari"
+
+#: templates/jobs/find-employee.html:230
+msgid "Automotive"
+msgstr "Avtomobilsozlik"
+
+#: templates/jobs/find-employee.html:250
+msgid "Data Analysis"
+msgstr "Ma'lumotlarni tahlil qilish"
+
+#: templates/jobs/post-employee.html:8 templates/jobs/post-employee.html:35
+#: templates/layouts/navbar.html:164
+#, fuzzy
+#| msgid "Find An employee"
+msgid "Add employee"
+msgstr "Xodimni toping"
+
+#: templates/jobs/post-employee.html:13
+#, fuzzy
+#| msgid "Find an Employee"
+msgid "Add Employee"
+msgstr "Xodim topish"
+
+#: templates/jobs/post-employee.html:30 templates/post-job.html:29
+#: templates/profile-change.html:29
+msgid "Fill Up Your Job information"
+msgstr "Ishingiz haqidagi ma'lumotlarni to'ldiring"
 
 #: templates/layouts/footer.html:28
 msgid "For Candidate"
@@ -962,28 +807,24 @@ msgstr "Ishlarni ko'rib chiqish"
 msgid "Browse Categories"
 msgstr "Kategoriyalarni ko'rib chiqish"
 
-#: templates/layouts/footer.html:51 templates/layouts/navbar.html:106
+#: templates/layouts/footer.html:51 templates/layouts/navbar.html:82
+#: templates/layouts/navbar.html:241
 msgid "Resume"
-msgstr "Rezyume; qayta boshlash"
-
-#: templates/layouts/footer.html:63 templates/layouts/navbar.html:116
-#: templates/sign-up.html:9 templates/sign-up.html:14 templates/sign-up.html:48
-msgid "Sign Up"
-msgstr "Ro'yxatdan o'tish"
+msgstr "Rezyume"
 
 #: templates/layouts/footer.html:72
 msgid "Quick Links"
 msgstr "Tez havolalar"
 
-#: templates/layouts/footer.html:83 templates/layouts/navbar.html:51
+#: templates/layouts/footer.html:83 templates/layouts/navbar.html:181
 msgid "About"
 msgstr "Haqida"
 
-#: templates/layouts/footer.html:89 templates/layouts/navbar.html:80
+#: templates/layouts/footer.html:89
 msgid "FAQ"
 msgstr "TSS"
 
-#: templates/layouts/footer.html:95 templates/layouts/navbar.html:76
+#: templates/layouts/footer.html:95
 msgid "Pricing"
 msgstr "Narxlar"
 
@@ -1003,129 +844,365 @@ msgstr "Ma `lumot"
 msgid "Phone"
 msgstr "Telefon"
 
+#: templates/layouts/footer.html:141 templates/removed/user-account.html:130
+msgid "Address"
+msgstr "Manzil"
+
 #: templates/layouts/footer.html:152
 msgid "Copyright @2023 check_user. All Rights Reserved By"
 msgstr ""
 "Mualliflik huquqi @2023 check_user. Barcha huquqlar tomonidan himoyalangan"
 
-#: templates/layouts/navbar.html:55
-msgid "Jobs"
-msgstr "Ishlar"
+#: templates/layouts/navbar.html:15 templates/layouts/navbar.html:68
+msgid "Logout"
+msgstr ""
 
-#: templates/layouts/navbar.html:59
-msgid "Find An employee"
-msgstr "Xodimni toping"
+#: templates/layouts/navbar.html:22 templates/layouts/navbar.html:109
+msgid "Register"
+msgstr ""
 
-#: templates/layouts/navbar.html:62 templates/post-job.html:122
-msgid "Post A Job"
-msgstr "Ish joylash"
-
-#: templates/layouts/navbar.html:70
-msgid "Pages"
-msgstr "Sahifalar"
-
-#: templates/layouts/navbar.html:83
-#, fuzzy
-#| msgid "Catagories"
-msgid "Categories"
-msgstr "Kategoriyalar"
-
-#: templates/layouts/navbar.html:86
-msgid "Privacy & Policy"
-msgstr "Maxfiylik siyosati"
-
-#: templates/layouts/navbar.html:89
-msgid "Terms & Conditions"
-msgstr "Foydalanish shartlari"
-
-#: templates/layouts/navbar.html:100
+#: templates/layouts/navbar.html:72 templates/layouts/navbar.html:231
 msgid "Profile"
 msgstr "Profil"
 
-#: templates/layouts/navbar.html:109 templates/reset-password.html:9
-#: templates/reset-password.html:14 templates/reset-password.html:38
+#: templates/layouts/navbar.html:87 templates/layouts/navbar.html:246
+#: templates/registration/password_change_done.html:9
+#: templates/registration/password_change_done.html:14
+#: templates/registration/password_change_form.html:9
+#: templates/registration/password_change_form.html:14
+#: templates/registration/password_change_form.html:52
 msgid "Reset Password"
 msgstr "Parolni tiklash"
 
-#: templates/layouts/navbar.html:117 templates/sign-in.html:9
-#: templates/sign-in.html:14 templates/sign-in.html:43
-#: templates/sign-up.html:81
-msgid "Sign In"
-msgstr "Tizimga kirish"
+#: templates/layouts/navbar.html:91 templates/layouts/navbar.html:250
+#: templates/removed/user-account.html:124
+#: templates/removed/user-account.html:161
+#: templates/removed/user-account.html:198
+#: templates/removed/user-account.html:235
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: templates/layouts/navbar.html:156
+msgid "Jobs"
+msgstr "Ishlar"
+
+#: templates/layouts/navbar.html:170 templates/post-job.html:122
+#: templates/profile-change.html:122
+msgid "Post A Job"
+msgstr "Ish joylash"
+
+#: templates/layouts/navbar.html:186
+msgid "Ishchilar royhati"
+msgstr ""
+
+#: templates/layouts/navbar.html:190
+msgid "Kompaniyalar royhati"
+msgstr ""
+
+#: templates/layouts/navbar.html:227 templates/main/contact.html:9
+#: templates/main/contact.html:14
+msgid "Contact Us"
+msgstr "Biz bilan bog'lanish"
+
+#: templates/main/404.html:35
+msgid "Go To Home"
+msgstr "bosh sahifaga o'ting"
+
+#: templates/main/about.html:9 templates/main/about.html:14
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+#: templates/main/about.html:33
+msgid "How We Started"
+msgstr "Biz qanday boshladik"
+
+#: templates/main/about.html:98
+msgid "Why You Choose Us Among Other Job Site?"
+msgstr "Nima uchun boshqa ish saytlari orasida bizni tanlaysiz?"
+
+#: templates/main/about.html:107
+msgid "Advertise Job"
+msgstr "Ishni reklama qilish"
+
+#: templates/main/about.html:116
+msgid "Recruiter Profiles"
+msgstr "Ishga qabul qilish profillari"
+
+#: templates/main/about.html:125
+msgid "Find Your Dream Job"
+msgstr "O'zingizning orzuyingizdagi ishni toping"
+
+#: templates/main/about.html:142
+msgid "Grow Your Business Faster With Premium Advertising"
+msgstr "Premium reklama bilan biznesingizni tezroq rivojlantiring"
+
+#: templates/main/about.html:157
+msgid "Checkout More"
+msgstr "Batafsil hisob"
+
+#: templates/main/about.html:180
+msgid "Job Posted"
+msgstr "Ish e'lon qilindi"
+
+#: templates/main/about.html:248
+msgid "Adam Smith"
+msgstr "Adam Smith"
+
+#: templates/main/about.html:264
+msgid "Graphics Designer"
+msgstr "Grafik dizayner"
+
+#: templates/main/contact.html:92
+msgid "Lets' Talk With Us"
+msgstr "Biz bilan gaplashing"
+
+#: templates/main/contact.html:133
+msgid "Send Message"
+msgstr "Xabar yuborish"
 
 #: templates/post-job.html:8 templates/post-job.html:13
+#: templates/profile-change.html:8 templates/profile-change.html:13
 msgid "Post a Job"
 msgstr "Ish joylash"
 
-#: templates/post-job.html:29
-msgid "Fill Up Your Job information"
-msgstr "Ishingiz haqidagi ma'lumotlarni to'ldiring"
+#: templates/post-job.html:33 templates/profile-change.html:33
+#: templates/removed/user-account.html:119
+msgid "Job Title"
+msgstr "Lavozim"
 
-#: templates/post-job.html:40
+#: templates/post-job.html:40 templates/profile-change.html:40
 msgid "Job Category"
 msgstr "Ish toifasi"
 
-#: templates/post-job.html:54
+#: templates/post-job.html:42 templates/profile-change.html:42
+msgid "Category"
+msgstr "Turkum"
+
+#: templates/post-job.html:54 templates/profile-change.html:54
 msgid "Company Name"
 msgstr "Shirkat nomi"
 
-#: templates/post-job.html:61
+#: templates/post-job.html:61 templates/profile-change.html:61
 msgid "Company Email"
 msgstr "Kompaniya e-pochtasi"
 
-#: templates/post-job.html:68
+#: templates/post-job.html:68 templates/profile-change.html:68
 msgid "Company Website (Optional)"
 msgstr "Kompaniya veb-sayti (ixtiyoriy)"
 
-#: templates/post-job.html:86
+#: templates/post-job.html:86 templates/profile-change.html:86
 msgid "Part Time"
 msgstr "Yarim kun"
 
-#: templates/post-job.html:87
+#: templates/post-job.html:87 templates/profile-change.html:87
 msgid "Freelancer"
 msgstr "Freelancer"
 
-#: templates/post-job.html:94
+#: templates/post-job.html:94 templates/profile-change.html:94
 msgid "Job Tags"
 msgstr "Ish teglari"
 
-#: templates/post-job.html:101
+#: templates/post-job.html:101 templates/profile-change.html:101
 msgid "Salary (Optional)"
 msgstr "Ish haqi (ixtiyoriy)"
 
-#: templates/post-job.html:115
+#: templates/post-job.html:115 templates/profile-change.html:115
 msgid "Job Description"
 msgstr "Ish tavsifi"
 
-#: templates/reset-password.html:33 templates/sign-in.html:33
-#: templates/sign-up.html:38
-msgid "Enter Email"
-msgstr "E-pochtani kiriting"
+#: templates/registration/password_change_form.html:34
+#, fuzzy
+#| msgid "Reset Password"
+msgid "Old Password"
+msgstr "Parolni tiklash"
 
-#: templates/sign-in.html:38 templates/sign-up.html:43
-msgid "Enter Password"
-msgstr "Parolni kiriting"
+#: templates/registration/password_change_form.html:38
+#, fuzzy
+#| msgid "Reset Password"
+msgid "New Password"
+msgstr "Parolni tiklash"
 
-#: templates/sign-in.html:47
-msgid "Or sign in with"
-msgstr "Yoki hisobingizga kiring"
+#: templates/registration/password_change_form.html:42
+#, fuzzy
+#| msgid "Reset Password"
+msgid "Repeat your new password"
+msgstr "Parolni tiklash"
 
-#: templates/sign-in.html:73
-msgid "Not have an account?"
-msgstr "Hisobingiz yo'qmi?"
+#: templates/removed/user-account.html:9
+#, fuzzy
+#| msgid "Account"
+msgid "User Account"
+msgstr "Hisob"
 
-#: templates/sign-in.html:75
-msgid "Create an account"
-msgstr "Hisob ochish"
+#: templates/removed/user-account.html:98
+msgid "Your Name"
+msgstr "Ismingiz"
 
-#: templates/sign-up.html:33
-msgid "Enter Username"
-msgstr "Foydalanuvchi nomini kiriting"
+#: templates/removed/user-account.html:105
+msgid "Your Email"
+msgstr "Sizning e-manzilingiz"
 
-#: templates/sign-up.html:52
-msgid "Or sign up with"
-msgstr "Yoki ro'yxatdan o'ting"
+#: templates/removed/user-account.html:112
+msgid "Your Phone"
+msgstr "Telefon raqamingiz"
 
-#: templates/sign-up.html:79
-msgid "Have an Account?"
-msgstr "Hisobingiz bormi?"
+#: templates/removed/user-account.html:135
+msgid "Your Country"
+msgstr "Sizning mamlakatingiz"
+
+#: templates/removed/user-account.html:142
+msgid "Your City"
+msgstr "Sizning shahringiz"
+
+#: templates/removed/user-account.html:149
+msgid "Zip Code"
+msgstr "Pochta indeksi"
+
+#: templates/removed/user-account.html:156
+msgid "Region"
+msgstr "Mintaqa"
+
+#: templates/removed/user-account.html:167
+msgid "Other information"
+msgstr "Boshqa ma'lumotlar"
+
+#: templates/removed/user-account.html:172
+msgid "Age"
+msgstr "Yosh"
+
+#: templates/removed/user-account.html:179
+msgid "Work Experience"
+msgstr "Ish tajribasi"
+
+#: templates/removed/user-account.html:193
+msgid "Skill"
+msgstr "Malaka"
+
+#: templates/removed/user-account.html:204
+msgid "Social links"
+msgstr "Ijtimoiy havolalar"
+
+#~ msgid "School"
+#~ msgstr "Maktab"
+
+#~ msgid "Amherst School, Uzbekistan"
+#~ msgstr "Amherst maktabi, O'zbekiston"
+
+#~ msgid "College"
+#~ msgstr "Kollej"
+
+#~ msgid "Swarthmore College, Uzbekistan"
+#~ msgstr "Svartmor kolleji, Oʻzbekiston"
+
+#~ msgid "University"
+#~ msgstr "Universitet"
+
+#~ msgid "Princeton University, Uzbekistan"
+#~ msgstr "Prinston universiteti, Oʻzbekiston"
+
+#~ msgid "Proficient in HTML, CSS, Server-Scripting, C/C++, and Oracle"
+#~ msgstr "HTML, CSS, Server-skript, C/C++ va Oracle tillarida malakali"
+
+#~ msgid "Experience with SEO"
+#~ msgstr "SEO bilan tajriba"
+
+#~ msgid "Experience Teaching Web Development"
+#~ msgstr "Veb-ishlab chiqishni o'rgatish tajribasi"
+
+#~ msgid "Knowledgeable in Online Advertising"
+#~ msgstr "Onlayn reklama sohasida bilimga ega"
+
+#~ msgid "Expert in LAMP Web Service Stacks"
+#~ msgstr "LAMP Web Service Stacks bo'yicha mutaxassis"
+
+#~ msgid "month"
+#~ msgstr "oy"
+
+#~ msgid "Hire Me"
+#~ msgstr "Meni ishga oling"
+
+#~ msgid "Download CV"
+#~ msgstr "CV yuklab olish"
+
+#~ msgid "Web Development"
+#~ msgstr "Veb-ishlab chiqish"
+
+#~ msgid "Graphics Design"
+#~ msgstr "Grafik dizayn"
+
+#~ msgid "Data Scientist"
+#~ msgstr "Ma'lumot olimi"
+
+#~ msgid "Office Assistant"
+#~ msgstr "Ofis yordamchisi"
+
+#~ msgid "Post-Room Operate"
+#~ msgstr "Xonadan keyingi operatsiya"
+
+#~ msgid "Data Entry"
+#~ msgstr "Ma'lumotlarni kiritish"
+
+#~ msgid "Via"
+#~ msgstr "orqali"
+
+#~ msgid "Techno Inc"
+#~ msgstr "Techno Inc"
+
+#~ msgid "Street 40/A, London"
+#~ msgstr "Ko'cha 40/A, London"
+
+#~ msgid "Freelance"
+#~ msgstr "Freelance"
+
+#~ msgid "Graphic Designer"
+#~ msgstr "Grafik dizayner"
+
+#~ msgid "Devon Design"
+#~ msgstr "Devon dizayni"
+
+#~ msgid "West Sight, USA"
+#~ msgstr "West Sight, AQSh"
+
+#~ msgid "Graphics"
+#~ msgstr "Grafika"
+
+#~ msgid "MegaNews"
+#~ msgstr "MegaNews"
+
+#~ msgid "San Francisco, California"
+#~ msgstr "San-Fransisko, Kaliforniya"
+
+#~ msgid "Development"
+#~ msgstr "Rivojlanish"
+
+#~ msgid "Digital Marketor"
+#~ msgstr "Raqamli marketolog"
+
+#~ msgid "Marketing"
+#~ msgstr "Marketing"
+
+#~ msgid "UI/UX Designer"
+#~ msgstr "UI/UX dizayneri"
+
+#~ msgid "Design Hunter"
+#~ msgstr "Dizayn ovchisi"
+
+#~ msgid "Zoo Rd, Uzbekistan"
+#~ msgstr "Alisher ko'chasi, O'zbekiston"
+
+#~ msgid "Pages"
+#~ msgstr "Sahifalar"
+
+#, fuzzy
+#~| msgid "Catagories"
+#~ msgid "Categories"
+#~ msgstr "Kategoriyalar"
+
+#~ msgid "Privacy & Policy"
+#~ msgstr "Maxfiylik siyosati"
+
+#~ msgid "Terms & Conditions"
+#~ msgstr "Foydalanish shartlari"
+
+#~ msgid "Enter Email"
+#~ msgstr "E-pochtani kiriting"

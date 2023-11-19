@@ -286,7 +286,11 @@ h3 {
     width: 100% !important;
 }
 
-.first-navbar .collapse .other-option  {
+.first-navbar {
+    background-color: white;
+}
+
+.first-navbar .collapse .other-option {
     display: flex;
     align-items: center;
     list-style: none;
@@ -2670,6 +2674,7 @@ h3 {
 .candidate-info-text h3 {
     margin-bottom: 15px;
     font-size: 24px;
+    padding: 5px 0 0 5px;
 }
 
 .candidate-info-text p {
@@ -4321,7 +4326,7 @@ h3 {
 }
 
 .candidate-details .container .row .candidate-info-text form .form-gr label {
-    margin: 16px 0 0 0 ;
+    margin: 16px 0 0 0;
     display: flex;
     align-items: start;
 }

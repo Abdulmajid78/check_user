@@ -82,13 +82,13 @@
                             <div class="job-card-two">
                                 <h3>Qayoda ishlaganlari</h3>
                                 {#                                {% if comments %}#}
-                                <div class="row mt-5 px-5">
-                                    <div class="col-4 mb-2 offset-lg-81">
+                                <div class="row mt-5 px-md-5">
+                                    <div class="col-4 px-1 mb-2 offset-lg-81">
                                         Comment{{ comments.count|pluralize }}
                                         <span class="badge bg-primary ms-1">{{ comments.count }}</span>
                                     </div>
                                     {% for comment in comments %}
-                                        <div class="row bg-lightsilver mb-3 align-items-center">
+                                        <div class="row bg-lightsilver mb-3 mx-auto col-12 align-items-center">
                                             <div class="col-md-2">
                                                 <div class="company-logo d-flex justify-content-center align-content-center">
                                                     <a href="{% url 'jobs:job-detail' %}">

@@ -304,6 +304,14 @@ Default CSS
     background-color: #0e0e0e;
 }
 
+.theme-dark .candidate-info-text .job-info li p:before {
+    content: "“";
+}
+
+.theme-dark .candidate-info-text .job-info li p:after {
+    content: "”";
+}
+
 .theme-dark .account-information {
     background-color: #0e0e0e;
 }
@@ -630,4 +638,12 @@ Default CSS
 
 .theme-dark .navbar-area .main-nav {
     background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-dark .first-navbar {
+    background-color: black;
+}
+
+.theme-dark .navbar-area .first-navbar .navbar .navbar-nav .nav-item .nav-link.dropdown-toggle {
+    color: var(--red-color);
 }
